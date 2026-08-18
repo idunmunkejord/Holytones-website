@@ -6,7 +6,7 @@ export const siteConfig = {
   tagline: "Words, music, and work made for the deep and the honest.",
   description:
     "Holytones is the creative home of Idun Munkejord — original music, books, courses, art, and reflection, written across English, Norwegian, and Spanish.",
-  url: "https://holytones.example.com",
+  url: "https://holytones.no",
 };
 
 export const links = {
@@ -15,7 +15,7 @@ export const links = {
   youtube: "https://www.youtube.com/@holytones",
   instagram: "https://www.instagram.com/holytonesmusic",
   tiktok: "https://www.tiktok.com/@holytonesmusic",
-  email: "hello@holytonesmusic.com",
+  email: "post@holytones.no",
 };
 
 export const navLinks = [
@@ -29,11 +29,13 @@ export const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+export type CategoryTone = "teal" | "blush" | "violet" | "peach" | "green";
+
 export type Category = {
   slug: string;
   label: string;
-  kicker: string;
   blurb: string;
+  tone: CategoryTone;
 };
 
 // The five category cards shown on the homepage.
@@ -41,32 +43,32 @@ export const categories: Category[] = [
   {
     slug: "music",
     label: "Music",
-    kicker: "Holytones",
-    blurb: "Original songs and worship music, written and released across languages.",
+    blurb: "Songs with stories, truth and hope.",
+    tone: "teal",
   },
   {
     slug: "books",
     label: "Books",
-    kicker: "Words on the page",
-    blurb: "Honest, faith-rooted books for readers who want depth over polish.",
+    blurb: "Words that challenge, awaken and restore.",
+    tone: "blush",
   },
   {
     slug: "courses",
     label: "Courses",
-    kicker: "YouMatter Academy",
-    blurb: "Guided courses and devotionals for a deeper, more honest faith.",
+    blurb: "Learning that helps you grow and live with purpose.",
+    tone: "violet",
   },
   {
     slug: "art",
     label: "Art",
-    kicker: "In progress",
-    blurb: "A growing collection of visual and creative work.",
+    blurb: "Beauty with meaning.",
+    tone: "peach",
   },
   {
     slug: "skin",
     label: "Skin",
-    kicker: "In progress",
-    blurb: "A space taking shape — more to come soon.",
+    blurb: "Care for the body you live in.",
+    tone: "green",
   },
 ];
 

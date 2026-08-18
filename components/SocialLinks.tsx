@@ -8,10 +8,18 @@ const items = [
   { key: "tiktok", label: "TikTok", href: links.tiktok },
 ];
 
-export default function SocialLinks({ className = "" }: { className?: string }) {
+export default function SocialLinks({
+  className = "",
+  hide = [],
+}: {
+  className?: string;
+  hide?: string[];
+}) {
   return (
     <ul className={`flex flex-wrap gap-x-6 gap-y-2 ${className}`}>
-      {items.map((item) => (
+      {items
+        .filter((item) => !hide.includes(item.key))
+        .map((item) => (
         <li key={item.key}>
           <a
             href={item.href}

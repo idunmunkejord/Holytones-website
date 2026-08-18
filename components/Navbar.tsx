@@ -11,13 +11,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-soft bg-background/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-serif-display tracking-wide text-foreground"
+          className="font-serif-display text-4xl tracking-wide text-foreground sm:text-5xl lg:text-6xl"
           onClick={() => setOpen(false)}
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
           Holytones
         </Link>
 

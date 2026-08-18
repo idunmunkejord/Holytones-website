@@ -1,62 +1,73 @@
-import Link from "next/link";
-import OceanHero from "@/components/OceanHero";
 import SectionLabel from "@/components/SectionLabel";
 import CategoryCard from "@/components/CategoryCard";
 import MailingList from "@/components/MailingList";
-import { categories, links, siteConfig } from "@/lib/site-config";
+import { categories } from "@/lib/site-config";
 
 export default function Home() {
   return (
     <>
-      <section className="relative flex min-h-[92vh] items-end overflow-hidden">
-        <OceanHero />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent" />
-        <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 md:px-10 md:pb-28">
-          <p className="text-xs uppercase tracking-[0.3em] text-foreground/80">
-            Idun Munkejord · Holytones
-          </p>
-          <h1 className="mt-4 max-w-3xl font-serif-display text-5xl leading-[1.08] text-foreground drop-shadow-sm sm:text-6xl md:text-7xl">
-            {siteConfig.tagline}
-          </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/90 md:text-lg">
-            {siteConfig.description}
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href={links.spotify}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-foreground/70 bg-background/70 px-8 py-3 text-xs uppercase tracking-[0.2em] text-foreground backdrop-blur-sm transition-colors hover:bg-foreground hover:text-background"
-            >
-              Listen to the music
-            </a>
-            <Link
-              href="/about"
-              className="link-underline px-2 py-3 text-xs uppercase tracking-[0.2em] text-foreground/90 hover:text-foreground"
-            >
-              About Idun
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 py-20 md:px-10 md:py-28">
-        <div className="mx-auto max-w-3xl text-center">
-          <SectionLabel>Welcome</SectionLabel>
-          <p className="font-serif-display text-2xl leading-relaxed text-foreground md:text-3xl">
-            Holytones is where the songs, the books, the courses, and the quieter work all live —
-            made for people who want depth more than polish.
-          </p>
-        </div>
-      </section>
-
-      <section className="border-t border-border-soft bg-background-alt px-6 py-20 md:px-10 md:py-28">
+      <section className="bg-background-alt px-6 py-24 md:px-10 md:py-32">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel>Explore</SectionLabel>
-          <h2 className="font-serif-display text-4xl text-foreground md:text-5xl">
-            Five ways in
-          </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="max-w-2xl">
+            <SectionLabel>Welcome</SectionLabel>
+            <div className="space-y-6 text-base leading-relaxed text-foreground-muted md:text-lg">
+              <p>
+                Holytones is a creative home for music, books, courses, art, and wellbeing, born
+                from a desire to create things that carry meaning and make a difference.
+              </p>
+              <p>
+                Rooted in Christian faith and inspired by Scripture, real life, and the stories we
+                carry, Holytones explores truth, beauty, healing, identity, love, and hope through
+                different forms of creativity.
+              </p>
+            </div>
+
+            {/* Full introduction, kept in code for reuse on a future About/Holytones page. */}
+            <details className="mt-6">
+              <summary className="link-underline w-fit cursor-pointer list-none text-xs uppercase tracking-[0.18em] text-accent transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+                Read more
+              </summary>
+              <div className="mt-6 space-y-6 text-base leading-relaxed text-foreground-muted md:text-lg">
+                <p>
+                  Some stories are best told through a song.
+                  <br />
+                  Some need the pages of a book.
+                  <br />
+                  Some become a journey of learning, reflection, and transformation.
+                  <br />
+                  Others find their expression through art.
+                </p>
+                <p>Holytones is where these different forms meet.</p>
+                <p>
+                  At its heart is a belief that creativity can do more than entertain or decorate.
+                  It can tell the truth beautifully. It can give language to things we have
+                  struggled to express. It can awaken hope, invite reflection, bring healing,
+                  challenge the way we see ourselves and the world, and gently point us back to
+                  God.
+                </p>
+                <p>
+                  Much of what is created here grows from Scripture, but also from lived
+                  experience: faith and doubt, love and loss, wounds and restoration, questions of
+                  identity and purpose, and the quiet ways God meets us in the middle of ordinary
+                  life.
+                </p>
+                <p className="font-medium text-foreground">Different expressions. One heart.</p>
+                <p>
+                  Music to be felt.
+                  <br />
+                  Books to be lived with.
+                  <br />
+                  Courses to grow through.
+                  <br />
+                  Art to make the unseen visible.
+                </p>
+                <p className="font-medium text-foreground">
+                  Holytones — creativity with meaning, created to make a difference.
+                </p>
+              </div>
+            </details>
+          </div>
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 md:mt-20">
             {categories.map((category) => (
               <CategoryCard key={category.slug} category={category} />
             ))}
@@ -64,7 +75,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="mailing-list" className="border-t border-border-soft px-6 py-20 md:px-10 md:py-28">
+      <section id="mailing-list" className="border-t border-border-soft px-6 py-24 md:px-10 md:py-32">
         <MailingList />
       </section>
     </>
