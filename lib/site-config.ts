@@ -10,7 +10,7 @@ export const siteConfig = {
 };
 
 export const links = {
-  spotify: "https://open.spotify.com/artist/REPLACE_WITH_SPOTIFY_ID",
+  spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/REPLACE_WITH_APPLE_ID",
   youtube: "https://www.youtube.com/@holytones",
   instagram: "https://www.instagram.com/holytonesmusic",
