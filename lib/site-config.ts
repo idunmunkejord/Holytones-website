@@ -105,6 +105,8 @@ export type Book = {
   language: string;
   note: string;
   status: string;
+  cover?: string;
+  coverBack?: string;
 };
 
 export const books: Book[] = [
@@ -113,6 +115,8 @@ export const books: Book[] = [
     language: "English",
     note: "A bold Christian response to modern wellness culture — unmasking the half-truths behind manifestation, positive psychology, and the \"you are enough\" gospel of self, and pointing readers back to the only truth that can truly set them free.",
     status: "Coming soon",
+    cover: "/images/the-most-dangerous-lie-front.jpg",
+    coverBack: "/images/the-most-dangerous-lie-back.jpg",
   },
 ];
 

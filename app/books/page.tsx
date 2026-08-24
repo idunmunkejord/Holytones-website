@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import { books } from "@/lib/site-config";
 
@@ -26,28 +27,56 @@ export default function BooksPage() {
           {books.map((book, index) => (
             <div
               key={book.title}
-              className="flex flex-col gap-4 border-b border-border-soft py-8 first:pt-0 last:border-b-0 sm:flex-row sm:items-start sm:gap-6"
+              className="flex flex-col gap-6 border-b border-border-soft py-8 first:pt-0 last:border-b-0 sm:flex-row sm:items-start sm:gap-8"
             >
-              <span className="font-serif-display text-2xl text-foreground-muted/60">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h2 className="font-serif-display text-2xl text-foreground">{book.title}</h2>
-                <p className="mt-1 text-sm text-foreground-muted">
-                  {book.language} ·{" "}
-                  <span
-                    className={
-                      book.status === "Coming soon"
-                        ? "uppercase tracking-[0.14em] text-accent"
-                        : undefined
-                    }
-                  >
-                    {book.status}
-                  </span>
-                </p>
-                <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
-                  {book.note}
-                </p>
+              {(book.cover || book.coverBack) && (
+                <div className="flex shrink-0 gap-3">
+                  {book.cover && (
+                    <div className="relative aspect-[3/4] w-32 overflow-hidden border border-border-soft sm:w-40">
+                      <Image
+                        src={book.cover}
+                        alt={`${book.title} — front cover`}
+                        fill
+                        sizes="(min-width: 640px) 160px, 128px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  {book.coverBack && (
+                    <div className="relative aspect-[3/4] w-32 overflow-hidden border border-border-soft sm:w-40">
+                      <Image
+                        src={book.coverBack}
+                        alt={`${book.title} — back cover`}
+                        fill
+                        sizes="(min-width: 640px) 160px, 128px"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+              <div className="flex flex-1 gap-4">
+                <span className="font-serif-display text-2xl text-foreground-muted/60">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h2 className="font-serif-display text-2xl text-foreground">{book.title}</h2>
+                  <p className="mt-1 text-sm text-foreground-muted">
+                    {book.language} ·{" "}
+                    <span
+                      className={
+                        book.status === "Coming soon"
+                          ? "uppercase tracking-[0.14em] text-accent"
+                          : undefined
+                      }
+                    >
+                      {book.status}
+                    </span>
+                  </p>
+                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
+                    {book.note}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
