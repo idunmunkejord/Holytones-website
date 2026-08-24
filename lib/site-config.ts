@@ -23,8 +23,6 @@ export const navLinks = [
   { href: "/music", label: "Music" },
   { href: "/books", label: "Books" },
   { href: "/courses", label: "Courses" },
-  { href: "/art", label: "Art" },
-  { href: "/skin", label: "Skin" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -38,7 +36,7 @@ export type Category = {
   tone: CategoryTone;
 };
 
-// The five category cards shown on the homepage.
+// The category cards shown on the homepage.
 export const categories: Category[] = [
   {
     slug: "music",
@@ -57,18 +55,6 @@ export const categories: Category[] = [
     label: "Courses",
     blurb: "Learning that helps you grow and live with purpose.",
     tone: "violet",
-  },
-  {
-    slug: "art",
-    label: "Art",
-    blurb: "Beauty with meaning.",
-    tone: "peach",
-  },
-  {
-    slug: "skin",
-    label: "Skin",
-    blurb: "Care for the body you live in.",
-    tone: "green",
   },
 ];
 
