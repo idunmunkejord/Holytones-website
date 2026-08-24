@@ -32,7 +32,12 @@ export default function BooksPage() {
               {(book.cover || book.coverBack) && (
                 <div className="flex shrink-0 gap-3">
                   {book.cover && (
-                    <div className="relative aspect-[3/4] w-32 overflow-hidden border border-border-soft sm:w-40">
+                    <a
+                      href={book.cover}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative aspect-[3/4] w-32 shrink-0 cursor-zoom-in overflow-hidden border border-border-soft transition-opacity hover:opacity-80 sm:w-40"
+                    >
                       <Image
                         src={book.cover}
                         alt={`${book.title} — front cover`}
@@ -41,10 +46,15 @@ export default function BooksPage() {
                         quality={95}
                         className="object-cover"
                       />
-                    </div>
+                    </a>
                   )}
                   {book.coverBack && (
-                    <div className="relative aspect-[3/4] w-32 overflow-hidden border border-border-soft sm:w-40">
+                    <a
+                      href={book.coverBack}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative aspect-[3/4] w-32 shrink-0 cursor-zoom-in overflow-hidden border border-border-soft transition-opacity hover:opacity-80 sm:w-40"
+                    >
                       <Image
                         src={book.coverBack}
                         alt={`${book.title} — back cover`}
@@ -53,7 +63,7 @@ export default function BooksPage() {
                         quality={95}
                         className="object-cover"
                       />
-                    </div>
+                    </a>
                   )}
                 </div>
               )}
