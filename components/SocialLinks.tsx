@@ -4,8 +4,6 @@ const items = [
   { key: "spotify", label: "Spotify", href: links.spotify },
   { key: "appleMusic", label: "Apple Music", href: links.appleMusic },
   { key: "youtube", label: "YouTube", href: links.youtube },
-  { key: "instagram", label: "Instagram", href: links.instagram },
-  { key: "tiktok", label: "TikTok", href: links.tiktok },
 ];
 
 export default function SocialLinks({

@@ -38,6 +38,7 @@ export default function BooksPage() {
                         alt={`${book.title} — front cover`}
                         fill
                         sizes="(min-width: 640px) 160px, 128px"
+                        quality={95}
                         className="object-cover"
                       />
                     </div>
@@ -49,6 +50,7 @@ export default function BooksPage() {
                         alt={`${book.title} — back cover`}
                         fill
                         sizes="(min-width: 640px) 160px, 128px"
+                        quality={95}
                         className="object-cover"
                       />
                     </div>

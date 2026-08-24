@@ -13,8 +13,6 @@ export const links = {
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/REPLACE_WITH_APPLE_ID",
   youtube: "https://www.youtube.com/@holytones",
-  instagram: "https://www.instagram.com/holytonesmusic",
-  tiktok: "https://www.tiktok.com/@holytonesmusic",
   email: "post@holytones.no",
 };
 
@@ -115,8 +113,8 @@ export const books: Book[] = [
     language: "English",
     note: "A bold Christian response to modern wellness culture — unmasking the half-truths behind manifestation, positive psychology, and the \"you are enough\" gospel of self, and pointing readers back to the only truth that can truly set them free.",
     status: "Coming soon",
-    cover: "/images/the-most-dangerous-lie-front.jpg",
-    coverBack: "/images/the-most-dangerous-lie-back.jpg",
+    cover: "/images/the-most-dangerous-lie-front.png",
+    coverBack: "/images/the-most-dangerous-lie-back.png",
   },
 ];
 
