@@ -34,7 +34,16 @@ export default function BooksPage() {
               <div>
                 <h2 className="font-serif-display text-2xl text-foreground">{book.title}</h2>
                 <p className="mt-1 text-sm text-foreground-muted">
-                  {book.language} · {book.status}
+                  {book.language} ·{" "}
+                  <span
+                    className={
+                      book.status === "Coming soon"
+                        ? "uppercase tracking-[0.14em] text-accent"
+                        : undefined
+                    }
+                  >
+                    {book.status}
+                  </span>
                 </p>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
                   {book.note}

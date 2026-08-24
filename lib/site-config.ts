@@ -109,10 +109,10 @@ export type Book = {
 
 export const books: Book[] = [
   {
-    title: "La mentira más vendida",
-    language: "Spanish",
-    note: "A book examining the most popular lie of our age, written for readers ready to trade easy comfort for honest truth. Written with an introduction addressed to the next generation of readers.",
-    status: "Available",
+    title: "The Most Dangerous Lie Ever Sold",
+    language: "English",
+    note: "A bold Christian response to modern wellness culture — unmasking the half-truths behind manifestation, positive psychology, and the \"you are enough\" gospel of self, and pointing readers back to the only truth that can truly set them free.",
+    status: "Coming soon",
   },
 ];
 
