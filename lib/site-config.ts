@@ -14,6 +14,9 @@ export const links = {
   appleMusic: "https://music.apple.com/artist/REPLACE_WITH_APPLE_ID",
   youtube: "https://www.youtube.com/@holytones",
   email: "post@holytones.no",
+  // Public site key for the Cloudflare Turnstile spam check on the contact form.
+  // Leave empty to show the form without it.
+  turnstileSiteKey: "",
 };
 
 export const navLinks = [
