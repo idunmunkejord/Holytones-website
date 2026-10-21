@@ -33,6 +33,16 @@ export default function AuthorHero() {
               you&apos;ve been looking to yourself for answers that were never meant to come from
               you?
             </p>
+          </div>
+
+          <a
+            href="#my-work"
+            className="mt-10 inline-block border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
+          >
+            Explore My Books, Courses &amp; Music
+          </a>
+
+          <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-foreground-muted md:text-lg">
             <p>
               The Christian message offers a radically different starting point. Your value is not
               something you have to create, your identity is not something you have to invent, and
@@ -50,13 +60,6 @@ export default function AuthorHero() {
               between a life built on self-reliance and one rooted in a relationship with God.
             </p>
           </div>
-
-          <a
-            href="#my-work"
-            className="mt-10 inline-block border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
-          >
-            Explore My Books, Courses &amp; Music
-          </a>
         </div>
 
         <div className="mx-auto w-full max-w-sm lg:sticky lg:top-36 lg:mt-2 lg:max-w-none">
