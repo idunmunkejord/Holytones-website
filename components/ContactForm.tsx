@@ -4,21 +4,6 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import Script from "next/script";
 import { links } from "@/lib/site-config";
 
-type Turnstile = {
-  render: (
-    container: HTMLElement,
-    options: { sitekey: string; theme: "light"; callback: (token: string) => void }
-  ) => string;
-  reset: (widgetId: string) => void;
-  remove: (widgetId: string) => void;
-};
-
-declare global {
-  interface Window {
-    turnstile?: Turnstile;
-  }
-}
-
 const labelClass = "text-xs uppercase tracking-[0.18em] text-foreground-muted";
 const inputClass =
   "border-b border-border-soft bg-transparent py-2 text-foreground outline-none transition-colors focus:border-accent";

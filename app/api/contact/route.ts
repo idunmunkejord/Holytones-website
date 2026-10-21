@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { links } from "@/lib/site-config";
+import { passesTurnstile } from "@/lib/turnstile";
 
 // Delivers contact form submissions to the Holytones inbox.
 // Needs RESEND_API_KEY set as a secret in Cloudflare. TURNSTILE_SECRET_KEY is optional;
@@ -21,18 +22,6 @@ function singleLine(value: unknown) {
 
 function fail(error: string, status: number) {
   return NextResponse.json({ ok: false, error }, { status });
-}
-
-async function passesTurnstile(token: string, secret: string, ip: string | null) {
-  const body = new URLSearchParams({ secret, response: token });
-  if (ip) body.set("remoteip", ip);
-  const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
-    method: "POST",
-    body,
-  });
-  if (!res.ok) return false;
-  const result = (await res.json()) as { success?: boolean };
-  return result.success === true;
 }
 
 export async function POST(request: Request) {

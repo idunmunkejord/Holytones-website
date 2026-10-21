@@ -7,6 +7,10 @@ export const siteConfig = {
   description:
     "Holytones is the creative home of Idun Munkejord — original music, books, courses, art, and reflection, written across English, Norwegian, and Spanish.",
   url: "https://holytones.no",
+  // Author portrait for the homepage hero. Drop the photo into /public/images
+  // and set its path here (e.g. "/images/idun-munkejord.jpg"). A portrait
+  // (roughly 4:5) works best. Leave empty to show a soft placeholder.
+  authorPhoto: "",
 };
 
 export const links = {
