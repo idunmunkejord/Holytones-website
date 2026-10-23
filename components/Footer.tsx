@@ -21,10 +21,15 @@ export default function Footer() {
 
         <div className="space-y-1 text-xs leading-relaxed text-foreground-muted/70">
           <p>© {new Date().getFullYear()} Holytones. All rights reserved.</p>
-          <p>
-            Holytones is run by {company.name} ({company.form}), org. no. {company.orgNumber} ·{" "}
-            {company.address} · {links.email} · {company.offering}.
-          </p>
+          <details>
+            <summary className="w-fit cursor-pointer list-none uppercase tracking-[0.18em] transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+              Sales terms
+            </summary>
+            <p className="mt-2">
+              Holytones is run by {company.name} ({company.form}), org. no. {company.orgNumber} ·{" "}
+              {links.email} · {company.offering}.
+            </p>
+          </details>
         </div>
       </div>
     </footer>

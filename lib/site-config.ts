@@ -18,7 +18,6 @@ export const company = {
   name: "Pedersen Interaktiv",
   form: "sole proprietorship",
   orgNumber: "927 929 783",
-  address: "Krooddveien 9B, 4624 Kristiansand S, Norway",
   offering: "Books, courses, and music",
 };
 
