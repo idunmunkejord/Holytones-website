@@ -13,6 +13,15 @@ export const siteConfig = {
   authorPhoto: "/images/idun-munkejord.webp",
 };
 
+// The registered business behind Holytones, shown in the footer (Brønnøysundregistrene).
+export const company = {
+  name: "Pedersen Interaktiv",
+  form: "sole proprietorship",
+  orgNumber: "927 929 783",
+  address: "Krooddveien 9B, 4624 Kristiansand S, Norway",
+  offering: "Books, courses, and music",
+};
+
 export const links = {
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/REPLACE_WITH_APPLE_ID",
