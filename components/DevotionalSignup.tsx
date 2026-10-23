@@ -50,7 +50,6 @@ export default function DevotionalSignup() {
               title="Subscribe to the Holytones weekly devotional on Substack"
               width="100%"
               height="320"
-              loading="lazy"
               className="mt-6 block w-full"
               style={{ border: "1px solid #EEE", background: "white" }}
               frameBorder="0"
