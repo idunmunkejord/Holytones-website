@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <Link
           href="/"
-          className="font-serif-display text-4xl tracking-wide text-foreground sm:text-5xl lg:text-6xl"
+          className="logo-gold font-serif-display text-4xl tracking-wide sm:text-5xl lg:text-6xl"
           onClick={() => setOpen(false)}
         >
           Holytones
