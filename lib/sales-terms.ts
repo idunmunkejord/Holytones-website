@@ -1,7 +1,10 @@
 // Content of the Salgsbetingelser page (/salgsbetingelser), kept word for word from Idun's
 // document. Each paragraph is shown on its own; line breaks inside one are kept.
 
-export const salesTerms = {
+import type { Policy } from "@/components/PolicyPage";
+
+export const salesTerms: Policy = {
+  title: "Salgsbetingelser",
   subtitle: "HOLYTONES | Salg av fysiske bøker",
   updated: "Sist oppdatert: 23. oktober 2026",
   intro:

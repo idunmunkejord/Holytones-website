@@ -72,7 +72,7 @@ export default function DevotionalSignup() {
 
         <p className="mt-5 text-xs leading-relaxed text-foreground-muted">
           Free weekly reflections from Idun Munkejord. Unsubscribe whenever you wish.{" "}
-          <Link href="/privacy" className="link-underline text-accent">
+          <Link href="/personvern" className="link-underline text-accent">
             Privacy policy
           </Link>
         </p>

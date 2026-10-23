@@ -28,6 +28,7 @@ export type CustomerServicePart = { heading?: string; text: string; href?: strin
 
 export const customerService: { title: string; href?: string; parts: CustomerServicePart[] }[] = [
   { title: "Salgsbetingelser", href: "/salgsbetingelser", parts: [] },
+  { title: "Personvernerklæring", href: "/personvern", parts: [] },
   {
     title: "Frakt og retur",
     parts: [
