@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-
 - `app/` — one folder per route (`music`, `books`, `courses`, `art`, `skin`, `about`, `contact`),
   plus the shared `layout.tsx` and `globals.css`.
 - `components/` — shared UI: `Navbar`, `Footer`, `OceanHero`, `CategoryCard`, `TrackCard`,
-  `ContactForm`, `AuthorHero`, `GuideSignup`, `SocialLinks`, `SectionLabel`.
+  `ContactForm`, `AuthorHero`, `DevotionalSignup`, `ReadMore`, `SocialLinks`, `SectionLabel`.
 - `lib/site-config.ts` — all site copy, links, and content lists (tracks, books, courses, category
   cards, nav). Edit this file first for most content changes.
 
@@ -31,17 +31,10 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-
   ocean gradient. Swap it for a real photo (e.g. a Next.js `<Image>` sourced from `public/`)
   whenever one is ready.
 - **Author photo**: set `authorPhoto` in `lib/site-config.ts` to a portrait in `public/images`.
-- **Email signup (MailerLite)**: the homepage form (`components/GuideSignup.tsx`) posts to
-  `app/api/subscribe/route.ts`, which adds subscribers to MailerLite. Until it is set up, the form
-  shows an error instead of pretending to subscribe anyone. To switch it on:
-  1. In MailerLite, create a group (e.g. "5 Lies guide") and note its ID.
-  2. Turn on double opt-in: Account settings → Subscribe settings → "Double opt-in for API and
-     integrations".
-  3. Create an automation triggered by "joins group" that sends the welcome email with a link to
-     the *5 Lies That Keep You Striving* PDF (upload it to MailerLite's file manager or to
-     `public/`). It runs only after the subscriber confirms.
-  4. Add `MAILERLITE_API_KEY` (Integrations → API) and `MAILERLITE_GROUP_ID` as secrets in
-     Cloudflare. The form uses the same optional Turnstile spam check as the contact form.
+- **Weekly devotional (Substack)**: the homepage signup (`components/DevotionalSignup.tsx`)
+  embeds Substack's official signup form, so subscribers go straight to the Substack publication.
+  Set `links.substack` in `lib/site-config.ts` to the publication URL to switch it on; until then
+  it shows "Subscriptions open soon" and no form.
 - **Contact form**: `components/ContactForm.tsx` opens the visitor's email client with a
   pre-filled message (no backend required). Replace with a hosted form service if you'd rather
   receive submissions directly.

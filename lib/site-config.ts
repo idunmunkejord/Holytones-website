@@ -22,6 +22,9 @@ export const company = {
 };
 
 export const links = {
+  // The weekly devotional's Substack publication, e.g. "https://holytones.substack.com".
+  // The homepage signup embeds Substack's own form from it. Leave empty until it exists.
+  substack: "",
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/REPLACE_WITH_APPLE_ID",
   youtube: "https://www.youtube.com/@holytones",
