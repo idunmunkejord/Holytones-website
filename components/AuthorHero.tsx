@@ -1,18 +1,11 @@
-"use client";
-
-import Image from "next/image";
-import { useId, useState } from "react";
-import { siteConfig } from "@/lib/site-config";
+import ReadMore from "@/components/ReadMore";
 
 const bodyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted md:text-base";
 
 export default function AuthorHero() {
-  const [expanded, setExpanded] = useState(false);
-  const moreId = useId();
-
   return (
     <section className="px-6 py-12 md:px-10 md:py-16">
-      <div className="mx-auto grid max-w-6xl items-start gap-10 md:grid-cols-[1fr_15rem] md:gap-14 lg:grid-cols-[1fr_17rem] lg:gap-20">
+      <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
           <h1 className="font-serif-display text-[1.75rem] leading-[1.2] text-foreground md:text-[2.125rem]">
             What if the greatest lie you&apos;ve believed is that everything depends on you?
@@ -30,83 +23,34 @@ export default function AuthorHero() {
             </p>
           </div>
 
-          <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <button
-              type="button"
-              aria-expanded={expanded}
-              aria-controls={moreId}
-              onClick={() => setExpanded((open) => !open)}
-              className="link-underline text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
-            >
-              {expanded ? "Read Less ↑" : "Read More ↓"}
-            </button>
-            <a
-              href="#my-work"
-              className="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
-            >
-              Explore My Books, Courses &amp; Music
-            </a>
-          </div>
-
-          {/* Collapsed text is inert, so it is hidden from keyboard and screen readers too. */}
-          <div
-            id={moreId}
-            inert={!expanded}
-            className={`grid transition-[grid-template-rows,opacity] duration-500 ease-out motion-reduce:transition-none ${
-              expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-            }`}
+          <ReadMore
+            className={bodyClass}
+            actions={
+              <a
+                href="#my-work"
+                className="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
+              >
+                Explore My Books, Courses &amp; Music
+              </a>
+            }
           >
-            <div className="overflow-hidden">
-              <div className={`pt-7 ${bodyClass}`}>
-                <p>
-                  Perhaps you&apos;ve worked hard to improve yourself, overcome challenges, and
-                  create a meaningful life. You&apos;ve learned to take responsibility, develop your
-                  abilities, and manage your circumstances, only to discover that there is always
-                  something more to achieve, another weakness to overcome, or another part of
-                  yourself that supposedly needs fixing. What began as a desire to grow can
-                  gradually become an exhausting responsibility to make everything in your life
-                  work.
-                </p>
-                <p>
-                  The Christian message offers a radically different starting point. Your value is
-                  not something you have to create, your identity is not something you have to
-                  invent, and lasting freedom is not something you can manufacture through the
-                  right thoughts, habits, or techniques. You were created for a relationship with
-                  God, and understanding who He is changes how you understand yourself, your
-                  purpose, and the life you have been given.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-full max-w-[15rem] md:max-w-none">
-          <div className="relative">
-            {/* Offset frame behind the photo, tying it into the warm palette. */}
-            <div
-              className="absolute inset-0 translate-x-3 translate-y-3 bg-background-alt"
-              aria-hidden
-            />
-            <div className="relative aspect-[4/5] overflow-hidden bg-background-alt">
-              {siteConfig.authorPhoto ? (
-                <Image
-                  src={siteConfig.authorPhoto}
-                  alt="Idun Munkejord"
-                  fill
-                  priority
-                  quality={95}
-                  sizes="(min-width: 1024px) 17rem, 15rem"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="flex h-full items-end bg-gradient-to-b from-surface to-accent-soft/40 p-6">
-                  <p className="font-serif-display text-xl italic text-foreground-muted">
-                    Idun Munkejord
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
+            <p>
+              Perhaps you&apos;ve worked hard to improve yourself, overcome challenges, and create a
+              meaningful life. You&apos;ve learned to take responsibility, develop your abilities,
+              and manage your circumstances, only to discover that there is always something more
+              to achieve, another weakness to overcome, or another part of yourself that supposedly
+              needs fixing. What began as a desire to grow can gradually become an exhausting
+              responsibility to make everything in your life work.
+            </p>
+            <p>
+              The Christian message offers a radically different starting point. Your value is not
+              something you have to create, your identity is not something you have to invent, and
+              lasting freedom is not something you can manufacture through the right thoughts,
+              habits, or techniques. You were created for a relationship with God, and
+              understanding who He is changes how you understand yourself, your purpose, and the
+              life you have been given.
+            </p>
+          </ReadMore>
         </div>
       </div>
     </section>
