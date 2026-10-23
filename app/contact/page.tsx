@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ContactForm from "@/components/ContactForm";
 import SocialLinks from "@/components/SocialLinks";
-import { links } from "@/lib/site-config";
+import Link from "next/link";
+import { company, customerService, links } from "@/lib/site-config";
+
+const columnHeading = "mb-3 text-xs uppercase tracking-[0.2em] text-foreground";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -44,6 +47,66 @@ export default function ContactPage() {
               <SectionLabel>Follow along</SectionLabel>
               <SocialLinks className="flex-col gap-3" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border-soft px-6 py-12 md:px-10">
+        <div className="mx-auto grid max-w-4xl gap-10 text-sm leading-relaxed text-foreground-muted sm:grid-cols-2">
+          <div>
+            <h2 className={columnHeading}>Info</h2>
+            <p className="text-foreground">{company.name}</p>
+            <p>Org.nr. {company.orgNumber}</p>
+            <p>{company.offering}</p>
+          </div>
+
+          <div>
+            <h2 className={columnHeading}>Kundeservice</h2>
+            <ul className="space-y-2">
+              {customerService.map((item) => (
+                <li key={item.title}>
+                  {item.href ? (
+                    <Link href={item.href} className="transition-colors hover:text-foreground">
+                      {item.title}
+                    </Link>
+                  ) : (
+                    <details className="group">
+                      <summary className="w-fit cursor-pointer list-none transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+                        {item.title}
+                        <span className="ml-2 text-xs text-accent group-open:hidden" aria-hidden>
+                          +
+                        </span>
+                        <span className="ml-2 hidden text-xs text-accent group-open:inline" aria-hidden>
+                          −
+                        </span>
+                      </summary>
+                      <div className="mt-2 mb-4 max-w-sm space-y-3 text-xs leading-relaxed">
+                        {item.parts.length === 0 && <p>Kommer snart.</p>}
+                        {item.parts.map((part, i) => (
+                          <div key={i}>
+                            {part.heading && (
+                              <h3 className="font-medium text-foreground">{part.heading}</h3>
+                            )}
+                            {part.href ? (
+                              <Link href={part.href} className="link-underline text-accent">
+                                {part.text}
+                              </Link>
+                            ) : (
+                              <p className="whitespace-pre-line">{part.text}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </details>
+                  )}
+                </li>
+              ))}
+              <li>
+                <Link href="/about" className="transition-colors hover:text-foreground">
+                  Om Idun
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

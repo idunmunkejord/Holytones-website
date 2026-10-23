@@ -18,8 +18,50 @@ export const company = {
   name: "Pedersen Interaktiv",
   form: "sole proprietorship",
   orgNumber: "927 929 783",
-  offering: "Books, courses, and music",
+  offering: "Bøker, kurs og musikk",
 };
+
+// Customer service sections at the bottom of the Contact page. An item with `href` links to its
+// own page; the others open to show their parts (an optional subheading plus text, which links
+// when it has `href`). One with no parts yet says the details are coming soon.
+export type CustomerServicePart = { heading?: string; text: string; href?: string };
+
+export const customerService: { title: string; href?: string; parts: CustomerServicePart[] }[] = [
+  { title: "Salgsbetingelser", href: "/salgsbetingelser", parts: [] },
+  {
+    title: "Frakt og retur",
+    parts: [
+      {
+        heading: "Priser og betaling",
+        text: "Alle priser oppgis i norske kroner. Fraktkostnader vises før betaling. Du kan betale med betalingsmåtene som tilbys i nettbutikken.",
+      },
+      {
+        heading: "Frakt og levering",
+        text: "Vi sender bøker til hele Norge.\nForventet leveringstid er 3–10 dager. Frakt beregnes ved bestilling.",
+      },
+      {
+        heading: "Retur og angrerett",
+        text: "Du har 14 dagers angrerett fra dagen etter at du mottar boken.\nØnsker du å returnere en bok, kontakt oss på post@holytones.no innen fristen.\nBoken må sendes tilbake innen 14 dager etter at du har meldt fra. Du betaler selv returportoen.\nKjøpesummen og ordinær frakt refunderes i henhold til angrerettloven.",
+      },
+      {
+        heading: "Returadresse",
+        text: "Pedersen Interaktiv (Holytones)\nKrooddveien 9b\n4624 Kristiansand",
+      },
+      {
+        heading: "Reklamasjon",
+        text: "Dersom boken er skadet, feiltrykt eller du har mottatt feil vare, kontakt oss på post@holytones.no.\nVi hjelper deg i samsvar med forbrukerkjøpsloven.",
+      },
+      {
+        heading: "Kontakt",
+        text: "Holytones – Pedersen Interaktiv\nE-post: post@holytones.no\nTelefon: 971 91 960",
+      },
+      {
+        text: "For fullstendige kjøpsvilkår, se våre salgsbetingelser.",
+        href: "/salgsbetingelser",
+      },
+    ],
+  },
+];
 
 export const links = {
   // The weekly devotional's Substack publication, e.g. "https://holytones.substack.com".

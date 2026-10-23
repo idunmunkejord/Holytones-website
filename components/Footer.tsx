@@ -1,4 +1,4 @@
-import { company, links } from "@/lib/site-config";
+import { links } from "@/lib/site-config";
 import SocialLinks from "@/components/SocialLinks";
 
 export default function Footer() {
@@ -19,18 +19,9 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="space-y-1 text-xs leading-relaxed text-foreground-muted/70">
-          <p>© {new Date().getFullYear()} Holytones. All rights reserved.</p>
-          <details>
-            <summary className="w-fit cursor-pointer list-none uppercase tracking-[0.18em] transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
-              Sales terms
-            </summary>
-            <p className="mt-2">
-              Holytones is run by {company.name} ({company.form}), org. no. {company.orgNumber} ·{" "}
-              {links.email} · {company.offering}.
-            </p>
-          </details>
-        </div>
+        <p className="text-xs text-foreground-muted/70">
+          © {new Date().getFullYear()} Holytones. All rights reserved.
+        </p>
       </div>
     </footer>
   );
