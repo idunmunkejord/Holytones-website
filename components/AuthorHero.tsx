@@ -75,15 +75,6 @@ export default function AuthorHero() {
                   God, and understanding who He is changes how you understand yourself, your
                   purpose, and the life you have been given.
                 </p>
-                <p>
-                  I&apos;m Idun Munkejord, an author, educator, and creator of Holytones. Through my
-                  books, courses, and music, I explore the beliefs that shape your understanding of
-                  yourself and the world around you. Drawing on personal experience, years of
-                  working with people, and the truth of Scripture, I invite you to question the
-                  promises of modern self-help, examine what you have come to believe, and discover
-                  the difference between a life built on self-reliance and one rooted in a
-                  relationship with God.
-                </p>
               </div>
             </div>
           </div>

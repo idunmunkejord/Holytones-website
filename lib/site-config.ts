@@ -10,7 +10,7 @@ export const siteConfig = {
   // Author portrait for the homepage hero. Drop the photo into /public/images
   // and set its path here (e.g. "/images/idun-munkejord.jpg"). A portrait
   // (roughly 4:5) works best. Leave empty to show a soft placeholder.
-  authorPhoto: "",
+  authorPhoto: "/images/idun-munkejord.webp",
 };
 
 export const links = {
