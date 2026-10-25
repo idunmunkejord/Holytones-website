@@ -18,7 +18,7 @@ export default function DevotionalSignup() {
           A Moment of Truth. Once a Week.
         </h2>
         <p className="mt-3 font-serif-display text-base italic leading-snug text-accent md:text-lg">
-          One Scripture. One Reflection. A Different Way to See Your Life.
+          A Different Way to See Your Life.
         </p>
         <div className="mt-6 space-y-4 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
           <p>
