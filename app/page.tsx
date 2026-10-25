@@ -24,14 +24,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="border-t border-border-soft px-6 py-10 md:px-10 md:py-14">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif-display text-[1.375rem] leading-[1.25] text-foreground md:text-[1.625rem]">
-            Welcome. I&apos;m glad you&apos;re here.
-          </h2>
-        </div>
-      </section>
     </>
   );
 }

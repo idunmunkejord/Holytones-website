@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   description: "The story behind Holytones — music, books, courses, and creative work by Idun Munkejord.",
 };
 
-const languages = ["English", "Norwegian", "Spanish"];
 
 export default function AboutPage() {
   return (
@@ -66,27 +65,10 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-3xl border-t border-border-soft pt-10">
-          <SectionLabel>Written &amp; released in</SectionLabel>
-          <ul className="flex flex-wrap gap-x-8 gap-y-3">
-            {languages.map((lang) => (
-              <li
-                key={lang}
-                className="font-serif-display text-lg text-foreground md:text-xl"
-              >
-                {lang}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mx-auto mt-16 max-w-3xl border-t border-border-soft pt-10">
-          <p className="font-serif-display text-xl italic leading-relaxed text-foreground md:text-2xl">
-            &ldquo;I make the work I needed to find, and hope it finds someone who needs it too.&rdquo;
-          </p>
-          <div className="mt-8 flex flex-wrap gap-6">
+        <div className="mx-auto mt-16 max-w-5xl border-t border-border-soft pt-10">
+          <div className="flex flex-wrap gap-6">
             <Link
-              href="/music"
+              href="/#my-work"
               className="border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
             >
               Explore the work

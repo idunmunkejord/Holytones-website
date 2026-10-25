@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { links } from "@/lib/site-config";
 
-// Weekly devotional signup. Subscribers go straight to the Substack publication in
-// `links.substack` through Substack's own embedded form; nothing is stored by this site.
+// Weekly devotional signup. The button opens the Substack publication in `links.substack`,
+// where visitors subscribe; nothing is stored by this site.
 
 export default function DevotionalSignup() {
   const substack = links.substack.replace(/\/+$/, "");
@@ -45,27 +45,15 @@ export default function DevotionalSignup() {
         </h3>
 
         {substack ? (
-          <>
-            {/* Substack's official embedded signup form, used as Substack provides it. */}
-            <iframe
-              src={`${substack}/embed`}
-              title="Subscribe to the Holytones weekly devotional on Substack"
-              width="100%"
-              height="320"
-              className="mt-6 block w-full"
-              style={{ border: "1px solid #EEE", background: "white" }}
-              frameBorder="0"
-              scrolling="no"
-            />
-            <a
-              href={`${substack}/subscribe`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 block w-full bg-accent px-6 py-3.5 text-center text-xs uppercase tracking-[0.2em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              Send Me the Devotionals
-            </a>
-          </>
+          // Opens the Substack signup page, where visitors enter their email.
+          <a
+            href={`${substack}/subscribe`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 block w-full bg-accent px-6 py-3.5 text-center text-xs uppercase tracking-[0.2em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            Send Me the Devotionals
+          </a>
         ) : (
           <p className="mt-6 border border-dashed border-border-soft px-4 py-5 text-center text-sm text-foreground-muted">
             Subscriptions open soon.
@@ -73,7 +61,7 @@ export default function DevotionalSignup() {
         )}
 
         <p className="mt-5 text-xs leading-relaxed text-foreground-muted">
-          Free to join. Unsubscribe whenever you choose.{" "}
+          Free weekly reflections from Holytones. Free to join. Unsubscribe whenever you choose.{" "}
           <Link href="/personvern" className="link-underline text-accent">
             Privacy policy
           </Link>

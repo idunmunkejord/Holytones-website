@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-
   whenever one is ready.
 - **Author photo**: set `authorPhoto` in `lib/site-config.ts` to a portrait in `public/images`.
 - **Weekly devotional (Substack)**: the homepage signup (`components/DevotionalSignup.tsx`)
-  embeds Substack's official signup form, so subscribers go straight to the Substack publication.
+  links to the Substack publication's signup page, so subscribers go straight into Substack.
   Set `links.substack` in `lib/site-config.ts` to the publication URL to switch it on; until then
   it shows "Subscriptions open soon" and no form.
 - **Contact form**: `components/ContactForm.tsx` opens the visitor's email client with a
