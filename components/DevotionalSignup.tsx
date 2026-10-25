@@ -17,7 +17,7 @@ export default function DevotionalSignup() {
         <h2 className="mt-4 font-serif-display text-[1.375rem] leading-[1.25] text-foreground md:text-[1.625rem]">
           Weekly Devotional
         </h2>
-        <p className="mt-4 text-base font-medium leading-snug text-accent md:text-[1.0625rem]">
+        <p className="mt-4 text-base leading-snug text-accent md:text-[1.0625rem]">
           What if the thought exhausting you is not true?
         </p>
         <div className="mt-4 space-y-4 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
@@ -38,7 +38,7 @@ export default function DevotionalSignup() {
 
       <div className="border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
         <h3 className="font-serif-display text-xl text-foreground">
-          Holytones Weekly Devotional here.
+          Weekly Devotional Holytones
         </h3>
 
         {substack ? (

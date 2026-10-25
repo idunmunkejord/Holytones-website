@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-6 border-t border-border-soft pt-8 md:flex-row md:items-center md:justify-between">
-          <SocialLinks hide={["appleMusic"]} />
+          <SocialLinks />
           <a
             href={`mailto:${links.email}`}
             className="link-underline text-sm text-foreground-muted hover:text-foreground"

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ContactForm from "@/components/ContactForm";
-import SocialLinks from "@/components/SocialLinks";
 import Link from "next/link";
 import { company, customerService, links } from "@/lib/site-config";
 
@@ -15,37 +14,21 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="border-b border-border-soft bg-background-alt px-6 pt-20 pb-16 md:px-10 md:pt-28">
+      <section className="px-6 py-14 md:px-10 md:py-20">
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Contact</SectionLabel>
-          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
-            Get in touch
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground-muted">
-            Booking requests, press inquiries, collaborations, or just a note to say hello — all
-            welcome.
-          </p>
-        </div>
-      </section>
+          <h1 className="sr-only">Contact</h1>
+          <div className="mt-2 grid gap-10 border border-border-soft bg-surface px-6 py-8 sm:px-10 sm:py-10 md:grid-cols-[1.4fr_1fr] md:gap-14">
+            <ContactForm />
 
-      <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto grid max-w-4xl gap-16 md:grid-cols-[1.2fr_1fr]">
-          <ContactForm />
-
-          <div className="space-y-10">
-            <div>
-              <SectionLabel>Direct</SectionLabel>
+            <div className="md:border-l md:border-border-soft md:pl-10">
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-foreground">Direct</p>
               <a
                 href={`mailto:${links.email}`}
-                className="link-underline font-serif-display text-2xl text-foreground"
+                className="link-underline font-serif-display text-xl text-foreground"
               >
                 {links.email}
               </a>
-            </div>
-
-            <div>
-              <SectionLabel>Follow along</SectionLabel>
-              <SocialLinks className="flex-col gap-3" />
             </div>
           </div>
         </div>

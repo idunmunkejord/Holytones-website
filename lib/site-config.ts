@@ -69,7 +69,7 @@ export const links = {
   // The homepage signup embeds Substack's own form from it. Leave empty until it exists.
   substack: "https://idunmunkejord.substack.com",
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
-  appleMusic: "https://music.apple.com/artist/REPLACE_WITH_APPLE_ID",
+  appleMusic: "https://music.apple.com/artist/holytones/6773490843",
   youtube: "https://www.youtube.com/@holytones",
   email: "post@holytones.no",
   // Public site key for the Cloudflare Turnstile spam check on the contact form.
