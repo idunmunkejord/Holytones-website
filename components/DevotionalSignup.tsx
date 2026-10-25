@@ -17,10 +17,7 @@ export default function DevotionalSignup() {
         <h2 className="mt-4 font-serif-display text-[1.375rem] leading-[1.25] text-foreground md:text-[1.625rem]">
           Weekly Devotional
         </h2>
-        <p className="mt-3 font-serif-display text-base italic leading-snug text-accent md:text-lg">
-          A Moment of Truth. Once a Week.
-        </p>
-        <p className="mt-6 text-base font-medium leading-snug text-accent md:text-[1.0625rem]">
+        <p className="mt-4 text-base font-medium leading-snug text-accent md:text-[1.0625rem]">
           What if the thought exhausting you is not true?
         </p>
         <div className="mt-4 space-y-4 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
@@ -41,7 +38,7 @@ export default function DevotionalSignup() {
 
       <div className="border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
         <h3 className="font-serif-display text-xl text-foreground">
-          Sign up for the Holytones Weekly Devotional here.
+          Holytones Weekly Devotional here.
         </h3>
 
         {substack ? (
@@ -52,7 +49,7 @@ export default function DevotionalSignup() {
             rel="noopener noreferrer"
             className="mt-6 block w-full bg-accent px-6 py-3.5 text-center text-xs uppercase tracking-[0.2em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Send Me the Devotionals
+            Send Devotionals
           </a>
         ) : (
           <p className="mt-6 border border-dashed border-border-soft px-4 py-5 text-center text-sm text-foreground-muted">
@@ -61,7 +58,7 @@ export default function DevotionalSignup() {
         )}
 
         <p className="mt-5 text-xs leading-relaxed text-foreground-muted">
-          Free weekly reflections from Holytones. Free to join. Unsubscribe whenever you choose.{" "}
+          Free to join. Free weekly reflections from Holytones.{" "}
           <Link href="/personvern" className="link-underline text-accent">
             Privacy policy
           </Link>
