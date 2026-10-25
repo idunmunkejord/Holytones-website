@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
+import OrderForm from "@/components/OrderForm";
 import { books } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -88,6 +89,7 @@ export default function BooksPage() {
                   <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
                     {book.note}
                   </p>
+                  <OrderForm bookTitle={book.title} />
                 </div>
               </div>
             </div>
