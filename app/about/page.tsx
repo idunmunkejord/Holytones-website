@@ -29,13 +29,9 @@ export default function AboutPage() {
                 I&apos;m Idun Munkejord, an author, educator, and creator of Holytones. My
                 professional background includes leadership, teaching, mentoring, and further
                 studies in leadership, emotional competence and interpersonal intelligence.
-                Throughout my career, I have been
-                deeply interested in what shapes human behavior, how people develop, and what helps
-                them overcome the challenges they face.
+                Throughout my career, I have been deeply interested in what shapes human behavior,
+                how people develop, and what helps them overcome the challenges they face.
               </p>
-            </div>
-
-            <ReadMore className={storyClass} moreLabel="Read My Story ↓">
               <p>
                 For many years, personal growth was part of both my professional world and my
                 own journey. I understood the appeal of becoming stronger, more capable, and better
@@ -43,6 +39,9 @@ export default function AboutPage() {
                 the assumptions beneath that pursuit, particularly the belief that lasting freedom
                 could be found through greater confidence in myself.
               </p>
+            </div>
+
+            <ReadMore className={storyClass} moreLabel="Read My Story ↓">
               <p>
                 My relationship with God changed the way I understood personal growth. I began to
                 see that there is a profound difference between developing your potential and
