@@ -7,7 +7,7 @@ export default function AuthorHero() {
     <section className="px-6 py-12 md:px-10 md:py-16">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <h1 className="font-serif-display text-[1.75rem] leading-[1.2] text-foreground md:text-[2.125rem]">
+          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
             What if the greatest lie you&apos;ve believed is that everything depends on you?
           </h1>
 

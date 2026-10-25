@@ -37,7 +37,7 @@ export default function PolicyPage({
     <section className="px-6 py-14 md:px-10 md:py-20">
       <div className="mx-auto max-w-3xl">
         <SectionLabel>Kundeservice</SectionLabel>
-        <h1 className="font-serif-display text-[1.875rem] leading-[1.2] text-foreground md:text-[2.375rem]">
+        <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
           {policy.title}
         </h1>
         <p className="mt-3 text-xs uppercase tracking-[0.2em] text-accent-gold">

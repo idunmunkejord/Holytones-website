@@ -12,8 +12,8 @@ export default function SkinPage() {
     <section className="flex min-h-[60vh] items-center border-b border-border-soft px-6 py-24 md:px-10">
       <div className="mx-auto max-w-2xl text-center">
         <SectionLabel>In progress</SectionLabel>
-        <h1 className="font-serif-display text-5xl text-foreground md:text-6xl">Skin</h1>
-        <p className="mt-5 text-base leading-relaxed text-foreground-muted md:text-lg">
+        <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">Skin</h1>
+        <p className="mt-5 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
           This space is still taking shape. Come back soon to see what it becomes, or join the
           mailing list to hear when it launches.
         </p>

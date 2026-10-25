@@ -77,7 +77,7 @@ export default function ContactForm() {
   if (status === "sent") {
     return (
       <div role="status">
-        <h2 className="font-serif-display text-3xl text-foreground">Thank you</h2>
+        <h2 className="font-serif-display text-2xl text-foreground">Thank you</h2>
         <p className="mt-4 max-w-md text-base leading-relaxed text-foreground-muted">
           Your message is on its way. We&apos;ll reply to {email} as soon as we can.
         </p>

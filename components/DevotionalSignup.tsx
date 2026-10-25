@@ -14,10 +14,10 @@ export default function DevotionalSignup() {
           <span className="h-px w-8 bg-accent-gold/70" aria-hidden />
           Holytones | Weekly Devotional
         </p>
-        <h2 className="mt-4 font-serif-display text-[1.625rem] leading-[1.2] text-foreground md:text-[1.875rem]">
+        <h2 className="mt-4 font-serif-display text-[1.375rem] leading-[1.25] text-foreground md:text-[1.625rem]">
           A Moment of Truth. Once a Week.
         </h2>
-        <p className="mt-3 font-serif-display text-lg italic leading-snug text-accent md:text-xl">
+        <p className="mt-3 font-serif-display text-base italic leading-snug text-accent md:text-lg">
           One Scripture. One Reflection. A Different Way to See Your Life.
         </p>
         <div className="mt-6 space-y-4 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
@@ -35,7 +35,7 @@ export default function DevotionalSignup() {
       </div>
 
       <div className="border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
-        <h3 className="font-serif-display text-2xl text-foreground">
+        <h3 className="font-serif-display text-xl text-foreground">
           Receive Your Weekly Devotional
         </h3>
         <p className="mt-2 text-[15px] leading-relaxed text-foreground-muted">

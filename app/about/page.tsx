@@ -21,7 +21,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-5xl items-start gap-12 md:grid-cols-[1fr_16rem] md:gap-16 lg:grid-cols-[1fr_18rem]">
           <div className="max-w-2xl">
             <SectionLabel>About</SectionLabel>
-            <h1 className="font-serif-display text-[1.875rem] leading-[1.2] text-foreground md:text-[2.375rem]">
+            <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
               I know what it means to search for answers in the wrong places.
             </h1>
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
             {languages.map((lang) => (
               <li
                 key={lang}
-                className="font-serif-display text-xl text-foreground md:text-2xl"
+                className="font-serif-display text-lg text-foreground md:text-xl"
               >
                 {lang}
               </li>
@@ -81,7 +81,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mx-auto mt-16 max-w-3xl border-t border-border-soft pt-10">
-          <p className="font-serif-display text-2xl italic leading-relaxed text-foreground md:text-3xl">
+          <p className="font-serif-display text-xl italic leading-relaxed text-foreground md:text-2xl">
             &ldquo;I make the work I needed to find, and hope it finds someone who needs it too.&rdquo;
           </p>
           <div className="mt-8 flex flex-wrap gap-6">

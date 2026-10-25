@@ -5,7 +5,7 @@ export default function NotFound() {
     <section className="flex min-h-[70vh] items-center justify-center px-6 text-center">
       <div>
         <p className="text-xs uppercase tracking-[0.3em] text-accent">404</p>
-        <h1 className="mt-4 font-serif-display text-4xl text-foreground md:text-5xl">
+        <h1 className="mt-4 font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
           This page went quiet.
         </h1>
         <p className="mt-4 text-foreground-muted">

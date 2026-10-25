@@ -18,7 +18,7 @@ export default function ContactPage() {
       <section className="border-b border-border-soft bg-background-alt px-6 pt-20 pb-16 md:px-10 md:pt-28">
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Contact</SectionLabel>
-          <h1 className="font-serif-display text-5xl text-foreground md:text-6xl">
+          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
             Get in touch
           </h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground-muted">

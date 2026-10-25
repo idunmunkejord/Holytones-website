@@ -33,7 +33,7 @@ export default function CategoryCard({ category }: { category: Category }) {
       className={`group flex flex-col justify-between border border-border-soft border-t-[3px] ${tone.top} bg-surface px-8 py-10 transition-colors`}
     >
       <div>
-        <h3 className="font-serif-display text-3xl text-foreground">{category.label}</h3>
+        <h3 className="font-serif-display text-2xl text-foreground">{category.label}</h3>
         <p className="mt-3 text-sm leading-relaxed text-foreground-muted">{category.blurb}</p>
       </div>
       <span

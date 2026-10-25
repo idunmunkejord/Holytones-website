@@ -14,7 +14,7 @@ export default function BooksPage() {
       <section className="border-b border-border-soft bg-background-alt px-6 pt-20 pb-16 md:px-10 md:pt-28">
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Words on the page</SectionLabel>
-          <h1 className="font-serif-display text-5xl text-foreground md:text-6xl">Books</h1>
+          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">Books</h1>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground-muted">
             Faith-rooted books, written primarily for readers ready to trade easy comfort for
             honest truth.

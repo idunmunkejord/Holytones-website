@@ -25,12 +25,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-border-soft px-6 py-24 md:px-10 md:py-32">
+      <section className="border-t border-border-soft px-6 py-14 md:px-10 md:py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif-display text-4xl text-foreground md:text-5xl">
+          <h2 className="font-serif-display text-[1.375rem] leading-[1.25] text-foreground md:text-[1.625rem]">
             Welcome. I&apos;m glad you&apos;re here.
           </h2>
-          <div className="mt-8 space-y-6 text-base leading-relaxed text-foreground-muted md:text-lg">
+          <div className="mt-8 space-y-6 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
             <p>
               Whether you&apos;re questioning something you&apos;ve always believed, searching for
               a deeper understanding of your Christian faith, or simply tired of the pressure to
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className="mt-12">
             <span className="mx-auto block h-px w-12 bg-accent/60" aria-hidden />
-            <p className="mt-6 font-serif-display text-3xl italic text-foreground">
+            <p className="mt-6 font-serif-display text-2xl italic text-foreground">
               Idun Munkejord
             </p>
             <p className="mt-2 text-xs uppercase tracking-[0.2em] text-accent">
