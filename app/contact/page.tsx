@@ -18,7 +18,12 @@ export default function ContactPage() {
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Contact</SectionLabel>
           <h1 className="sr-only">Contact</h1>
-          <div className="mt-2 grid gap-10 border border-border-soft bg-surface px-6 py-8 sm:px-10 sm:py-10 md:grid-cols-[1.4fr_1fr] md:gap-14">
+          <p className="max-w-2xl text-[15px] leading-[1.75] text-foreground-muted md:text-base">
+            Whether you have a question about my books, courses, or music, want to share something
+            that has touched your heart, or simply feel like reaching out, you&apos;re always welcome
+            to get in touch.
+          </p>
+          <div className="mt-8 grid gap-10 border border-border-soft bg-surface px-6 py-8 sm:px-10 sm:py-10 md:grid-cols-[1.4fr_1fr] md:gap-14">
             <ContactForm />
 
             <div className="md:border-l md:border-border-soft md:pl-10">

@@ -99,7 +99,6 @@ export default function ContactForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className={inputClass}
-            placeholder="Your name"
           />
         </label>
         <label className="flex flex-col gap-2">
@@ -113,7 +112,6 @@ export default function ContactForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={inputClass}
-            placeholder="you@example.com"
           />
         </label>
       </div>
@@ -128,7 +126,6 @@ export default function ContactForm() {
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
           className={inputClass}
-          placeholder="What is this about?"
         />
       </label>
 
@@ -142,7 +139,6 @@ export default function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className={`resize-none ${inputClass}`}
-          placeholder="Booking inquiry, press request, or just a hello..."
         />
       </label>
 
