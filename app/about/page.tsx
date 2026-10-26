@@ -49,16 +49,6 @@ export default function AboutPage() {
                 heart and the mind, and that discovering who God is changes how you understand
                 yourself and the world around you.
               </p>
-              <p className="text-sm">
-                <a
-                  href={links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-border-soft underline-offset-4 transition-colors hover:text-foreground"
-                >
-                  LinkedIn
-                </a>
-              </p>
             </ReadMore>
           </div>
 
