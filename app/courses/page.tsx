@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
@@ -15,10 +16,21 @@ export default function CoursesPage() {
   return (
     <>
       <section className="border-b border-border-soft bg-background-alt px-6 pt-14 pb-16 md:px-10 md:pt-20">
-        <div className="mx-auto max-w-4xl">
-          <SectionLabel>Courses</SectionLabel>
-          <h1 className="sr-only">Courses</h1>
+        <div className="mx-auto grid max-w-6xl items-start gap-10 md:grid-cols-2 md:gap-14">
+          <div className="relative aspect-[3/2] overflow-hidden border border-border-soft md:mt-10">
+            <Image
+              src="/images/courses-sessions.webp"
+              alt="Idun in conversation with a small group in a bright living room"
+              fill
+              priority
+              sizes="(min-width: 1152px) 548px, (min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+
           <div className="max-w-2xl">
+            <SectionLabel>Courses</SectionLabel>
+            <h1 className="sr-only">Courses</h1>
             <p className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
               Your worth is already given. You do not have to spend your life trying to earn it.
             </p>
