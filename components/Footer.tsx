@@ -1,9 +1,18 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { links } from "@/lib/site-config";
 import SocialLinks from "@/components/SocialLinks";
 
+// Pages whose last section is already dark get a light footer so the two stay distinct.
+const lightFooterPaths = ["/", "/about"];
+
 export default function Footer() {
+  const pathname = usePathname();
+  const background = lightFooterPaths.includes(pathname) ? "bg-background" : "bg-background-alt";
+
   return (
-    <footer className="border-t border-border-soft bg-background-alt">
+    <footer className={`border-t border-border-soft ${background}`}>
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14 md:px-10">
         <div className="max-w-sm">
           <p className="font-serif-display text-2xl text-foreground">Holytones</p>
