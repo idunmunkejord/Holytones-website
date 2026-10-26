@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function MusicPage() {
   return (
     <>
-      <section className="border-b border-border-soft bg-background-alt px-6 pt-20 pb-16 md:px-10 md:pt-28">
+      <section className="border-b border-border-soft bg-background-alt px-6 pt-14 pb-16 md:px-10 md:pt-20">
         <div className="mx-auto max-w-4xl">
-          <SectionLabel>Discography</SectionLabel>
-          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">Music</h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground-muted">
+          <SectionLabel>Music</SectionLabel>
+          <h1 className="sr-only">Music</h1>
+          <p className="max-w-xl text-base leading-relaxed text-foreground-muted">
             New singles arrive every four to six weeks, released across languages as each song
             finds its voice. Find the full catalogue on Spotify and Apple Music.
           </p>

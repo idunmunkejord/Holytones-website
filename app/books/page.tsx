@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 export default function BooksPage() {
   return (
     <>
-      <section className="border-b border-border-soft bg-background-alt px-6 pt-20 pb-16 md:px-10 md:pt-28">
+      <section className="border-b border-border-soft bg-background-alt px-6 pt-14 pb-16 md:px-10 md:pt-20">
         <div className="mx-auto max-w-4xl">
-          <SectionLabel>Words on the page</SectionLabel>
-          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">Books</h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-foreground-muted">
+          <SectionLabel>Books</SectionLabel>
+          <h1 className="sr-only">Books</h1>
+          <p className="max-w-xl text-base leading-relaxed text-foreground-muted">
             Faith-rooted books, written primarily for readers ready to trade easy comfort for
             honest truth.
           </p>
