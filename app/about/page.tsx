@@ -32,9 +32,6 @@ export default function AboutPage() {
                 the assumptions beneath that pursuit, particularly the belief that lasting freedom
                 could be found through greater confidence in myself.
               </p>
-            </div>
-
-            <ReadMore className={storyClass} moreLabel="Read My Story ↓">
               <p>
                 My relationship with God changed the way I understood personal growth. I began to
                 see that there is a profound difference between developing your potential and
@@ -42,6 +39,9 @@ export default function AboutPage() {
                 responsibility remain important, they cannot provide everything the human heart
                 needs.
               </p>
+            </div>
+
+            <ReadMore className={storyClass} moreLabel="Read My Story ↓">
               <p>
                 Today, my writing, teaching, and music grow out of that understanding. I want to
                 communicate biblical truth in a way that is thoughtful, accessible, and relevant to
