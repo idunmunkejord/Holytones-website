@@ -1,5 +1,12 @@
 {
   "artistId": "7Ku7VA1XgZC0OPHhH0Zg1b",
+  "appleMusic": {
+    "artistId": "6773490843",
+    "country": "no",
+    "extraAlbumIds": [
+      "1885796049"
+    ]
+  },
   "releases": [
     {
       "id": "0IPc0Bh8fdfEpmaKYtpCA4",
@@ -13,9 +20,11 @@
           "id": "0WaO7RwNP5Wk2kKqOIoUhs",
           "title": "I still believe in miracles",
           "durationMs": 303960,
-          "url": "https://open.spotify.com/track/0WaO7RwNP5Wk2kKqOIoUhs"
+          "url": "https://open.spotify.com/track/0WaO7RwNP5Wk2kKqOIoUhs",
+          "appleMusicUrl": "https://music.apple.com/album/i-still-believe-in-miracles/6815323293?i=6815323296"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/i-still-believe-in-miracles-single/6815323293"
     },
     {
       "id": "7eA2U6Wy7VVEt0gaIn82pK",
@@ -29,9 +38,11 @@
           "id": "5SQ5O4fWju9u5sey42GtO0",
           "title": "Protect my children, Lord",
           "durationMs": 359240,
-          "url": "https://open.spotify.com/track/5SQ5O4fWju9u5sey42GtO0"
+          "url": "https://open.spotify.com/track/5SQ5O4fWju9u5sey42GtO0",
+          "appleMusicUrl": "https://music.apple.com/album/protect-my-children-lord/6812359832?i=6812359833"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/protect-my-children-lord-single/6812359832"
     },
     {
       "id": "1K57a7qncptknA3DthyVAg",
@@ -45,9 +56,11 @@
           "id": "5Xp4yexU0yABVajn6CtCXB",
           "title": "En el silencio",
           "durationMs": 263999,
-          "url": "https://open.spotify.com/track/5Xp4yexU0yABVajn6CtCXB"
+          "url": "https://open.spotify.com/track/5Xp4yexU0yABVajn6CtCXB",
+          "appleMusicUrl": "https://music.apple.com/album/en-el-silencio/6798821450?i=6798821451"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/en-el-silencio-single/6798821450"
     },
     {
       "id": "4LjHceTPmHRW7M6yzs5rrH",
@@ -61,9 +74,11 @@
           "id": "4f7Q0X8fGRgjm9o5VjyvdJ",
           "title": "I tausheten",
           "durationMs": 255373,
-          "url": "https://open.spotify.com/track/4f7Q0X8fGRgjm9o5VjyvdJ"
+          "url": "https://open.spotify.com/track/4f7Q0X8fGRgjm9o5VjyvdJ",
+          "appleMusicUrl": "https://music.apple.com/album/i-tausheten/6797482140?i=6797482295"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/i-tausheten-single/6797482140"
     },
     {
       "id": "22hjxTRD0Lz0Ctkqr1vno4",
@@ -77,9 +92,11 @@
           "id": "1tL6L7n1dfL2M1scoa0PyM",
           "title": "In the silence",
           "durationMs": 268770,
-          "url": "https://open.spotify.com/track/1tL6L7n1dfL2M1scoa0PyM"
+          "url": "https://open.spotify.com/track/1tL6L7n1dfL2M1scoa0PyM",
+          "appleMusicUrl": "https://music.apple.com/album/in-the-silence/6797501556?i=6797501557"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/in-the-silence-single/6797501556"
     },
     {
       "id": "0NXIIsKHEqBxLeDn9KR8lo",
@@ -93,9 +110,11 @@
           "id": "72FbaHYfADhSwqB955fAPn",
           "title": "Nel Silenzio",
           "durationMs": 248719,
-          "url": "https://open.spotify.com/track/72FbaHYfADhSwqB955fAPn"
+          "url": "https://open.spotify.com/track/72FbaHYfADhSwqB955fAPn",
+          "appleMusicUrl": "https://music.apple.com/album/nel-silenzio/6797501397?i=6797501398"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/nel-silenzio-single/6797501397"
     },
     {
       "id": "1rWnET6H3TrpBkoBo9xuYv",
@@ -109,63 +128,74 @@
           "id": "5p2xwmaIqFVtWGXsY8MnbZ",
           "title": "Through the valley",
           "durationMs": 203999,
-          "url": "https://open.spotify.com/track/5p2xwmaIqFVtWGXsY8MnbZ"
+          "url": "https://open.spotify.com/track/5p2xwmaIqFVtWGXsY8MnbZ",
+          "appleMusicUrl": "https://music.apple.com/album/through-the-valley/6788250956?i=6788250957"
         },
         {
           "id": "7gkxBKs4bsMEmH4msSw6j0",
           "title": "Come back to Jesus",
           "durationMs": 324159,
-          "url": "https://open.spotify.com/track/7gkxBKs4bsMEmH4msSw6j0"
+          "url": "https://open.spotify.com/track/7gkxBKs4bsMEmH4msSw6j0",
+          "appleMusicUrl": "https://music.apple.com/album/come-back-to-jesus/6788250956?i=6788250958"
         },
         {
           "id": "1wsYJne1eJfokoJ6w2xPte",
           "title": "Alive by grace",
           "durationMs": 214759,
-          "url": "https://open.spotify.com/track/1wsYJne1eJfokoJ6w2xPte"
+          "url": "https://open.spotify.com/track/1wsYJne1eJfokoJ6w2xPte",
+          "appleMusicUrl": "https://music.apple.com/album/alive-by-grace/6788250956?i=6788250959"
         },
         {
           "id": "3vvMHwIItN0XiaztbLou5F",
           "title": "Feed your soul",
           "durationMs": 384240,
-          "url": "https://open.spotify.com/track/3vvMHwIItN0XiaztbLou5F"
+          "url": "https://open.spotify.com/track/3vvMHwIItN0XiaztbLou5F",
+          "appleMusicUrl": "https://music.apple.com/album/feed-your-soul/6788250956?i=6788250960"
         },
         {
           "id": "6gsu4rpOjw23eDqXPMYWV4",
           "title": "The voice that whispers",
           "durationMs": 370759,
-          "url": "https://open.spotify.com/track/6gsu4rpOjw23eDqXPMYWV4"
+          "url": "https://open.spotify.com/track/6gsu4rpOjw23eDqXPMYWV4",
+          "appleMusicUrl": "https://music.apple.com/album/the-voice-that-whispers/6788250956?i=6788250961"
         },
         {
           "id": "6PM0607tCsrI47miLlKOmo",
           "title": "Let your light shine",
           "durationMs": 273039,
-          "url": "https://open.spotify.com/track/6PM0607tCsrI47miLlKOmo"
+          "url": "https://open.spotify.com/track/6PM0607tCsrI47miLlKOmo",
+          "appleMusicUrl": "https://music.apple.com/album/let-your-light-shine/6788250956?i=6788250962"
         },
         {
           "id": "0jp4V3mtziaxSpA7WxD6AF",
           "title": "For you know the plans you have for me",
           "durationMs": 384639,
-          "url": "https://open.spotify.com/track/0jp4V3mtziaxSpA7WxD6AF"
+          "url": "https://open.spotify.com/track/0jp4V3mtziaxSpA7WxD6AF",
+          "appleMusicUrl": "https://music.apple.com/album/for-you-know-the-plans-you-have-for-me/6788250956?i=6788250963"
         },
         {
           "id": "2kL552hbYEBLoHgljVkoTf",
           "title": "I lift my eyes up to the mountains",
           "durationMs": 272559,
-          "url": "https://open.spotify.com/track/2kL552hbYEBLoHgljVkoTf"
+          "url": "https://open.spotify.com/track/2kL552hbYEBLoHgljVkoTf",
+          "appleMusicUrl": "https://music.apple.com/album/i-lift-my-eyes-up-to-the-mountains/6788250956?i=6788250964"
         },
         {
           "id": "4THDrczNVYRTGubBxBfnxF",
           "title": "My spirit knew it was you",
           "durationMs": 304800,
-          "url": "https://open.spotify.com/track/4THDrczNVYRTGubBxBfnxF"
+          "url": "https://open.spotify.com/track/4THDrczNVYRTGubBxBfnxF",
+          "appleMusicUrl": "https://music.apple.com/album/my-spirit-knew-it-was-you/6788250956?i=6788250965"
         },
         {
           "id": "4dDS5R2KM4ja0R1svNuOCY",
           "title": "Resurrection",
           "durationMs": 348520,
-          "url": "https://open.spotify.com/track/4dDS5R2KM4ja0R1svNuOCY"
+          "url": "https://open.spotify.com/track/4dDS5R2KM4ja0R1svNuOCY",
+          "appleMusicUrl": "https://music.apple.com/album/resurrection/6788250956?i=6788250966"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/the-voice-that-whispers/6788250956"
     },
     {
       "id": "4HUr9dhSqQeF5UbMAxaP1H",
@@ -179,9 +209,11 @@
           "id": "0jlxUOWPTq7qhE5mZ9XKDE",
           "title": "Through the Valley",
           "durationMs": 203999,
-          "url": "https://open.spotify.com/track/0jlxUOWPTq7qhE5mZ9XKDE"
+          "url": "https://open.spotify.com/track/0jlxUOWPTq7qhE5mZ9XKDE",
+          "appleMusicUrl": "https://music.apple.com/album/through-the-valley/6773687598?i=6773687817"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/through-the-valley-single/6773687598"
     },
     {
       "id": "78RMRDkZCaU1hRzRco0HdF",
@@ -195,63 +227,74 @@
           "id": "5hxlkSZyEGB6iTSSx8uwOY",
           "title": "Barndomsdraumar",
           "durationMs": 379119,
-          "url": "https://open.spotify.com/track/5hxlkSZyEGB6iTSSx8uwOY"
+          "url": "https://open.spotify.com/track/5hxlkSZyEGB6iTSSx8uwOY",
+          "appleMusicUrl": "https://music.apple.com/album/barndomsdraumar/1885796049?i=1885796050"
         },
         {
           "id": "4ERYTf72WQa26WZJWfMoMe",
           "title": "Ein tidlaus draum",
           "durationMs": 320800,
-          "url": "https://open.spotify.com/track/4ERYTf72WQa26WZJWfMoMe"
+          "url": "https://open.spotify.com/track/4ERYTf72WQa26WZJWfMoMe",
+          "appleMusicUrl": "https://music.apple.com/album/ein-tidlaus-draum/1885796049?i=1885796052"
         },
         {
           "id": "0b8GEoKXeCYmfYLywcHHEq",
           "title": "Går det an å gløyma",
           "durationMs": 211759,
-          "url": "https://open.spotify.com/track/0b8GEoKXeCYmfYLywcHHEq"
+          "url": "https://open.spotify.com/track/0b8GEoKXeCYmfYLywcHHEq",
+          "appleMusicUrl": "https://music.apple.com/album/g%C3%A5r-det-an-%C3%A5-gl%C3%B8yma/1885796049?i=1885796053"
         },
         {
           "id": "7JnCZwGSTzY8loudFt9owi",
           "title": "Du er her og du meg ser",
           "durationMs": 307479,
-          "url": "https://open.spotify.com/track/7JnCZwGSTzY8loudFt9owi"
+          "url": "https://open.spotify.com/track/7JnCZwGSTzY8loudFt9owi",
+          "appleMusicUrl": "https://music.apple.com/album/du-er-her-og-du-meg-ser/1885796049?i=1885796054"
         },
         {
           "id": "0Pg3d0h0VRVYBDbv1y3yL7",
           "title": "Det evige",
           "durationMs": 194839,
-          "url": "https://open.spotify.com/track/0Pg3d0h0VRVYBDbv1y3yL7"
+          "url": "https://open.spotify.com/track/0Pg3d0h0VRVYBDbv1y3yL7",
+          "appleMusicUrl": "https://music.apple.com/album/det-evige/1885796049?i=1885796055"
         },
         {
           "id": "62hL2XPQpvLOVycAKRGh1D",
           "title": "Livet på smale stiar",
           "durationMs": 204839,
-          "url": "https://open.spotify.com/track/62hL2XPQpvLOVycAKRGh1D"
+          "url": "https://open.spotify.com/track/62hL2XPQpvLOVycAKRGh1D",
+          "appleMusicUrl": "https://music.apple.com/album/livet-p%C3%A5-smale-stiar/1885796049?i=1885796056"
         },
         {
           "id": "7hSAKrGXrdhaeIGsKnEpoV",
           "title": "A timeless dream",
           "durationMs": 249919,
-          "url": "https://open.spotify.com/track/7hSAKrGXrdhaeIGsKnEpoV"
+          "url": "https://open.spotify.com/track/7hSAKrGXrdhaeIGsKnEpoV",
+          "appleMusicUrl": "https://music.apple.com/album/a-timeless-dream/1885796049?i=1885796057"
         },
         {
           "id": "3mEPrX2EdUozr3yke2PaBC",
           "title": "Eit sterkt møte",
           "durationMs": 226879,
-          "url": "https://open.spotify.com/track/3mEPrX2EdUozr3yke2PaBC"
+          "url": "https://open.spotify.com/track/3mEPrX2EdUozr3yke2PaBC",
+          "appleMusicUrl": "https://music.apple.com/album/eit-sterkt-m%C3%B8te/1885796049?i=1885796058"
         },
         {
           "id": "4mDuJV6P0Ri8jaN29IDEBb",
           "title": "Is it possible to forget",
           "durationMs": 300999,
-          "url": "https://open.spotify.com/track/4mDuJV6P0Ri8jaN29IDEBb"
+          "url": "https://open.spotify.com/track/4mDuJV6P0Ri8jaN29IDEBb",
+          "appleMusicUrl": "https://music.apple.com/album/is-it-possible-to-forget/1885796049?i=1885796059"
         },
         {
           "id": "6AqamOhtGE2ujA5o0n6IFf",
           "title": "Slik vil Herren farga dagen din",
           "durationMs": 156559,
-          "url": "https://open.spotify.com/track/6AqamOhtGE2ujA5o0n6IFf"
+          "url": "https://open.spotify.com/track/6AqamOhtGE2ujA5o0n6IFf",
+          "appleMusicUrl": "https://music.apple.com/album/slik-vil-herren-farga-dagen-din/1885796049?i=1885796060"
         }
-      ]
+      ],
+      "appleMusicUrl": "https://music.apple.com/album/pappas-fotspor-ord-og-toner-fra-et-liv/1885796049"
     }
   ]
 }

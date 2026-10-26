@@ -23,8 +23,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-
 - `lib/site-config.ts` — all site copy, links, and content lists (books, courses, category
   cards, nav). Edit this file first for most content changes.
 - `lib/music-catalogue.json` — the albums, singles and songs on the Music page. It is generated
-  from Spotify by `scripts/sync-spotify.mjs`, which the `Sync music from Spotify` GitHub workflow
-  runs every Monday (it needs the `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` repository
+  from Spotify by `scripts/sync-spotify.mjs`, with Apple Music links added by
+  `scripts/sync-apple-music.mjs`. Both run in the `Sync music from Spotify` GitHub workflow every
+  Monday (it needs the `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` repository
   secrets). Don't edit it by hand.
 
 ## Things to finish before launch

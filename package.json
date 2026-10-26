@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync:music": "node scripts/sync-spotify.mjs"
+    "sync:music": "node scripts/sync-spotify.mjs",
+    "sync:apple-music": "node scripts/sync-apple-music.mjs"
   },
   "dependencies": {
     "next": "16.3.1",

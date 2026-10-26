@@ -4,6 +4,30 @@ import { formatDuration, formatReleaseDate, type ListedSong, type Release } from
 const listenLink =
   "link-underline text-xs uppercase tracking-[0.18em] text-foreground-muted hover:text-accent";
 
+// Lets visitors pick Spotify or Apple Music. Apple Music is left out when it has no match.
+function ListenLinks({
+  spotify,
+  appleMusic,
+  className = "",
+}: {
+  spotify: string;
+  appleMusic?: string;
+  className?: string;
+}) {
+  return (
+    <div className={`flex shrink-0 gap-4 ${className}`}>
+      <a href={spotify} target="_blank" rel="noopener noreferrer" className={listenLink}>
+        Spotify
+      </a>
+      {appleMusic && (
+        <a href={appleMusic} target="_blank" rel="noopener noreferrer" className={listenLink}>
+          Apple Music
+        </a>
+      )}
+    </div>
+  );
+}
+
 function Cover({ release, size }: { release: Release; size: number }) {
   return (
     <Image
@@ -41,24 +65,23 @@ export function AlbumCard({ album }: { album: Release }) {
           {album.tracks.map((track, index) => (
             <li
               key={track.id}
-              className="flex items-baseline gap-4 border-b border-border-soft py-3 last:border-b-0"
+              className="flex flex-wrap items-baseline gap-x-4 gap-y-1 border-b border-border-soft py-3 last:border-b-0"
             >
               <span className="w-6 text-sm text-foreground-muted/60">{index + 1}</span>
-              <a
-                href={track.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 text-foreground transition-colors hover:text-accent"
-              >
-                {track.title}
-              </a>
+              <span className="min-w-0 flex-1 text-foreground">{track.title}</span>
               <span className="text-sm text-foreground-muted">{formatDuration(track.durationMs)}</span>
+              <ListenLinks
+                spotify={track.url}
+                appleMusic={track.appleMusicUrl}
+                className="w-full pl-10 sm:w-auto sm:pl-0"
+              />
             </li>
           ))}
         </ol>
-        <a href={album.url} target="_blank" rel="noopener noreferrer" className={`mt-5 inline-block ${listenLink}`}>
-          Play album on Spotify
-        </a>
+        <div className="mt-5 flex flex-wrap items-baseline gap-4">
+          <span className="text-xs uppercase tracking-[0.18em] text-foreground">Whole album:</span>
+          <ListenLinks spotify={album.url} appleMusic={album.appleMusicUrl} />
+        </div>
       </div>
     </details>
   );
@@ -66,44 +89,35 @@ export function AlbumCard({ album }: { album: Release }) {
 
 export function SingleCard({ single }: { single: Release }) {
   return (
-    <a
-      href={single.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-5 border-b border-border-soft py-5 first:pt-0 last:border-b-0"
-    >
+    <div className="flex flex-wrap items-center gap-5 border-b border-border-soft py-5 first:pt-0 last:border-b-0">
       <Cover release={single} size={72} />
-      <div>
-        <h3 className="font-serif-display text-xl text-foreground transition-colors group-hover:text-accent">
-          {single.title}
-        </h3>
+      <div className="min-w-0 flex-1">
+        <h3 className="font-serif-display text-xl text-foreground">{single.title}</h3>
         <p className="mt-1 text-sm text-foreground-muted">{formatReleaseDate(single.releaseDate)}</p>
       </div>
-    </a>
+      <ListenLinks spotify={single.url} appleMusic={single.appleMusicUrl} />
+    </div>
   );
 }
 
 export function SongRow({ song, index }: { song: ListedSong; index: number }) {
   return (
-    <li className="flex items-baseline gap-4 border-b border-border-soft py-4 last:border-b-0 sm:gap-6">
+    <li className="flex flex-wrap items-baseline gap-x-4 gap-y-2 border-b border-border-soft py-4 last:border-b-0 sm:gap-x-6">
       <span className="w-8 font-serif-display text-lg text-foreground-muted/60">
         {String(index + 1).padStart(2, "0")}
       </span>
       <div className="min-w-0 flex-1">
-        <a
-          href={song.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-serif-display text-xl text-foreground transition-colors hover:text-accent"
-        >
-          {song.title}
-        </a>
+        <p className="font-serif-display text-xl text-foreground">{song.title}</p>
         <p className="mt-0.5 text-sm text-foreground-muted">
           {song.releaseTitle !== song.title && `${song.releaseTitle} · `}
-          {formatReleaseDate(song.releaseDate)}
+          {formatReleaseDate(song.releaseDate)} · {formatDuration(song.durationMs)}
         </p>
       </div>
-      <span className="text-sm text-foreground-muted">{formatDuration(song.durationMs)}</span>
+      <ListenLinks
+        spotify={song.url}
+        appleMusic={song.appleMusicUrl}
+        className="w-full pl-12 sm:w-auto sm:pl-0"
+      />
     </li>
   );
 }

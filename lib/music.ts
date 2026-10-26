@@ -1,12 +1,15 @@
 // Holytones releases, read from lib/music-catalogue.json. That file is regenerated from Spotify by
-// scripts/sync-spotify.mjs (run weekly by .github/workflows/sync-spotify.yml) — don't edit it by hand.
+// scripts/sync-spotify.mjs, with Apple Music links added by scripts/sync-apple-music.mjs (both run
+// weekly by .github/workflows/sync-spotify.yml) — don't edit it by hand.
 import catalogue from "@/lib/music-catalogue.json";
 
+// `url` is the Spotify link.
 export type Song = {
   id: string;
   title: string;
   durationMs: number;
   url: string;
+  appleMusicUrl?: string;
 };
 
 export type Release = {
@@ -15,6 +18,7 @@ export type Release = {
   type: "album" | "single";
   releaseDate: string;
   url: string;
+  appleMusicUrl?: string;
   cover: string;
   tracks: Song[];
 };

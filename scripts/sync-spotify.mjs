@@ -17,7 +17,8 @@ if (!clientId || !clientSecret) {
   process.exit(1);
 }
 
-const { artistId } = JSON.parse(await readFile(outputPath, "utf8"));
+const existing = JSON.parse(await readFile(outputPath, "utf8"));
+const { artistId } = existing;
 
 async function getToken() {
   const response = await fetch("https://accounts.spotify.com/api/token", {
@@ -97,5 +98,5 @@ for (const summary of summaries) {
 if (releases.length === 0) throw new Error("Spotify returned no releases; keeping the current catalogue.");
 
 releases.sort((a, b) => b.releaseDate.localeCompare(a.releaseDate) || a.title.localeCompare(b.title));
-await writeFile(outputPath, `${JSON.stringify({ artistId, releases }, null, 2)}\n`);
+await writeFile(outputPath, `${JSON.stringify({ ...existing, releases }, null, 2)}\n`);
 console.log(`Wrote ${releases.length} releases.`);

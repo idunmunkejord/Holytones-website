@@ -1,7 +1,7 @@
 name: Sync music from Spotify
 
-# Refreshes lib/music-catalogue.json from the Holytones artist on Spotify every Monday, and commits
-# it to main when something changed. Cloudflare then deploys the update to holytones.no.
+# Refreshes lib/music-catalogue.json from the Holytones artist on Spotify every Monday, adds the
+# matching Apple Music links, and commits it to main when something changed. Cloudflare then deploys the update to holytones.no.
 on:
   schedule:
     - cron: "0 6 * * 1"
@@ -25,6 +25,9 @@ jobs:
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+
+      - name: Add Apple Music links
+        run: node scripts/sync-apple-music.mjs
 
       - name: Commit changes
         run: |
