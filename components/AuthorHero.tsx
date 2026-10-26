@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
 
@@ -6,7 +7,18 @@ const bodyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted md
 export default function AuthorHero() {
   return (
     <section className="border-b border-border-soft bg-background-alt px-6 py-14 md:px-10 md:py-20">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 md:grid-cols-2 md:gap-14">
+        <div className="relative aspect-[1672/941] overflow-hidden border border-border-soft md:mt-10">
+          <Image
+            src="/images/home-hero.webp"
+            alt="A woman at her desk with her head in her hand, looking weary"
+            fill
+            priority
+            sizes="(min-width: 1152px) 548px, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+
         <div className="max-w-2xl">
           <SectionLabel>Home</SectionLabel>
           <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
