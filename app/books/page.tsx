@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
-import OrderForm from "@/components/OrderForm";
 import { books } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -89,7 +88,16 @@ export default function BooksPage() {
                   <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
                     {book.note}
                   </p>
-                  <OrderForm bookTitle={book.title} />
+                  {book.orderUrl && (
+                    <a
+                      href={book.orderUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 inline-block border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
+                    >
+                      Order
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

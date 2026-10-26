@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
 import { AlbumCard, SingleCard, SongRow } from "@/components/ReleaseCards";
 import { albums, allSongs, singles } from "@/lib/music";
@@ -23,6 +24,8 @@ export default function MusicPage() {
               each song invites you to draw closer to Jesus and let faith shape how you live to
               forgive, love, and take the next step with God.
             </p>
+          </div>
+          <ReadMore className="max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
             <p>
               The catalogue also includes songs built around poems and lyrics by the Norwegian poet
               and songwriter Reidar Munkejord, giving his words a musical voice to inspire a new
@@ -36,7 +39,7 @@ export default function MusicPage() {
               New singles arrive every one to three months, released across languages as each song
               finds its voice. Find the full catalogue on Spotify and Apple Music.
             </p>
-          </div>
+          </ReadMore>
           <div className="mt-8 flex flex-wrap gap-6">
             <a
               href={links.spotify}

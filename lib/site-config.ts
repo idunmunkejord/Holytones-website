@@ -125,6 +125,8 @@ export type Book = {
   status: string;
   cover?: string;
   coverBack?: string;
+  // Simplero checkout page the ORDER button opens.
+  orderUrl?: string;
 };
 
 export const books: Book[] = [
@@ -135,6 +137,7 @@ export const books: Book[] = [
     status: "Coming soon",
     cover: "/images/the-most-dangerous-lie-front.png",
     coverBack: "/images/the-most-dangerous-lie-back.png",
+    orderUrl: "https://www.youmatter.academy/cart/263881-Loegnen",
   },
 ];
 
