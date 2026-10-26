@@ -37,7 +37,7 @@ export default function DevotionalSignup() {
           </p>
         </div>
 
-        <div className="mt-8 border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
+        <div className="mt-8 max-w-[22.75rem] border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
           <h3 className="font-serif-display text-xl text-foreground">
             Weekly Devotional Holytones
           </h3>
