@@ -10,7 +10,7 @@ export default function DevotionalSignup() {
 
   return (
     <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[1fr_minmax(0,24rem)] md:gap-14">
-      {/* Text with the signup box under it; the picture sits in the right column. */}
+      {/* Text with the signup box under it; the picture sits in the right column (above the text on phones). */}
       <div className="max-w-xl">
         <p className="flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-accent-gold">
           <span className="h-px w-8 bg-accent-gold/70" aria-hidden />
@@ -67,7 +67,7 @@ export default function DevotionalSignup() {
         </div>
       </div>
 
-      <div className="relative aspect-square w-full overflow-hidden border border-border-soft md:mt-10">
+      <div className="relative order-first aspect-square w-full overflow-hidden border border-border-soft md:order-none md:mt-10">
         <Image
           src="/images/weekly-devotional.webp"
           alt="A tablet on a table showing the Weekly Devotional email"
