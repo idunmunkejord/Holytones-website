@@ -36,15 +36,15 @@ export default function BooksPage() {
                       href={book.cover}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative aspect-[3/4] w-32 shrink-0 cursor-zoom-in overflow-hidden border border-border-soft transition-opacity hover:opacity-80 sm:w-40"
+                      className="relative aspect-[3/2] w-full max-w-sm shrink-0 cursor-zoom-in overflow-hidden transition-opacity hover:opacity-80 sm:w-72"
                     >
                       <Image
                         src={book.cover}
-                        alt={`${book.title} — front cover`}
+                        alt={`${book.title} — front and back cover`}
                         fill
-                        sizes="(min-width: 640px) 160px, 128px"
+                        sizes="(min-width: 640px) 288px, 384px"
                         quality={95}
-                        className="object-cover"
+                        className="object-contain mix-blend-multiply"
                       />
                     </a>
                   )}
@@ -73,6 +73,11 @@ export default function BooksPage() {
                 </span>
                 <div>
                   <h2 className="font-serif-display text-2xl text-foreground">{book.title}</h2>
+                  {book.subtitle && (
+                    <p className="mt-1 font-serif-display text-lg text-foreground-muted">
+                      {book.subtitle}
+                    </p>
+                  )}
                   <p className="mt-1 text-sm text-foreground-muted">
                     {book.language} ·{" "}
                     <span
@@ -85,9 +90,11 @@ export default function BooksPage() {
                       {book.status}
                     </span>
                   </p>
-                  <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
-                    {book.note}
-                  </p>
+                  <div className="mt-4 max-w-xl space-y-4 text-sm leading-relaxed text-foreground-muted">
+                    {book.note.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
                   {book.orderUrl && (
                     <a
                       href={book.orderUrl}

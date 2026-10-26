@@ -120,8 +120,10 @@ export const categories: Category[] = [
 
 export type Book = {
   title: string;
+  subtitle?: string;
   language: string;
-  note: string;
+  // One string per paragraph.
+  note: string[];
   status: string;
   cover?: string;
   coverBack?: string;
@@ -131,12 +133,15 @@ export type Book = {
 
 export const books: Book[] = [
   {
-    title: "The Most Dangerous Lie Ever Sold",
-    language: "English",
-    note: "A bold Christian response to modern wellness culture — unmasking the half-truths behind manifestation, positive psychology, and the \"you are enough\" gospel of self, and pointing readers back to the only truth that can truly set them free.",
-    status: "Coming soon",
-    cover: "/images/the-most-dangerous-lie-front.png",
-    coverBack: "/images/the-most-dangerous-lie-back.png",
+    title: "Løgnen",
+    subtitle: "Når selvutvikling tar Guds plass",
+    language: "Norwegian",
+    note: [
+      "Mange mennesker bærer på en lengsel om at livet kan forandres og få mening hvis de bare tenker riktig og retter oppmerksomheten mot det de ønsker. Budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og at kraften allerede finnes i deg selv, høres forlokkende ut. Disse tankene har gjennom årene sneket seg inn i måten vi tenker på, og gradvis også inn i måten mange kristne forstår tro, bønn og Guds velsignelse.",
+      "LØGNEN er et kristent svar på denne forlokkende fortellingen som nesten umerket har sneket seg inn i vår kristne tro. For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.",
+    ],
+    status: "Available now",
+    cover: "/images/loegnen-book.webp",
     orderUrl: "https://www.youmatter.academy/cart/263881-Loegnen",
   },
 ];
