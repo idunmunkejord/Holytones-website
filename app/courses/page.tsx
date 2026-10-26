@@ -80,9 +80,9 @@ export default function CoursesPage() {
               </span>
               <div>
                 <h2 className="font-serif-display text-2xl text-foreground">{course.title}</h2>
-                <p className="mt-1 text-sm text-foreground-muted">
-                  {course.language} · {course.modules}
-                </p>
+                {course.details && (
+                  <p className="mt-1 text-sm text-foreground-muted">{course.details}</p>
+                )}
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-foreground-muted">
                   {course.note}
                 </p>

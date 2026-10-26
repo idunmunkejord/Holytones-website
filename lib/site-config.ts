@@ -148,28 +148,18 @@ export const books: Book[] = [
 
 export type Course = {
   title: string;
-  language: string;
-  modules: string;
+  // Short facts shown under the title, e.g. language or length. Leave empty to hide the line.
+  details?: string;
   note: string;
 };
 
 export const courses: Course[] = [
   {
-    title: "Conocer su corazón",
-    language: "Spanish",
-    modules: "10 modules",
-    note: "A guided course for knowing your own heart honestly before God — identity, wounds, and truth.",
+    title: "Individual Session",
+    note: "More information coming soon.",
   },
   {
-    title: "La Verdad que Libera",
-    language: "Spanish",
-    modules: "Full course",
-    note: "A course built around the truths that set us free from the stories we've believed about ourselves.",
-  },
-  {
-    title: "¿Eres suficiente? Desmontando el evangelio del yo",
-    language: "Spanish",
-    modules: "10 modules",
-    note: "A biblical critique of self-help culture, New Age spirituality, and positive psychology — and what's offered in their place.",
+    title: "Group Session",
+    note: "More information coming soon.",
   },
 ];
