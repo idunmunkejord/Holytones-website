@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
 import { courses } from "@/lib/site-config";
+
+const storyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted md:text-base";
 
 export const metadata: Metadata = {
   title: "Courses",
@@ -14,10 +18,53 @@ export default function CoursesPage() {
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Courses</SectionLabel>
           <h1 className="sr-only">Courses</h1>
-          <p className="max-w-xl text-base leading-relaxed text-foreground-muted">
-            Guided courses and devotionals for women seeking a deeper, more honest faith — built
-            through YouMatter Academy.
-          </p>
+          <div className="max-w-2xl">
+            <p className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
+              Your worth is already given. You do not have to spend your life trying to earn it.
+            </p>
+
+            <div className={`mt-6 ${storyClass}`}>
+              <p>
+                During my years as a teacher and principal in upper secondary education, I have
+                walked alongside young people facing insecurity, difficult choices and questions
+                about who they are. I have seen how deeply the pressure to succeed can affect a
+                person, and how much it matters to be heard, supported and reminded of your worth.
+              </p>
+            </div>
+
+            <ReadMore className={storyClass}>
+              <p>
+                My own journey has changed the way I approach growth. My Christian faith shapes both
+                my understanding of people and the guidance I offer. I believe lasting change begins
+                with knowing God and discovering who you are in Christ. From that foundation you can
+                recognise the lies shaping your thinking, loosen the grip of performance and take
+                meaningful steps forward.
+              </p>
+              <p>
+                As a teacher and mentor, I offer individual and group conversations with space for
+                honest questions, practical guidance and biblical reflection. Together we explore
+                what is holding you back, what you believe about yourself and how faith can shape
+                your everyday choices. I bring energy, honesty and a listening ear. I will encourage
+                you, ask questions that challenge you, and help you put insight into practice with
+                room for both courage and rest.
+              </p>
+              <p>
+                Having lived in Norway, the United States and Spain, I bring international
+                experience and offer conversations in Norwegian, English and Spanish.
+              </p>
+              <p>
+                You are loved by God, your life matters, and you can move forward from a place of
+                grace.
+              </p>
+              <p>
+                If this speaks to where you are today, you are welcome to{" "}
+                <Link href="/contact" className="link-underline text-accent hover:text-foreground">
+                  get in touch
+                </Link>
+                .
+              </p>
+            </ReadMore>
+          </div>
         </div>
       </section>
 
