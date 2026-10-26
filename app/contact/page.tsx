@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="px-6 py-14 md:px-10 md:py-20">
+      <section className="border-b border-border-soft bg-background-alt px-6 py-14 md:px-10 md:py-20">
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Contact</SectionLabel>
           <h1 className="sr-only">Contact</h1>
@@ -39,7 +39,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="border-t border-border-soft px-6 py-12 md:px-10">
+      <section className="px-6 py-12 md:px-10">
         <div className="mx-auto grid max-w-4xl gap-10 text-sm leading-relaxed text-foreground-muted sm:grid-cols-2">
           <div>
             <h2 className={columnHeading}>Info</h2>

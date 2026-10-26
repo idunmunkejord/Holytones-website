@@ -5,7 +5,7 @@ const bodyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted md
 
 export default function AuthorHero() {
   return (
-    <section className="px-6 py-14 md:px-10 md:py-20">
+    <section className="border-b border-border-soft bg-background-alt px-6 py-14 md:px-10 md:py-20">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
           <SectionLabel>Home</SectionLabel>

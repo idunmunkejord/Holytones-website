@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="px-6 py-14 md:px-10 md:py-20">
+      <section className="border-b border-border-soft bg-background-alt px-6 py-14 md:px-10 md:py-20">
         <div className="mx-auto grid max-w-5xl items-start gap-12 md:grid-cols-[1fr_16rem] md:gap-16 lg:grid-cols-[1fr_18rem]">
           <div className="max-w-2xl">
             <SectionLabel>About</SectionLabel>

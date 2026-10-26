@@ -10,7 +10,7 @@ export default function Home() {
 
       <section
         id="mailing-list"
-        className="scroll-mt-28 border-y border-border-soft bg-background-alt px-6 py-14 md:px-10 md:py-16"
+        className="scroll-mt-28 border-b border-border-soft px-6 py-14 md:px-10 md:py-16"
       >
         <DevotionalSignup />
       </section>
