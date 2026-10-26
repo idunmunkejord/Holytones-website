@@ -15,10 +15,20 @@ export default function BooksPage() {
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Books</SectionLabel>
           <h1 className="sr-only">Books</h1>
-          <p className="max-w-xl text-base leading-relaxed text-foreground-muted">
-            Faith-rooted books, written primarily for readers ready to trade easy comfort for
-            honest truth.
-          </p>
+          <div className="max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
+            <p>
+              What you believe shapes how you live, yet some of the ideas you trust most may deserve
+              a closer look. Holytones books invite you to explore the questions that touch your
+              identity, faith and everyday choices, helping you recognise misleading promises and
+              deepen your trust in God. Through thoughtful reflection and Scripture-rooted
+              encouragement, each book brings God&rsquo;s Word into the struggles, longings and
+              decisions you know firsthand.
+            </p>
+            <p>
+              Begin with LØGNEN, which examines what happens when self-development takes
+              God&rsquo;s place.
+            </p>
+          </div>
         </div>
       </section>
 
