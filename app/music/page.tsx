@@ -15,10 +15,27 @@ export default function MusicPage() {
         <div className="mx-auto max-w-4xl">
           <SectionLabel>Music</SectionLabel>
           <h1 className="sr-only">Music</h1>
-          <p className="max-w-xl text-base leading-relaxed text-foreground-muted">
-            New singles arrive every four to six weeks, released across languages as each song
-            finds its voice. Find the full catalogue on Spotify and Apple Music.
-          </p>
+          <div className="max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
+            <p>
+              Holytones brings biblical truth into everyday life through songs about faith, love,
+              forgiveness, identity and hope. From quiet prayers to powerful calls to surrender,
+              each song invites you to draw closer to Jesus and let faith shape how you live to
+              forgive, love, and take the next step with God.
+            </p>
+            <p>
+              The catalogue also includes songs built around poems and lyrics by the Norwegian poet
+              and songwriter Reidar Munkejord, giving his words a musical voice to inspire a new
+              generation.
+            </p>
+            <p>
+              Listen and let the words become your prayer and share a song with someone who needs
+              encouragement.
+            </p>
+            <p>
+              New singles arrive every one to three months, released across languages as each song
+              finds its voice. Find the full catalogue on Spotify and Apple Music.
+            </p>
+          </div>
           <div className="mt-8 flex flex-wrap gap-6">
             <a
               href={links.spotify}

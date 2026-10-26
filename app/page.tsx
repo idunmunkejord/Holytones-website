@@ -15,7 +15,7 @@ export default function Home() {
         <DevotionalSignup />
       </section>
 
-      <section id="my-work" className="scroll-mt-28 px-6 py-14 md:px-10 md:py-20">
+      <section id="my-work" className="scroll-mt-28 bg-background-alt px-6 py-14 md:px-10 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
