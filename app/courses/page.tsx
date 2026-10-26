@@ -30,9 +30,6 @@ export default function CoursesPage() {
                 about who they are. I have seen how deeply the pressure to succeed can affect a
                 person, and how much it matters to be heard, supported and reminded of your worth.
               </p>
-            </div>
-
-            <ReadMore className={storyClass}>
               <p>
                 My own journey has changed the way I approach growth. My Christian faith shapes both
                 my understanding of people and the guidance I offer. I believe lasting change begins
@@ -40,6 +37,9 @@ export default function CoursesPage() {
                 recognise the lies shaping your thinking, loosen the grip of performance and take
                 meaningful steps forward.
               </p>
+            </div>
+
+            <ReadMore className={storyClass}>
               <p>
                 As a teacher and mentor, I offer individual and group conversations with space for
                 honest questions, practical guidance and biblical reflection. Together we explore
