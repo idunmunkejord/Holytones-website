@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
-import { company, customerService, links } from "@/lib/site-config";
+import { company, customerService } from "@/lib/site-config";
 
 const columnHeading = "mb-3 text-xs uppercase tracking-[0.2em] text-foreground";
 
@@ -25,19 +25,6 @@ export default function ContactPage() {
           </p>
           <div className="mt-8 max-w-2xl border border-border-soft bg-surface px-6 py-8 sm:px-10 sm:py-10">
             <ContactForm />
-          </div>
-
-          {/* Kept outside the form box so the email address isn't mistaken for part of the form. */}
-          <div className="mt-10">
-            <p className="mb-3 text-xs uppercase tracking-[0.2em] text-foreground">
-              Or email me directly
-            </p>
-            <a
-              href={`mailto:${links.email}`}
-              className="link-underline font-serif-display text-xl text-foreground"
-            >
-              {links.email}
-            </a>
           </div>
         </div>
       </section>
