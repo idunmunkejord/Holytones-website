@@ -95,7 +95,7 @@ export default function BooksPage() {
                       rel="noopener noreferrer"
                       className="mt-6 inline-block border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
                     >
-                      Order
+                      Order book
                     </a>
                   )}
                 </div>
