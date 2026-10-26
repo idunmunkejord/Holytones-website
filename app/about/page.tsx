@@ -49,6 +49,16 @@ export default function AboutPage() {
                 heart and the mind, and that discovering who God is changes how you understand
                 yourself and the world around you.
               </p>
+              <p className="text-sm">
+                <a
+                  href={links.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-border-soft underline-offset-4 transition-colors hover:text-foreground"
+                >
+                  LinkedIn
+                </a>
+              </p>
             </ReadMore>
           </div>
 
@@ -72,14 +82,6 @@ export default function AboutPage() {
               className="link-underline px-2 py-3 text-xs uppercase tracking-[0.2em] text-foreground-muted hover:text-foreground"
             >
               Get in touch
-            </a>
-            <a
-              href={links.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline px-2 py-3 text-xs uppercase tracking-[0.2em] text-foreground-muted hover:text-foreground"
-            >
-              LinkedIn
             </a>
           </div>
         </div>
