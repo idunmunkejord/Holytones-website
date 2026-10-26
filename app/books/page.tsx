@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
+import ZoomImage from "@/components/ZoomImage";
 import { books } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -37,26 +38,18 @@ export default function BooksPage() {
           {books.map((book, index) => (
             <div
               key={book.title}
-              className="flex flex-col gap-8 border-b border-border-soft py-8 first:pt-0 last:border-b-0 lg:flex-row lg:items-start lg:gap-12"
+              className="flex flex-col gap-8 border-b border-border-soft py-8 first:pt-0 last:border-b-0 sm:flex-row sm:items-start sm:gap-8 lg:gap-12"
             >
               {(book.cover || book.coverBack) && (
-                <div className="flex w-full max-w-xl shrink-0 gap-3 lg:w-1/2">
+                <div className="flex w-full max-w-sm shrink-0 gap-3 sm:w-64 md:w-80 lg:w-96">
                   {book.cover && (
-                    <a
-                      href={book.cover}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative aspect-[3/2] w-full max-w-xl shrink-0 cursor-zoom-in overflow-hidden transition-opacity hover:opacity-80"
-                    >
-                      <Image
-                        src={book.cover}
-                        alt={`${book.title} — front and back cover`}
-                        fill
-                        sizes="(min-width: 1024px) 50vw, (min-width: 640px) 576px, 100vw"
-                        quality={95}
-                        className="object-contain mix-blend-multiply"
-                      />
-                    </a>
+                    <ZoomImage
+                      src={book.cover}
+                      alt={`${book.title} — front and back cover`}
+                      sizes="(min-width: 1024px) 384px, (min-width: 768px) 320px, (min-width: 640px) 256px, 384px"
+                      className="aspect-[3/2] w-full shrink-0 overflow-hidden"
+                      imageClassName="object-contain mix-blend-multiply"
+                    />
                   )}
                   {book.coverBack && (
                     <a
