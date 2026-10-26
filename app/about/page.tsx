@@ -26,13 +26,6 @@ export default function AboutPage() {
 
             <div className={`mt-6 ${storyClass}`}>
               <p>
-                I&apos;m Idun Munkejord, an author, educator, and creator of Holytones. My
-                professional background includes leadership, teaching, mentoring, and further
-                studies in leadership, emotional competence and interpersonal intelligence.
-                Throughout my career, I have been deeply interested in what shapes human behavior,
-                how people develop, and what helps them overcome the challenges they face.
-              </p>
-              <p>
                 For many years, personal growth was part of both my professional world and my
                 own journey. I understood the appeal of becoming stronger, more capable, and better
                 equipped to manage life. Yet my Christian faith gradually led me to question some of
@@ -61,6 +54,8 @@ export default function AboutPage() {
 
           <div className="w-full max-w-[15rem] md:mt-10 md:max-w-none">
             <AuthorPhoto sizes="(min-width: 1024px) 18rem, (min-width: 768px) 16rem, 15rem" />
+            <p className="mt-7 font-serif-display text-xl text-foreground">Idun Munkejord</p>
+            <p className="mt-1 text-xs text-foreground-muted">Photo: Soni Sousa</p>
           </div>
         </div>
 
@@ -77,6 +72,14 @@ export default function AboutPage() {
               className="link-underline px-2 py-3 text-xs uppercase tracking-[0.2em] text-foreground-muted hover:text-foreground"
             >
               Get in touch
+            </a>
+            <a
+              href={links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline px-2 py-3 text-xs uppercase tracking-[0.2em] text-foreground-muted hover:text-foreground"
+            >
+              LinkedIn
             </a>
           </div>
         </div>

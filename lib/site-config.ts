@@ -71,6 +71,7 @@ export const links = {
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/holytones/6773490843",
   youtube: "https://www.youtube.com/@holytones",
+  linkedin: "https://www.linkedin.com/in/idun-munkejord-522b5315/",
   email: "post@holytones.no",
   // Public site key for the Cloudflare Turnstile spam check on the contact form.
   // Leave empty to show the form without it.
