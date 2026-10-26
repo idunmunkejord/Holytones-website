@@ -4,7 +4,7 @@
 //
 // Uses Apple's public iTunes lookup API (no key needed). Releases and songs are matched to the
 // Spotify ones by title; anything not found on Apple Music simply gets no Apple Music link.
-// Run it after scripts/sync-spotify.mjs — the weekly GitHub workflow runs both.
+// Run it after adding a new release to the catalogue.
 import { readFile, writeFile } from "node:fs/promises";
 
 const outputPath = new URL("../lib/music-catalogue.json", import.meta.url);

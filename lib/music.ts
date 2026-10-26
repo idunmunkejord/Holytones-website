@@ -1,6 +1,5 @@
-// Holytones releases, read from lib/music-catalogue.json. That file is regenerated from Spotify by
-// scripts/sync-spotify.mjs, with Apple Music links added by scripts/sync-apple-music.mjs (both run
-// weekly by .github/workflows/sync-spotify.yml) — don't edit it by hand.
+// Holytones releases, read from lib/music-catalogue.json. New releases are added to that file by
+// hand; scripts/sync-apple-music.mjs then fills in the Apple Music links.
 import catalogue from "@/lib/music-catalogue.json";
 
 // `url` is the Spotify link.

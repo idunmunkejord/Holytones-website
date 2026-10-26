@@ -22,11 +22,9 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-
   `ContactForm`, `AuthorHero`, `DevotionalSignup`, `ReadMore`, `SocialLinks`, `SectionLabel`.
 - `lib/site-config.ts` — all site copy, links, and content lists (books, courses, category
   cards, nav). Edit this file first for most content changes.
-- `lib/music-catalogue.json` — the albums, singles and songs on the Music page. It is generated
-  from Spotify by `scripts/sync-spotify.mjs`, with Apple Music links added by
-  `scripts/sync-apple-music.mjs`. Both run in the `Sync music from Spotify` GitHub workflow every
-  Monday (it needs the `SPOTIFY_CLIENT_ID` and `SPOTIFY_CLIENT_SECRET` repository
-  secrets). Don't edit it by hand.
+- `lib/music-catalogue.json` — the albums, singles and songs on the Music page, newest first,
+  with their Spotify links. Add new releases here by hand; then `npm run sync:apple-music` fills in
+  the matching Apple Music links.
 
 ## Things to finish before launch
 
