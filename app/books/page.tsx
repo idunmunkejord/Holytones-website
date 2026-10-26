@@ -90,15 +90,7 @@ export default function BooksPage() {
                   )}
                   <p className="mt-1 text-sm text-foreground-muted">
                     {book.language} ·{" "}
-                    <span
-                      className={
-                        book.status === "Coming soon"
-                          ? "uppercase tracking-[0.14em] text-accent"
-                          : undefined
-                      }
-                    >
-                      {book.status}
-                    </span>
+                    <span className="uppercase tracking-[0.14em] text-accent">{book.status}</span>
                   </p>
                   <div className="mt-4 max-w-xl space-y-4 text-sm leading-relaxed text-foreground-muted">
                     {book.note.map((paragraph) => (

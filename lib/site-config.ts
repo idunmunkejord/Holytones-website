@@ -135,12 +135,12 @@ export const books: Book[] = [
   {
     title: "Løgnen",
     subtitle: "Når selvutvikling tar Guds plass",
-    language: "Norwegian",
+    language: "Lansering",
     note: [
       "Mange mennesker bærer på en lengsel om at livet kan forandres og få mening hvis de bare tenker riktig og retter oppmerksomheten mot det de ønsker. Budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og at kraften allerede finnes i deg selv, høres forlokkende ut. Disse tankene har gjennom årene sneket seg inn i måten vi tenker på, og gradvis også inn i måten mange kristne forstår tro, bønn og Guds velsignelse.",
       "LØGNEN er et kristent svar på denne forlokkende fortellingen som nesten umerket har sneket seg inn i vår kristne tro. For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.",
     ],
-    status: "Available now",
+    status: "24 November",
     cover: "/images/loegnen-book.webp",
     orderUrl: "https://www.youmatter.academy/cart/263881-Loegnen",
   },
