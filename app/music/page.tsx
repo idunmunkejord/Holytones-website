@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
-import TrackCard from "@/components/TrackCard";
-import { links, tracks } from "@/lib/site-config";
+import { AlbumCard, SingleCard, SongRow } from "@/components/ReleaseCards";
+import { albums, allSongs, singles } from "@/lib/music";
+import { links } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Music",
@@ -58,10 +59,33 @@ export default function MusicPage() {
       </section>
 
       <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-4xl">
-          {tracks.map((track, index) => (
-            <TrackCard key={track.title} track={track} index={index} />
-          ))}
+        <div className="mx-auto max-w-4xl space-y-16">
+          <div>
+            <h2 className="mb-6 font-serif-display text-2xl text-foreground">Albums</h2>
+            <div className="space-y-5">
+              {albums.map((album) => (
+                <AlbumCard key={album.id} album={album} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="mb-6 font-serif-display text-2xl text-foreground">Singles</h2>
+            <div>
+              {singles.map((single) => (
+                <SingleCard key={single.id} single={single} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="mb-2 font-serif-display text-2xl text-foreground">All songs</h2>
+            <ol>
+              {allSongs.map((song, index) => (
+                <SongRow key={song.id} song={song} index={index} />
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
     </>

@@ -117,48 +117,6 @@ export const categories: Category[] = [
   },
 ];
 
-export type Track = {
-  title: string;
-  language: string;
-  note: string;
-  year: string;
-  featured?: boolean;
-};
-
-export const tracks: Track[] = [
-  {
-    title: "Through the Valley",
-    language: "English",
-    note: "A song for the seasons that ask more of you than you think you have.",
-    year: "2026",
-    featured: true,
-  },
-  {
-    title: "Is It Possible to Forget",
-    language: "English",
-    note: "On memory, mercy, and the things that stay with us longer than we'd like.",
-    year: "2025",
-  },
-  {
-    title: "Love That Never Leaves",
-    language: "English",
-    note: "A worship song written to sit quietly in the middle of the room.",
-    year: "2025",
-  },
-  {
-    title: "Ein Tidlaus Draum",
-    language: "Norwegian (Nynorsk)",
-    note: "A timeless dream, carried in the rhythm of the language it was written for.",
-    year: "2024",
-  },
-  {
-    title: "Du er her og du meg ser",
-    language: "Norwegian",
-    note: "You are here, and you see me — a Norwegian worship song of being known.",
-    year: "2024",
-  },
-];
-
 export type Book = {
   title: string;
   language: string;
