@@ -37,7 +37,7 @@ export default function BooksPage() {
           {books.map((book, index) => (
             <div
               key={book.title}
-              className="flex flex-col gap-6 border-b border-border-soft py-8 first:pt-0 last:border-b-0 sm:flex-row sm:items-start sm:gap-8"
+              className="flex flex-col gap-8 border-b border-border-soft py-8 first:pt-0 last:border-b-0"
             >
               {(book.cover || book.coverBack) && (
                 <div className="flex shrink-0 gap-3">
@@ -46,13 +46,13 @@ export default function BooksPage() {
                       href={book.cover}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="relative aspect-[3/2] w-full max-w-sm shrink-0 cursor-zoom-in overflow-hidden transition-opacity hover:opacity-80 sm:w-72"
+                      className="relative aspect-[3/2] w-full max-w-xl shrink-0 cursor-zoom-in overflow-hidden transition-opacity hover:opacity-80"
                     >
                       <Image
                         src={book.cover}
                         alt={`${book.title} — front and back cover`}
                         fill
-                        sizes="(min-width: 640px) 288px, 384px"
+                        sizes="(min-width: 640px) 576px, 100vw"
                         quality={95}
                         className="object-contain mix-blend-multiply"
                       />
@@ -82,9 +82,9 @@ export default function BooksPage() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h2 className="font-serif-display text-2xl text-foreground">{book.title}</h2>
+                  <h2 className="font-serif-display text-2xl font-bold text-brown-dark">{book.title}</h2>
                   {book.subtitle && (
-                    <p className="mt-1 font-serif-display text-lg text-foreground-muted">
+                    <p className="mt-1 font-serif-display text-lg font-bold text-brown-dark">
                       {book.subtitle}
                     </p>
                   )}

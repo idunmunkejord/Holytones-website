@@ -13,6 +13,7 @@
   --accent-peach: #c99361;
   --accent-green: #7fa184;
   --accent-gold: #b0915a;
+  --brown-dark: #4a2c17;
   --border-soft: rgba(43, 38, 33, 0.12);
 }
 
@@ -29,6 +30,7 @@
   --color-accent-peach: var(--accent-peach);
   --color-accent-green: var(--accent-green);
   --color-accent-gold: var(--accent-gold);
+  --color-brown-dark: var(--brown-dark);
   --color-border-soft: var(--border-soft);
   --font-serif: var(--font-cormorant);
   --font-sans: var(--font-inter);
