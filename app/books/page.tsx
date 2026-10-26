@@ -12,7 +12,7 @@ export default function BooksPage() {
   return (
     <>
       <section className="border-b border-border-soft bg-background-alt px-6 pt-14 pb-16 md:px-10 md:pt-20">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           <SectionLabel>Books</SectionLabel>
           <h1 className="sr-only">Books</h1>
           <div className="max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
@@ -33,14 +33,14 @@ export default function BooksPage() {
       </section>
 
       <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-4xl">
+        <div className="mx-auto max-w-6xl">
           {books.map((book, index) => (
             <div
               key={book.title}
-              className="flex flex-col gap-8 border-b border-border-soft py-8 first:pt-0 last:border-b-0"
+              className="flex flex-col gap-8 border-b border-border-soft py-8 first:pt-0 last:border-b-0 lg:flex-row lg:items-start lg:gap-12"
             >
               {(book.cover || book.coverBack) && (
-                <div className="flex shrink-0 gap-3">
+                <div className="flex w-full max-w-xl shrink-0 gap-3 lg:w-1/2">
                   {book.cover && (
                     <a
                       href={book.cover}
@@ -52,7 +52,7 @@ export default function BooksPage() {
                         src={book.cover}
                         alt={`${book.title} — front and back cover`}
                         fill
-                        sizes="(min-width: 640px) 576px, 100vw"
+                        sizes="(min-width: 1024px) 50vw, (min-width: 640px) 576px, 100vw"
                         quality={95}
                         className="object-contain mix-blend-multiply"
                       />
