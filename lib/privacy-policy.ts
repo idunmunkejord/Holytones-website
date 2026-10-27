@@ -6,13 +6,13 @@ import type { Policy } from "@/components/PolicyPage";
 export const privacyPolicy: Policy = {
   title: "Personvernerklæring",
   subtitle: "HOLYTONES | www.holytones.no",
-  updated: "Sist oppdatert: 23. oktober 2026",
+  updated: "Sist oppdatert: 27. oktober 2026",
   sections: [
     {
       title: "1. Innledning",
       paragraphs: [
         "Hos Holytones er personvernet ditt viktig. Du skal kunne besøke nettstedet, handle produkter og melde deg på vår e-postliste med trygghet om at personopplysningene dine behandles på en ansvarlig og sikker måte.",
-        "Denne personvernerklæringen forklarer hvilke personopplysninger som samles inn gjennom www.holytones.no, hvorfor opplysningene behandles, hvordan de beskyttes, og hvilke rettigheter du har.",
+        "Denne personvernerklæringen forklarer hvilke personopplysninger som samles inn gjennom www.holytones.no og www.holytones.org, hvorfor opplysningene behandles, hvordan de beskyttes, og hvilke rettigheter du har.",
         "Erklæringen gjelder bruk av Holytones sitt nettsted, nettbutikk, kontaktskjema, e-postliste og øvrige digitale tjenester.",
         "Behandlingen av personopplysninger skjer i samsvar med personopplysningsloven og EUs personvernforordning (GDPR).",
         "Erklæringen kan oppdateres ved endringer i lovverket, nettstedets funksjoner eller tjenestene som tilbys.",
@@ -23,7 +23,7 @@ export const privacyPolicy: Policy = {
       paragraphs: [
         "Pedersen Interaktiv er behandlingsansvarlig for personopplysninger som behandles gjennom Holytones sin virksomhet.",
         { heading: "Foretaksopplysninger" },
-        "Nettbutikk og merkevare: Holytones\nJuridisk foretaksnavn: Pedersen Interaktiv\nOrganisasjonsnummer: 927 929 783\nForretningsadresse: Krooddveien 9b, 4624 Kristiansand\nE-post: post@holytones.no\nTelefon: 971 91 960\nNettsted: www.holytones.no",
+        "Nettbutikk og merkevare: Holytones\nJuridisk foretaksnavn: Pedersen Interaktiv\nOrganisasjonsnummer: 927 929 783\nForretningsadresse: Krooddveien 9b, 4624 Kristiansand\nE-post: post@holytones.no\nTelefon: 971 91 960\nNettsted: www.holytones.no og www.holytones.org",
         "Spørsmål om personvern kan rettes til post@holytones.no.",
       ],
     },
@@ -147,7 +147,7 @@ export const privacyPolicy: Policy = {
         "Påmelding til e-postlisten er frivillig og skjer separat fra kjøp av produkter.",
         "E-postadressen brukes til utsendelser innenfor formålet med påmeldingen.",
         "Du kan når som helst melde deg av gjennom avmeldingslenken i e-postene eller ved å kontakte post@holytones.no.",
-        "Dersom en ekstern leverandør, for eksempel Substack eller Simplero, benyttes til e-postutsendelser, vil nødvendige opplysninger bli behandlet gjennom den aktuelle tjenesten.",
+        "Holytones bruker Simplero og Substack til administrasjon av e-postlister og utsendelser. Nødvendige opplysninger knyttet til påmelding og utsendelser behandles i den aktuelle tjenesten.",
         "Holytones vil sørge for at behandlingen skjer i samsvar med gjeldende personvernregelverk.",
       ],
     },
@@ -186,8 +186,8 @@ export const privacyPolicy: Policy = {
           list: [
             "Betalingsleverandører, som Stripe og Vipps.",
             "Frakt- og transportleverandører.",
-            "Leverandører av nettsted og netthandelsløsninger.",
-            "Leverandører av e-postliste og utsendelser.",
+            "Leverandører av nettsted og netthandelsløsninger, blant annet Simplero.",
+            "Simplero og Substack for administrasjon av e-postlister og utsendelser.",
             "Regnskaps- og IT-tjenester.",
             "Analyse- og sikkerhetstjenester, dersom slike benyttes.",
           ],
@@ -277,7 +277,7 @@ export const privacyPolicy: Policy = {
       title: "17. Endringer i personvernerklæringen",
       paragraphs: [
         "Holytones kan oppdatere denne personvernerklæringen dersom det skjer endringer i lovgivningen, virksomheten eller tjenestene som tilbys.",
-        "Den oppdaterte versjonen publiseres på www.holytones.no.",
+        "Den oppdaterte versjonen publiseres på www.holytones.no og www.holytones.org.",
         "Dersom endringer krever nytt samtykke eller særskilt informasjon etter personvernregelverket, vil dette bli håndtert i samsvar med gjeldende regler.",
       ],
     },
@@ -285,7 +285,7 @@ export const privacyPolicy: Policy = {
       title: "18. Kontakt og klager",
       paragraphs: [
         "Dersom du har spørsmål om personvern, ønsker innsyn i opplysninger eller vil benytte andre rettigheter, kan du kontakte:",
-        "Holytones – Pedersen Interaktiv\nOrganisasjonsnummer: 927 929 783\nKrooddveien 9b\n4624 Kristiansand\nTelefon: 971 91 960\nE-post: post@holytones.no\nNettsted: www.holytones.no",
+        "Holytones – Pedersen Interaktiv\nOrganisasjonsnummer: 927 929 783\nKrooddveien 9b\n4624 Kristiansand\nTelefon: 971 91 960\nE-post: post@holytones.no\nNettsted: www.holytones.no og www.holytones.org",
         "Du har også rett til å klage til Datatilsynet dersom du mener at behandlingen av personopplysningene dine er i strid med personvernregelverket.",
         "Datatilsynet: www.datatilsynet.no",
       ],
