@@ -65,6 +65,9 @@ export default function ContactPage() {
                             {part.heading && (
                               <h3 className="font-medium text-foreground">{part.heading}</h3>
                             )}
+                            {part.subheading && (
+                              <h4 className="mt-1 italic text-foreground">{part.subheading}</h4>
+                            )}
                             {part.href ? (
                               <Link href={part.href} className="link-underline text-accent">
                                 {part.text}

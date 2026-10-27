@@ -22,9 +22,14 @@ export const company = {
 };
 
 // Customer service sections at the bottom of the Contact page. An item with `href` links to its
-// own page; the others open to show their parts (an optional subheading plus text, which links
-// when it has `href`). One with no parts yet says the details are coming soon.
-export type CustomerServicePart = { heading?: string; text: string; href?: string };
+// own page; the others open to show their parts (an optional heading and subheading plus text,
+// which links when it has `href`). One with no parts yet says the details are coming soon.
+export type CustomerServicePart = {
+  heading?: string;
+  subheading?: string;
+  text: string;
+  href?: string;
+};
 
 export const customerService: { title: string; href?: string; parts: CustomerServicePart[] }[] = [
   { title: "Salgsbetingelser", href: "/salgsbetingelser", parts: [] },
@@ -42,7 +47,7 @@ export const customerService: { title: string; href?: string; parts: CustomerSer
       },
       {
         heading: "Retur og angrerett",
-        text: "Du har 14 dagers angrerett fra dagen etter at du mottar boken.\nØnsker du å returnere en bok, kontakt oss på post@holytones.no innen fristen.\nBoken må sendes tilbake innen 14 dager etter at du har meldt fra. Du betaler selv returportoen.\nKjøpesummen og ordinær frakt refunderes i henhold til angrerettloven.",
+        text: "Du har 14 dagers angrerett fra dagen etter at du mottar boken.\nØnsker du å returnere en bok, kontakt oss på post@holytones.no innen fristen.\nBoken må sendes tilbake innen 14 dager etter at du har meldt fra. Du betaler selv returportoen. Kjøpesummen og ordinær frakt refunderes i henhold til angrerettloven.",
       },
       {
         heading: "Returadresse",
@@ -50,7 +55,12 @@ export const customerService: { title: string; href?: string; parts: CustomerSer
       },
       {
         heading: "Reklamasjon",
+        subheading: "Bok",
         text: "Dersom boken er skadet, feiltrykt eller du har mottatt feil vare, kontakt oss på post@holytones.no.\nVi hjelper deg i samsvar med forbrukerkjøpsloven.",
+      },
+      {
+        subheading: "Nettkurs",
+        text: "Nettkurs leveres digitalt uten frakt. Du får informasjon om tilgang på e-post.\nDu har som hovedregel 14 dagers angrerett fra dagen etter kjøpet. Eventuelle unntak krever at lovens vilkår er oppfylt. Se salgsbetingelsene for detaljer.\nVed spørsmål om tilgang, angrerett eller feil ved kurset, kontakt post@holytones.no.",
       },
       {
         heading: "Kontakt",
