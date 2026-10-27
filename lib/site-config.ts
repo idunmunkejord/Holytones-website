@@ -72,6 +72,7 @@ export const customerService: { title: string; href?: string; parts: CustomerSer
       },
     ],
   },
+  { title: "Angre kjøp", href: "/angre-kjop", parts: [] },
 ];
 
 export const links = {
