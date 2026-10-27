@@ -6,7 +6,7 @@ import type { Policy } from "@/components/PolicyPage";
 export const salesTerms: Policy = {
   title: "Salgsbetingelser",
   intro:
-    "Disse betingelsene gjelder kjøp av fysiske bøker og nettkurs på www.holytones.no og www.holytones.net. For fysiske bøker bygger de på Forbrukertilsynets standard salgsbetingelser for forbrukerkjøp over internett. Avtaleloven, forbrukerkjøpsloven, digitalytelsesloven, angrerettloven, markedsføringsloven og ehandelsloven gjelder der de er relevante. Ingenting her begrenser ufravikelige forbrukerrettigheter. Bestemmelser om frakt, fysisk levering, transportrisiko og retur av bøker gjelder bare fysiske bøker. Nettkurs omfattes av de generelle bestemmelsene og de særskilte kursbestemmelsene nedenfor.",
+    "Disse betingelsene gjelder kjøp av fysiske bøker og nettkurs på www.holytones.no og www.holytones.org. For fysiske bøker bygger de på Forbrukertilsynets standard salgsbetingelser for forbrukerkjøp over internett. Avtaleloven, forbrukerkjøpsloven, digitalytelsesloven, angrerettloven, markedsføringsloven og ehandelsloven gjelder der de er relevante. Ingenting her begrenser ufravikelige forbrukerrettigheter. Bestemmelser om frakt, fysisk levering, transportrisiko og retur av bøker gjelder bare fysiske bøker. Nettkurs omfattes av de generelle bestemmelsene og de særskilte kursbestemmelsene nedenfor.",
   sections: [
     {
       title: "1. Avtalen",
@@ -17,7 +17,7 @@ export const salesTerms: Policy = {
     {
       title: "2. Partene",
       paragraphs: [
-        "Selger: Holytones (nettbutikk og merkevare)\nJuridisk foretaksnavn: Pedersen Interaktiv\nOrganisasjonsnummer: 927 929 783\nForretningsadresse: Krooddveien 9b, 4624 Kristiansand\nE-post: post@holytones.no\nTelefon: 971 91 960\nNettsteder: www.holytones.no og www.holytones.net",
+        "Selger: Holytones (nettbutikk og merkevare)\nJuridisk foretaksnavn: Pedersen Interaktiv\nOrganisasjonsnummer: 927 929 783\nForretningsadresse: Krooddveien 9b, 4624 Kristiansand\nE-post: post@holytones.no\nTelefon: 971 91 960\nNettsteder: www.holytones.no og www.holytones.org",
         "Kjøper er privatpersonen som foretar bestillingen.",
       ],
     },
