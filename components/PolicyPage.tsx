@@ -6,8 +6,8 @@ export type PolicyBlock = string | { heading: string } | { list: string[] };
 
 export type Policy = {
   title: string;
-  subtitle: string;
-  updated: string;
+  subtitle?: string;
+  updated?: string;
   intro?: string;
   sections: { title: string; paragraphs: PolicyBlock[] }[];
 };
@@ -40,10 +40,12 @@ export default function PolicyPage({
         <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
           {policy.title}
         </h1>
-        <p className="mt-3 text-xs uppercase tracking-[0.2em] text-accent-gold">
-          {policy.subtitle}
-        </p>
-        <p className="mt-1 text-xs text-foreground-muted">{policy.updated}</p>
+        {policy.subtitle && (
+          <p className="mt-3 text-xs uppercase tracking-[0.2em] text-accent-gold">
+            {policy.subtitle}
+          </p>
+        )}
+        {policy.updated && <p className="mt-1 text-xs text-foreground-muted">{policy.updated}</p>}
 
         <div className="mt-8 space-y-8 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
           {policy.intro && <p>{policy.intro}</p>}

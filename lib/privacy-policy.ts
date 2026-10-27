@@ -5,8 +5,6 @@ import type { Policy } from "@/components/PolicyPage";
 
 export const privacyPolicy: Policy = {
   title: "Personvernerklæring",
-  subtitle: "HOLYTONES | www.holytones.no",
-  updated: "Sist oppdatert: 27. oktober 2026",
   sections: [
     {
       title: "1. Innledning",
