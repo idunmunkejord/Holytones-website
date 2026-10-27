@@ -4,7 +4,7 @@ import { salesTerms } from "@/lib/sales-terms";
 
 export const metadata: Metadata = {
   title: "Salgsbetingelser",
-  description: "Salgsbetingelser for kjøp av fysiske bøker fra Holytones.",
+  description: "Salgsbetingelser for kjøp av fysiske bøker og nettkurs fra Holytones.",
 };
 
 export default function SalesTermsPage() {
