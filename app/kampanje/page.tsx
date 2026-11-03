@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
-import { books, company, links, siteConfig } from "@/lib/site-config";
+import { BuyButton, CampaignBuySection, CampaignFooter, CampaignHeader } from "@/components/CampaignParts";
+import { books, siteConfig } from "@/lib/site-config";
 
 // Landing page for the Facebook ad for LØGNEN. Not linked from the menu or anywhere else on the
 // site, and kept out of search engines; people reach it only through the ad's link.
@@ -35,38 +35,10 @@ export const metadata: Metadata = {
   },
 };
 
-function BuyButton({ onDark = false }: { onDark?: boolean }) {
-  if (!book.orderUrl) return null;
-  return (
-    <div>
-      <a
-        href={book.orderUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={
-          onDark
-            ? "inline-block border border-loegnen-light bg-loegnen-light px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-loegnen-night transition-colors hover:bg-transparent hover:text-loegnen-light"
-            : "inline-block border border-loegnen-night bg-loegnen-night px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-loegnen-light transition-colors hover:bg-transparent hover:text-loegnen-night"
-        }
-      >
-        Kjøp {book.title.toUpperCase()}
-      </a>
-      <p className={`mt-3 text-xs ${onDark ? "text-background/60" : "text-foreground-muted"}`}>
-        Lanseres {book.status.toLowerCase()}
-      </p>
-    </div>
-  );
-}
-
 export default function KampanjePage() {
   return (
     <div lang="no">
-      {/* The site menu is hidden here (standalonePaths); just the name, with no links away. */}
-      <header className="border-b border-border-soft bg-background px-6 py-4 md:px-10">
-        <p className="logo-gold mx-auto max-w-5xl font-serif-display text-3xl tracking-wide sm:text-4xl">
-          {siteConfig.name}
-        </p>
-      </header>
+      <CampaignHeader />
 
       {/* 1. The promise, and the question it raises */}
       <section className="border-b border-border-soft bg-background-alt px-6 pt-12 pb-16 md:px-10 md:pt-20">
@@ -207,34 +179,9 @@ export default function KampanjePage() {
       </section>
 
       {/* 6. Buy */}
-      <section className="px-6 py-20 md:px-10">
-        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
-            Undersøk hva du bygger håpet ditt på
-          </h2>
-          <p className="mt-4 text-foreground-muted">
-            {book.title.toUpperCase()} – {book.subtitle}
-          </p>
-          <div className="mt-8">
-            <BuyButton />
-          </div>
-          <div className="mt-12 flex items-center gap-4 text-left">
-            {siteConfig.authorPhoto && (
-              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full">
-                <Image src={siteConfig.authorPhoto} alt="Idun Munkejord" fill sizes="64px" className="object-cover" />
-              </div>
-            )}
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-accent">Forfatter</p>
-              <p className="font-serif-display text-xl font-bold text-loegnen-night">Idun Munkejord</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CampaignBuySection heading="Undersøk hva du bygger håpet ditt på" />
 
-      <footer className="border-t border-border-soft bg-background-alt px-6 py-8 text-center text-xs text-foreground-muted md:px-10">
-        {siteConfig.name} · {company.name} · Org.nr. {company.orgNumber} · {links.email}
-      </footer>
+      <CampaignFooter />
     </div>
   );
 }
