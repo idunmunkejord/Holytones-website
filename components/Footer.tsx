@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { links } from "@/lib/site-config";
+import { links, standalonePaths } from "@/lib/site-config";
 import SocialLinks from "@/components/SocialLinks";
 
 // Pages whose last section is already dark get a light footer so the two stay distinct.
@@ -9,6 +9,7 @@ const lightFooterPaths = ["/", "/about"];
 
 export default function Footer() {
   const pathname = usePathname();
+  if (standalonePaths.includes(pathname)) return null;
   const background = lightFooterPaths.includes(pathname) ? "bg-background" : "bg-background-alt";
 
   return (

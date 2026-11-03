@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
-import { books, siteConfig } from "@/lib/site-config";
+import { books, company, links, siteConfig } from "@/lib/site-config";
 
 // Landing page for the Facebook ad for LØGNEN. Not linked from the menu or anywhere else on the
 // site, and kept out of search engines; people reach it only through the ad's link.
@@ -61,6 +61,13 @@ function BuyButton({ onDark = false }: { onDark?: boolean }) {
 export default function KampanjePage() {
   return (
     <div lang="no">
+      {/* The site menu is hidden here (standalonePaths); just the name, with no links away. */}
+      <header className="border-b border-border-soft bg-background px-6 py-4 md:px-10">
+        <p className="logo-gold mx-auto max-w-5xl font-serif-display text-3xl tracking-wide sm:text-4xl">
+          {siteConfig.name}
+        </p>
+      </header>
+
       {/* 1. The promise, and the question it raises */}
       <section className="border-b border-border-soft bg-background-alt px-6 pt-12 pb-16 md:px-10 md:pt-20">
         <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-center md:gap-16">
@@ -224,6 +231,10 @@ export default function KampanjePage() {
           </div>
         </div>
       </section>
+
+      <footer className="border-t border-border-soft bg-background-alt px-6 py-8 text-center text-xs text-foreground-muted md:px-10">
+        {siteConfig.name} · {company.name} · Org.nr. {company.orgNumber} · {links.email}
+      </footer>
     </div>
   );
 }

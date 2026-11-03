@@ -89,6 +89,10 @@ export const links = {
   turnstileSiteKey: "",
 };
 
+// Landing pages that stand on their own: the site menu and footer are hidden on them so visitors
+// stay on the page.
+export const standalonePaths = ["/kampanje"];
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/books", label: "Books" },

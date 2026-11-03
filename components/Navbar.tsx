@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { navLinks } from "@/lib/site-config";
+import { navLinks, standalonePaths } from "@/lib/site-config";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  if (standalonePaths.includes(pathname)) return null;
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-soft bg-background/90 backdrop-blur-md">
