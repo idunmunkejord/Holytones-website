@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionLabel from "@/components/SectionLabel";
 import { books, siteConfig } from "@/lib/site-config";
 
 // Shared pieces of the LØGNEN ad landing pages (see standalonePaths in site-config).
@@ -31,6 +32,44 @@ export function BuyButton({ onDark = false }: { onDark?: boolean }) {
     >
       Kjøp {book.title.toUpperCase()}
     </a>
+  );
+}
+
+const messages = [
+  "Tankene dine former virkeligheten.",
+  "Universet svarer på energien du sender ut.",
+  "Kraften finnes allerede i deg selv.",
+];
+
+// The messages the reader may recognise, and the longing behind them. Same text on every page;
+// a page can add its own paragraphs after it.
+export function PromiseSection({
+  label,
+  heading,
+  children,
+}: {
+  label: string;
+  heading: string;
+  children?: React.ReactNode;
+}) {
+  return (
+    <section className="px-6 py-16 md:px-10">
+      <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
+        <SectionLabel>{label}</SectionLabel>
+        <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">{heading}</h2>
+        <ul className="space-y-3 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl text-loegnen-night">
+          {messages.map((message) => (
+            <li key={message}>{message}</li>
+          ))}
+        </ul>
+        <p>
+          Lengselen bak er lett å forstå. Du vil at livet skal bli bedre, og du vil ha noe å holde
+          fast ved. Men disse tankene kan gjennom årene ha sneket seg inn i måten du tenker på – og
+          gradvis også inn i måten du forstår tro, bønn og Guds velsignelse.
+        </p>
+        {children}
+      </div>
+    </section>
   );
 }
 

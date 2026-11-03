@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
-import { BuyButton, CampaignBuySection, CampaignFooter, CampaignHeader } from "@/components/CampaignParts";
+import {
+  BuyButton,
+  CampaignBuySection,
+  CampaignFooter,
+  CampaignHeader,
+  PromiseSection,
+} from "@/components/CampaignParts";
 import { books, siteConfig } from "@/lib/site-config";
 
 // Second landing page for the LØGNEN Facebook ads, built on the book's own angle: self-development
@@ -25,12 +31,6 @@ export const metadata: Metadata = {
     images: [{ url: `${siteConfig.url}${book.cover}` }],
   },
 };
-
-const messages = [
-  "Tankene dine former virkeligheten.",
-  "Universet svarer på energien du sender ut.",
-  "Kraften finnes allerede i deg selv.",
-];
 
 export default function LognenSelvutviklingPage() {
   return (
@@ -69,24 +69,7 @@ export default function LognenSelvutviklingPage() {
       </section>
 
       {/* 2. Recognising the message */}
-      <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-          <SectionLabel>Kjenner du igjen budskapet?</SectionLabel>
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-            Det høres forlokkende ut
-          </h2>
-          <ul className="space-y-3 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl text-loegnen-night">
-            {messages.map((message) => (
-              <li key={message}>{message}</li>
-            ))}
-          </ul>
-          <p>
-            Lengselen bak er lett å forstå. Du vil at livet skal bli bedre, og du vil ha noe å holde
-            fast ved. Men disse tankene kan gjennom årene ha sneket seg inn i måten du tenker på – og
-            gradvis også inn i måten du forstår tro, bønn og Guds velsignelse.
-          </p>
-        </div>
-      </section>
+      <PromiseSection label="Kjenner du igjen budskapet?" heading="Det høres forlokkende ut" />
 
       {/* 3. The old temptation */}
       <section className="bg-loegnen-night px-6 py-20 text-background md:px-10">

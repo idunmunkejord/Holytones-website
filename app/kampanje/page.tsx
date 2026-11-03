@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
-import { BuyButton, CampaignBuySection, CampaignFooter, CampaignHeader } from "@/components/CampaignParts";
+import {
+  BuyButton,
+  CampaignBuySection,
+  CampaignFooter,
+  CampaignHeader,
+  PromiseSection,
+} from "@/components/CampaignParts";
 import { books, siteConfig } from "@/lib/site-config";
 
 // Landing page for the Facebook ad for LØGNEN. Not linked from the menu or anywhere else on the
@@ -72,26 +78,16 @@ export default function KampanjePage() {
         </div>
       </section>
 
-      {/* 2. What The Secret promises, in its publisher's own words */}
-      <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-          <SectionLabel>Løftet</SectionLabel>
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-            Det er ikke rart at det treffer
-          </h2>
-          <p>
-            De fleste av oss kjenner lengselen etter håp, retning og forandring. Når noe lover å vise
-            veien til et bedre liv, er det forståelig at vi lytter.
-          </p>
-          <p>
-            Forlaget beskriver The Secret som en bok som forklarer «the law that is governing all
-            lives», og som gir kunnskapen om hvordan du kan skape et gledesfylt liv – med vilje og
-            uten anstrengelse. Loven det handler om, er det boken kaller tiltrekningsloven: tanken om
-            at det du fester tankene ved, trekker du til deg.
-          </p>
-          <p className="border-l border-border-soft pl-4 text-xs leading-relaxed">{sourceNote}</p>
-        </div>
-      </section>
+      {/* 2. The promise, then what The Secret promises in its publisher's own words */}
+      <PromiseSection label="Løftet" heading="Det er ikke rart at det høres forlokkende ut">
+        <p>
+          Forlaget beskriver The Secret som en bok som forklarer «the law that is governing all
+          lives», og som gir kunnskapen om hvordan du kan skape et gledesfylt liv – med vilje og
+          uten anstrengelse. Loven det handler om, er det boken kaller tiltrekningsloven: tanken om
+          at det du fester tankene ved, trekker du til deg.
+        </p>
+        <p className="border-l border-border-soft pl-4 text-xs leading-relaxed">{sourceNote}</p>
+      </PromiseSection>
 
       {/* 3. Examining the claim */}
       <section className="bg-loegnen-night px-6 py-20 text-background md:px-10">
