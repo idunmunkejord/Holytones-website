@@ -15,6 +15,9 @@
   --accent-gold: #b0915a;
   --brown-dark: #4a2c17;
   --border-soft: rgba(43, 38, 33, 0.12);
+  /* LØGNEN's own colours, taken from its cover: the dark room and the light through the door. */
+  --loegnen-night: #16110c;
+  --loegnen-light: #e8b85c;
 }
 
 @theme inline {
@@ -32,6 +35,8 @@
   --color-accent-gold: var(--accent-gold);
   --color-brown-dark: var(--brown-dark);
   --color-border-soft: var(--border-soft);
+  --color-loegnen-night: var(--loegnen-night);
+  --color-loegnen-light: var(--loegnen-light);
   --font-serif: var(--font-cormorant);
   --font-sans: var(--font-inter);
 }
