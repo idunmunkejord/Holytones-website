@@ -81,9 +81,9 @@ export default function LognenSelvutviklingPage() {
             ))}
           </ul>
           <p>
-            Lengselen bak er lett å forstå. Vi vil at livet skal bli bedre, og vi vil ha noe å holde
-            fast ved. Men disse tankene har gjennom årene sneket seg inn i måten vi tenker på – og
-            gradvis også inn i måten mange kristne forstår tro, bønn og Guds velsignelse.
+            Lengselen bak er lett å forstå. Du vil at livet skal bli bedre, og du vil ha noe å holde
+            fast ved. Men disse tankene kan gjennom årene ha sneket seg inn i måten du tenker på – og
+            gradvis også inn i måten du forstår tro, bønn og Guds velsignelse.
           </p>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function LognenSelvutviklingPage() {
           </p>
           <p>
             Boken peker på at friheten du søker, og tomheten du kanskje forsøker å fylle, ikke
-            begynner med å vende blikket innover mot deg selv – men utover og opp mot Han som «fyller
+            begynner med å vende blikket innover mot deg selv – men utover og opp mot Ham som «fyller
             alt i alle» (Efeserne 1,17–23).
           </p>
         </div>

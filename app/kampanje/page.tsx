@@ -158,7 +158,7 @@ export default function KampanjePage() {
           <p>
             Boken inviterer deg til å skille det som er sant fra det som bare ligner sannheten. Den
             peker på at friheten du søker, ikke begynner med å vende blikket innover mot deg selv,
-            men utover og opp mot Han som «fyller alt i alle» (Efeserne 1,17–23).
+            men utover og opp mot Ham som «fyller alt i alle» (Efeserne 1,17–23).
           </p>
           <p>
             Det er ikke et løfte om at livet blir lett. Men håpet ditt trenger ikke å hvile på hvor

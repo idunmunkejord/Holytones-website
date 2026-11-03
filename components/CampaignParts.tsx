@@ -19,23 +19,18 @@ export function CampaignHeader() {
 export function BuyButton({ onDark = false }: { onDark?: boolean }) {
   if (!book.orderUrl) return null;
   return (
-    <div>
-      <a
-        href={book.orderUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={
-          onDark
-            ? "inline-block border border-loegnen-light bg-loegnen-light px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-loegnen-night transition-colors hover:bg-transparent hover:text-loegnen-light"
-            : "inline-block border border-loegnen-night bg-loegnen-night px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-loegnen-light transition-colors hover:bg-transparent hover:text-loegnen-night"
-        }
-      >
-        Kjøp {book.title.toUpperCase()}
-      </a>
-      <p className={`mt-3 text-xs ${onDark ? "text-background/60" : "text-foreground-muted"}`}>
-        Lanseres {book.status.toLowerCase()}
-      </p>
-    </div>
+    <a
+      href={book.orderUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={
+        onDark
+          ? "inline-block border border-loegnen-light bg-loegnen-light px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-loegnen-night transition-colors hover:bg-transparent hover:text-loegnen-light"
+          : "inline-block border border-loegnen-night bg-loegnen-night px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-loegnen-light transition-colors hover:bg-transparent hover:text-loegnen-night"
+      }
+    >
+      Kjøp {book.title.toUpperCase()}
+    </a>
   );
 }
 
