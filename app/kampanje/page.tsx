@@ -42,13 +42,13 @@ export default function KampanjePage() {
 
       {/* 1. The promise, and the question it raises */}
       <section className="border-b border-border-soft bg-background-alt px-6 pt-12 pb-16 md:px-10 md:pt-20">
-        <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-center md:gap-16">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center md:gap-12">
           {book.cover && (
             <ZoomImage
               src={book.cover}
               alt={`${book.title} av Idun Munkejord — forside og bakside`}
-              sizes="(min-width: 768px) 320px, 220px"
-              className="order-last mx-auto aspect-[3/4] w-[55%] max-w-[220px] shrink-0 overflow-hidden md:order-first md:mx-0 md:w-80 md:max-w-xs"
+              sizes="(min-width: 1024px) 480px, (min-width: 768px) 384px, 340px"
+              className="order-last mx-auto aspect-[3/4] w-[85%] max-w-[340px] shrink-0 overflow-hidden md:order-first md:mx-0 md:w-[24rem] md:max-w-none lg:w-[30rem]"
               imageClassName="object-cover object-right mix-blend-multiply"
             />
           )}
