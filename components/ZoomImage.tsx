@@ -11,12 +11,16 @@ export default function ZoomImage({
   sizes,
   className = "",
   imageClassName = "",
+  unoptimized = false,
 }: {
   src: string;
   alt: string;
   sizes: string;
   className?: string;
   imageClassName?: string;
+  // Shows the original file instead of a resized copy, for images cropped so tightly that the
+  // resized copy looks soft.
+  unoptimized?: boolean;
 }) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -35,6 +39,7 @@ export default function ZoomImage({
           fill
           sizes={sizes}
           quality={95}
+          unoptimized={unoptimized}
           className={`transition-opacity group-hover:opacity-80 ${imageClassName}`}
         />
       </button>

@@ -50,6 +50,7 @@ export default function KampanjePage() {
               sizes="(min-width: 1024px) 480px, (min-width: 768px) 384px, 340px"
               className="order-last mx-auto aspect-[3/4] w-[85%] max-w-[340px] shrink-0 overflow-hidden md:order-first md:mx-0 md:w-[24rem] md:max-w-none lg:w-[30rem]"
               imageClassName="object-cover object-right mix-blend-multiply"
+              unoptimized
             />
           )}
           <div className="max-w-xl">
