@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import SectionLabel from "@/components/SectionLabel";
-import { books, siteConfig } from "@/lib/site-config";
+import { books, links, siteConfig } from "@/lib/site-config";
 
 // Shared pieces of the LØGNEN ad landing pages (see standalonePaths in site-config).
 
@@ -101,11 +102,56 @@ export function CampaignBuySection({ heading }: { heading: string }) {
   );
 }
 
-// Stands in for the site footer: the web address as plain text, with nothing to click.
-export function CampaignFooter() {
+// The delivery options and their prices, from the book's details in site-config.
+export function PriceList({ onDark = false }: { onDark?: boolean }) {
+  if (!book.prices?.length) return null;
+  return (
+    <ul className={`space-y-2 text-sm ${onDark ? "text-background/85" : "text-foreground-muted"}`}>
+      {book.prices.map((option) => (
+        <li key={option.label}>
+          <span className={`font-semibold ${onDark ? "text-background" : "text-loegnen-night"}`}>
+            {option.nok} kr
+          </span>{" "}
+          · {option.label} <span className="opacity-75">({option.note})</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+// Marks content still to be supplied. Shown only in the local preview, never on the live site.
+export function Missing({ children }: { children: React.ReactNode }) {
+  if (process.env.NODE_ENV !== "development") return null;
+  return (
+    <div className="px-6 py-8 md:px-10">
+      <div className="mx-auto max-w-2xl border-2 border-dashed border-accent-blush bg-accent-blush/10 p-4 text-sm text-foreground">
+        <strong>Mangler (vises bare i forhåndsvisningen):</strong> {children}
+      </div>
+    </div>
+  );
+}
+
+// Stands in for the site footer: the web address as plain text, with nothing to click. With
+// `contact`, it also gives the email address and the terms and privacy pages.
+export function CampaignFooter({ contact = false }: { contact?: boolean }) {
   return (
     <footer className="border-t border-border-soft bg-background-alt px-6 py-8 text-center text-xs text-foreground-muted md:px-10">
-      {siteConfig.url.replace("https://", "www.")}
+      {contact ? (
+        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+          <a href={`mailto:${links.email}`} className="hover:text-foreground">
+            {links.email}
+          </a>
+          <Link href="/salgsbetingelser" className="hover:text-foreground">
+            Salgsbetingelser
+          </Link>
+          <Link href="/personvern" className="hover:text-foreground">
+            Personvern
+          </Link>
+          <span>{siteConfig.url.replace("https://", "www.")}</span>
+        </div>
+      ) : (
+        siteConfig.url.replace("https://", "www.")
+      )}
     </footer>
   );
 }

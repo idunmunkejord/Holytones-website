@@ -91,7 +91,7 @@ export const links = {
 
 // Landing pages that stand on their own: the site menu and footer are hidden on them so visitors
 // stay on the page.
-export const standalonePaths = ["/kampanje", "/lognen-selvutvikling"];
+export const standalonePaths = ["/kampanje", "/lognen-selvutvikling", "/lognen-manifestering"];
 
 export const navLinks = [
   { href: "/", label: "Home" },
@@ -144,6 +144,8 @@ export type Book = {
   coverBack?: string;
   // Simplero checkout page the ORDER button opens.
   orderUrl?: string;
+  // Delivery options and prices in NOK, as listed on the checkout page.
+  prices?: { label: string; note: string; nok: number }[];
 };
 
 export const books: Book[] = [
@@ -158,6 +160,10 @@ export const books: Book[] = [
     status: "24 November",
     cover: "/images/loegnen-book.webp",
     orderUrl: "https://www.youmatter.academy/cart/263881-Loegnen",
+    prices: [
+      { label: "Sendes i posten", note: "Frakt er inkludert", nok: 495 },
+      { label: "Hent boka selv", note: "Etter avtale i Kristiansand", nok: 395 },
+    ],
   },
 ];
 
