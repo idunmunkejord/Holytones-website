@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
 import {
+  BackCoverHook,
   BuyButton,
   CampaignBuySection,
   CampaignFooter,
@@ -77,6 +78,8 @@ export default function KampanjePage() {
           </div>
         </div>
       </section>
+
+      <BackCoverHook />
 
       {/* 2. The promise, then what The Secret promises in its publisher's own words */}
       <PromiseSection label="Løftet" heading="Det er ikke rart at det høres forlokkende ut">

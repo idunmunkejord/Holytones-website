@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
 import {
+  BackCoverHook,
   BuyButton,
   CampaignFooter,
   CampaignHeader,
@@ -104,6 +105,8 @@ export default function LognenManifesteringPage() {
           </div>
         </div>
       </section>
+
+      <BackCoverHook />
 
       {/* 2. Thoughts and actions versus thoughts and events */}
       <section className="px-6 py-16 md:px-10">

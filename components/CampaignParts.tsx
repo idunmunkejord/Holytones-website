@@ -36,6 +36,39 @@ export function BuyButton({ onDark = false }: { onDark?: boolean }) {
   );
 }
 
+// The opening paragraph of the back cover, word for word, set like the cover itself. The hook
+// shown right after the opening of every campaign page.
+export function BackCoverHook() {
+  return (
+    <section className="bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
+      <figure className="mx-auto max-w-2xl">
+        <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-4xl">
+          Et kristent svar på {book.title.toUpperCase()} som høres ut som sannhet
+        </h2>
+        <blockquote className="mt-6 space-y-4 font-serif-display text-xl leading-relaxed md:text-2xl">
+          <p>
+            Hva om det som høres så forlokkende og frigjørende ut, flytter Gud ut av sentrum for ditt
+            liv?{" "}
+            <span className="font-bold text-loegnen-light">
+              Hva om troen på tiltrekningskraften og på at alle svarene finnes i deg selv ikke bare er
+              uskyldige redskaper, men uttrykk for en eldre fristelse: ønsket om å bli din egen Gud?
+            </span>{" "}
+            Den samme gamle fristelsen som drev Adam og Eva ut av paradis «dere blir som Gud»
+            (1. Mosebok 3,5), men denne gangen forkledd i et motivasjonsspråk som kunne ha vært
+            hentet fra en TED-talk.
+          </p>
+        </blockquote>
+        <figcaption className="mt-4 text-xs uppercase tracking-[0.2em] text-background/60">
+          Fra bokas bakside
+        </figcaption>
+        <div className="mt-10">
+          <BuyButton onDark />
+        </div>
+      </figure>
+    </section>
+  );
+}
+
 const messages = [
   "Tankene dine former virkeligheten.",
   "Universet svarer på energien du sender ut.",

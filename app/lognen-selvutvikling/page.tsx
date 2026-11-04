@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
 import {
+  BackCoverHook,
   BuyButton,
   CampaignBuySection,
   CampaignFooter,
@@ -68,36 +69,11 @@ export default function LognenSelvutviklingPage() {
         </div>
       </section>
 
-      {/* 2. Recognising the message */}
-      <PromiseSection label="Kjenner du igjen budskapet?" heading="Det høres forlokkende ut" />
+      {/* 2. The hook from the back cover */}
+      <BackCoverHook />
 
-      {/* 3. The old temptation */}
-      <section className="bg-loegnen-night px-6 py-20 text-background md:px-10">
-        <div className="mx-auto max-w-3xl">
-          <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-loegnen-light">
-            <span className="h-px w-8 bg-loegnen-light/60" />
-            Spørsmålet
-          </p>
-          <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-5xl">
-            Uskyldige redskaper – eller en gammel fristelse?
-          </h2>
-          <div className="mt-10 space-y-5 leading-relaxed text-background/85">
-            <p>
-              Hva om troen på tiltrekningskraften, og på at alle svarene finnes i deg selv, ikke bare
-              er nøytrale verktøy? Hva om de er uttrykk for en eldre fristelse: ønsket om å bli din
-              egen Gud?
-            </p>
-            <p>
-              Det er den samme fristelsen som møtte Adam og Eva i hagen: «dere blir som Gud»
-              (1. Mosebok 3,5). Denne gangen er den bare kledd i et motivasjonsspråk som kunne vært
-              hentet fra en TED-talk.
-            </p>
-          </div>
-          <div className="mt-12">
-            <BuyButton onDark />
-          </div>
-        </div>
-      </section>
+      {/* 3. Recognising the message */}
+      <PromiseSection label="Kjenner du igjen budskapet?" heading="Det høres forlokkende ut" />
 
       {/* 4. The book's response */}
       <section className="px-6 py-16 md:px-10">
