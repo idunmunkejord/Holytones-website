@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import type { Lang } from "@/lib/i18n";
 import { navLinks, standalonePaths } from "@/lib/site-config";
 
-export default function Navbar() {
+export default function Navbar({ lang }: { lang: Lang }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -33,26 +35,30 @@ export default function Navbar() {
                   active ? "text-accent" : "text-foreground-muted hover:text-foreground"
                 }`}
               >
-                {link.label}
+                {link.label[lang]}
               </Link>
             );
           })}
+          <LanguageSwitcher lang={lang} />
         </nav>
 
-        <button
-          type="button"
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span
-            className={`h-px w-6 bg-foreground transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
-          />
-          <span
-            className={`h-px w-6 bg-foreground transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
-          />
-        </button>
+        <div className="flex items-center gap-4 lg:hidden">
+          <LanguageSwitcher lang={lang} />
+          <button
+            type="button"
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5"
+            aria-label={lang === "no" ? "Vis eller skjul meny" : "Toggle menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span
+              className={`h-px w-6 bg-foreground transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+            />
+            <span
+              className={`h-px w-6 bg-foreground transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -68,7 +74,7 @@ export default function Navbar() {
                   active ? "text-accent" : "text-foreground-muted"
                 }`}
               >
-                {link.label}
+                {link.label[lang]}
               </Link>
             );
           })}

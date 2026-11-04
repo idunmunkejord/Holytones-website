@@ -1,5 +1,8 @@
 // Central place for site content and links.
 // Swap the placeholder URLs and copy below with the real ones whenever you have them.
+// Text shown to visitors is given in English (en) and Norwegian (no); see lib/i18n.ts.
+
+import type { Localized } from "@/lib/i18n";
 
 export const siteConfig = {
   name: "Holytones",
@@ -93,21 +96,21 @@ export const links = {
 // stay on the page.
 export const standalonePaths = ["/kampanje", "/lognen-selvutvikling", "/lognen-manifestering"];
 
-export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/books", label: "Books" },
-  { href: "/courses", label: "Courses" },
-  { href: "/music", label: "Music" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+export const navLinks: { href: string; label: Localized }[] = [
+  { href: "/", label: { en: "Home", no: "Hjem" } },
+  { href: "/books", label: { en: "Books", no: "Bøker" } },
+  { href: "/courses", label: { en: "Courses", no: "Kurs" } },
+  { href: "/music", label: { en: "Music", no: "Musikk" } },
+  { href: "/about", label: { en: "About", no: "Om meg" } },
+  { href: "/contact", label: { en: "Contact", no: "Kontakt" } },
 ];
 
 export type CategoryTone = "teal" | "blush" | "violet" | "peach" | "green";
 
 export type Category = {
   slug: string;
-  label: string;
-  blurb: string;
+  label: Localized;
+  blurb: Localized;
   tone: CategoryTone;
 };
 
@@ -115,20 +118,29 @@ export type Category = {
 export const categories: Category[] = [
   {
     slug: "books",
-    label: "Books",
-    blurb: "Words that challenge, awaken and restore.",
+    label: { en: "Books", no: "Bøker" },
+    blurb: {
+      en: "Words that challenge, awaken and restore.",
+      no: "Ord som utfordrer, vekker og gjenoppretter.",
+    },
     tone: "blush",
   },
   {
     slug: "courses",
-    label: "Courses",
-    blurb: "Learning that helps you grow and live with purpose.",
+    label: { en: "Courses", no: "Kurs" },
+    blurb: {
+      en: "Learning that helps you grow and live with purpose.",
+      no: "Læring som hjelper deg å vokse og leve med mening.",
+    },
     tone: "violet",
   },
   {
     slug: "music",
-    label: "Music",
-    blurb: "Songs with stories, truth and hope.",
+    label: { en: "Music", no: "Musikk" },
+    blurb: {
+      en: "Songs with stories, truth and hope.",
+      no: "Sanger med historier, sannhet og håp.",
+    },
     tone: "teal",
   },
 ];
@@ -136,10 +148,10 @@ export const categories: Category[] = [
 export type Book = {
   title: string;
   subtitle?: string;
-  language: string;
-  // One string per paragraph.
-  note: string[];
-  status: string;
+  language: Localized;
+  // One string per paragraph. The Norwegian text is from the back cover.
+  note: Localized<string[]>;
+  status: Localized;
   cover?: string;
   coverBack?: string;
   // Simplero checkout page the ORDER button opens.
@@ -152,12 +164,18 @@ export const books: Book[] = [
   {
     title: "Løgnen",
     subtitle: "Når selvutvikling tar Guds plass",
-    language: "Lansering",
-    note: [
-      "Mange mennesker bærer på en lengsel om at livet kan forandres og få mening hvis de bare tenker riktig og retter oppmerksomheten mot det de ønsker. Budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og at kraften allerede finnes i deg selv, høres forlokkende ut. Disse tankene har gjennom årene sneket seg inn i måten vi tenker på, og gradvis også inn i måten mange kristne forstår tro, bønn og Guds velsignelse.",
-      "LØGNEN er et kristent svar på denne forlokkende fortellingen som nesten umerket har sneket seg inn i vår kristne tro. For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.",
-    ],
-    status: "24 November",
+    language: { en: "In Norwegian · Launch", no: "Lansering" },
+    note: {
+      en: [
+        "Many people carry a longing for life to change and find meaning, if only they think the right way and focus on what they want. The message that your thoughts shape reality, that the universe responds to the energy you send out, and that the power already lies within you, sounds appealing. Over the years these ideas have crept into the way we think, and gradually also into the way many Christians understand faith, prayer and God's blessing.",
+        "LØGNEN is a Christian response to this appealing story, which has crept almost unnoticed into our Christian faith. For the most dangerous lies are not necessarily the ones that are completely untrue, but the ones that contain just enough truth that you don't notice what has been changed.",
+      ],
+      no: [
+        "Mange mennesker bærer på en lengsel om at livet kan forandres og få mening hvis de bare tenker riktig og retter oppmerksomheten mot det de ønsker. Budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og at kraften allerede finnes i deg selv, høres forlokkende ut. Disse tankene har gjennom årene sneket seg inn i måten vi tenker på, og gradvis også inn i måten mange kristne forstår tro, bønn og Guds velsignelse.",
+        "LØGNEN er et kristent svar på denne forlokkende fortellingen som nesten umerket har sneket seg inn i vår kristne tro. For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.",
+      ],
+    },
+    status: { en: "24 November", no: "24. november" },
     cover: "/images/loegnen-book.webp",
     orderUrl: "https://www.youmatter.academy/cart/263881-Loegnen",
     prices: [
@@ -168,19 +186,19 @@ export const books: Book[] = [
 ];
 
 export type Course = {
-  title: string;
+  title: Localized;
   // Short facts shown under the title, e.g. language or length. Leave empty to hide the line.
-  details?: string;
-  note: string;
+  details?: Localized;
+  note: Localized;
 };
 
 export const courses: Course[] = [
   {
-    title: "Individual Session",
-    note: "More information coming soon.",
+    title: { en: "Individual Session", no: "Individuell samtale" },
+    note: { en: "More information coming soon.", no: "Mer informasjon kommer snart." },
   },
   {
-    title: "Group Session",
-    note: "More information coming soon.",
+    title: { en: "Group Session", no: "Gruppesamtale" },
+    note: { en: "More information coming soon.", no: "Mer informasjon kommer snart." },
   },
 ];

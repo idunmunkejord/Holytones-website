@@ -1,13 +1,16 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import type { Lang } from "@/lib/i18n";
 import { links, standalonePaths } from "@/lib/site-config";
 import SocialLinks from "@/components/SocialLinks";
 
 // Pages whose last section is already dark get a light footer so the two stay distinct.
 const lightFooterPaths = ["/", "/about"];
 
-export default function Footer() {
+const rights = { en: "All rights reserved.", no: "Alle rettigheter forbeholdt." };
+
+export default function Footer({ lang }: { lang: Lang }) {
   const pathname = usePathname();
   if (standalonePaths.includes(pathname)) return null;
   const background = lightFooterPaths.includes(pathname) ? "bg-background" : "bg-background-alt";
@@ -30,7 +33,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-foreground-muted/70">
-          © {new Date().getFullYear()} Holytones. All rights reserved.
+          © {new Date().getFullYear()} Holytones. {rights[lang]}
         </p>
       </div>
     </footer>

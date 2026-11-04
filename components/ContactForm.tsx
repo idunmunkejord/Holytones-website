@@ -2,13 +2,55 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Script from "next/script";
+import type { Lang } from "@/lib/i18n";
 import { links } from "@/lib/site-config";
+
+const text = {
+  en: {
+    name: "Name",
+    email: "Email",
+    subject: "Subject",
+    message: "Message",
+    send: "Send message",
+    sending: "Sending...",
+    failed: "Your message could not be sent.",
+    thanks: "Thank you",
+    sentBefore: "Your message is on its way. We'll reply to ",
+    sentAfter: " as soon as we can.",
+    direct: "You can also write to us directly at",
+  },
+  no: {
+    name: "Navn",
+    email: "E-post",
+    subject: "Emne",
+    message: "Melding",
+    send: "Send melding",
+    sending: "Sender...",
+    failed: "Meldingen din kunne ikke sendes.",
+    thanks: "Takk",
+    sentBefore: "Meldingen din er på vei. Vi svarer til ",
+    sentAfter: " så snart vi kan.",
+    direct: "Du kan også skrive direkte til oss på",
+  },
+};
+
+// The server's error messages are in English; these are the Norwegian versions.
+const norwegianErrors: Record<string, string> = {
+  "Invalid request.": "Ugyldig forespørsel.",
+  "Please fill in all the fields.": "Fyll ut alle feltene.",
+  "Please enter a valid email address.": "Skriv inn en gyldig e-postadresse.",
+  "Your message is too long.": "Meldingen din er for lang.",
+  "The spam check did not pass. Please try again.": "Spamkontrollen gikk ikke gjennom. Prøv igjen.",
+  "The contact form is not available right now.": "Kontaktskjemaet er ikke tilgjengelig akkurat nå.",
+  "Your message could not be sent.": "Meldingen din kunne ikke sendes.",
+};
 
 const labelClass = "text-xs uppercase tracking-[0.18em] text-foreground-muted";
 const inputClass =
   "border-b border-border-soft bg-transparent py-2 text-foreground outline-none transition-colors focus:border-accent";
 
-export default function ContactForm() {
+export default function ContactForm({ lang }: { lang: Lang }) {
+  const t = text[lang];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -63,9 +105,10 @@ export default function ContactForm() {
         setStatus("sent");
         return;
       }
-      setError(result?.error ?? "Your message could not be sent.");
+      const serverError = result?.error ?? text.en.failed;
+      setError(lang === "no" ? (norwegianErrors[serverError] ?? t.failed) : serverError);
     } catch {
-      setError("Your message could not be sent.");
+      setError(t.failed);
     }
 
     // A Turnstile token can only be used once, so ask for a fresh one before a retry.
@@ -77,9 +120,11 @@ export default function ContactForm() {
   if (status === "sent") {
     return (
       <div role="status">
-        <h2 className="font-serif-display text-2xl text-foreground">Thank you</h2>
+        <h2 className="font-serif-display text-2xl text-foreground">{t.thanks}</h2>
         <p className="mt-4 max-w-md text-base leading-relaxed text-foreground-muted">
-          Your message is on its way. We&apos;ll reply to {email} as soon as we can.
+          {t.sentBefore}
+          {email}
+          {t.sentAfter}
         </p>
       </div>
     );
@@ -89,7 +134,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <label className="flex flex-col gap-2">
-          <span className={labelClass}>Name</span>
+          <span className={labelClass}>{t.name}</span>
           <input
             required
             type="text"
@@ -102,7 +147,7 @@ export default function ContactForm() {
           />
         </label>
         <label className="flex flex-col gap-2">
-          <span className={labelClass}>Email</span>
+          <span className={labelClass}>{t.email}</span>
           <input
             required
             type="email"
@@ -117,7 +162,7 @@ export default function ContactForm() {
       </div>
 
       <label className="flex flex-col gap-2">
-        <span className={labelClass}>Subject</span>
+        <span className={labelClass}>{t.subject}</span>
         <input
           required
           type="text"
@@ -130,7 +175,7 @@ export default function ContactForm() {
       </label>
 
       <label className="flex flex-col gap-2">
-        <span className={labelClass}>Message</span>
+        <span className={labelClass}>{t.message}</span>
         <textarea
           required
           rows={5}
@@ -172,13 +217,13 @@ export default function ContactForm() {
         disabled={status === "sending"}
         className="mt-2 w-fit border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "sending" ? "Sending..." : "Send message"}
+        {status === "sending" ? t.sending : t.send}
       </button>
 
       <p role="alert" className="text-sm text-foreground-muted empty:hidden">
         {status === "error" && (
           <>
-            {error} You can also write to us directly at{" "}
+            {error} {t.direct}{" "}
             <a href={`mailto:${links.email}`} className="link-underline text-accent">
               {links.email}
             </a>

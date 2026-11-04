@@ -1,6 +1,7 @@
 // Holytones releases, read from lib/music-catalogue.json. New releases are added to that file by
 // hand; scripts/sync-apple-music.mjs then fills in the Apple Music links.
 import catalogue from "@/lib/music-catalogue.json";
+import type { Lang } from "@/lib/i18n";
 
 // `url` is the Spotify link.
 export type Song = {
@@ -53,8 +54,8 @@ export function formatDuration(ms: number) {
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
 }
 
-export function formatReleaseDate(date: string) {
-  return new Date(`${date}T00:00:00Z`).toLocaleDateString("en-GB", {
+export function formatReleaseDate(date: string, lang: Lang = "en") {
+  return new Date(`${date}T00:00:00Z`).toLocaleDateString(lang === "no" ? "nb-NO" : "en-GB", {
     day: "numeric",
     month: "long",
     year: "numeric",

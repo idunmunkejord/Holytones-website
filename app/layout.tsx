@@ -3,6 +3,8 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getLang } from "@/lib/get-lang";
+import { htmlLang } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site-config";
 
 const cormorant = Cormorant_Garamond({
@@ -17,30 +19,33 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: `${siteConfig.name} — Original Music`,
-    template: `%s — ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  openGraph: {
-    title: `${siteConfig.name} — Original Music`,
-    description: siteConfig.description,
-    type: "website",
-  },
+const siteDescription = {
+  en: siteConfig.description,
+  no: "Holytones er Idun Munkejords kreative hjem – original musikk, bøker, kurs, kunst og refleksjon, skrevet på engelsk, norsk og spansk.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export async function generateMetadata(): Promise<Metadata> {
+  const lang = await getLang();
+  const title = `${siteConfig.name} — ${lang === "no" ? "Original musikk" : "Original Music"}`;
+  return {
+    title: { default: title, template: `%s — ${siteConfig.name}` },
+    description: siteDescription[lang],
+    openGraph: { title, description: siteDescription[lang], type: "website" },
+  };
+}
+
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const lang = await getLang();
   return (
     <html
-      lang="en"
+      lang={htmlLang[lang]}
       className={`${cormorant.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <div className="grain-overlay" />
-        <Navbar />
+        <Navbar lang={lang} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer lang={lang} />
       </body>
     </html>
   );

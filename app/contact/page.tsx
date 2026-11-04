@@ -2,29 +2,47 @@ import type { Metadata } from "next";
 import SectionLabel from "@/components/SectionLabel";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
+import { getLang } from "@/lib/get-lang";
 import { company, customerService } from "@/lib/site-config";
 
 const columnHeading = "mb-3 text-xs uppercase tracking-[0.2em] text-foreground";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with Holytones for booking, press, or general inquiries.",
+const text = {
+  en: {
+    title: "Contact",
+    description: "Get in touch with Holytones for booking, press, or general inquiries.",
+    intro:
+      "Whether you have a question about my books, courses, or music, want to share something that has touched your heart, or simply feel like reaching out, you are always welcome to get in touch.",
+    info: "Info",
+  },
+  no: {
+    title: "Kontakt",
+    description: "Ta kontakt med Holytones for booking, presse eller andre henvendelser.",
+    intro:
+      "Enten du har et spørsmål om bøkene, kursene eller musikken min, vil dele noe som har berørt hjertet ditt, eller bare har lyst til å ta kontakt, er du alltid velkommen til å skrive.",
+    info: "Info",
+  },
 };
 
-export default function ContactPage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const t = text[await getLang()];
+  return { title: t.title, description: t.description };
+}
+
+export default async function ContactPage() {
+  const lang = await getLang();
+  const t = text[lang];
   return (
     <>
       <section className="border-b border-border-soft bg-background-alt px-6 py-14 md:px-10 md:py-20">
         <div className="mx-auto max-w-4xl">
-          <SectionLabel>Contact</SectionLabel>
-          <h1 className="sr-only">Contact</h1>
+          <SectionLabel>{t.title}</SectionLabel>
+          <h1 className="sr-only">{t.title}</h1>
           <p className="max-w-2xl text-[15px] leading-[1.75] text-foreground-muted md:text-base">
-            Whether you have a question about my books, courses, or music, want to share something
-            that has touched your heart, or simply feel like reaching out, you are always welcome
-            to get in touch.
+            {t.intro}
           </p>
           <div className="mt-8 max-w-2xl border border-border-soft bg-surface px-6 py-8 sm:px-10 sm:py-10">
-            <ContactForm />
+            <ContactForm lang={lang} />
           </div>
         </div>
       </section>
@@ -32,7 +50,7 @@ export default function ContactPage() {
       <section className="px-6 py-12 md:px-10">
         <div className="mx-auto grid max-w-4xl gap-10 text-sm leading-relaxed text-foreground-muted sm:grid-cols-2">
           <div>
-            <h2 className={columnHeading}>Info</h2>
+            <h2 className={columnHeading}>{t.info}</h2>
             <p className="text-foreground">{company.name}</p>
             <p>Org.nr. {company.orgNumber}</p>
             <p>{company.offering}</p>

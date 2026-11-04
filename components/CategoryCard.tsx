@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Lang } from "@/lib/i18n";
 import type { Category, CategoryTone } from "@/lib/site-config";
 
 const toneClasses: Record<CategoryTone, { top: string; text: string }> = {
@@ -24,7 +25,7 @@ const toneClasses: Record<CategoryTone, { top: string; text: string }> = {
   },
 };
 
-export default function CategoryCard({ category }: { category: Category }) {
+export default function CategoryCard({ category, lang }: { category: Category; lang: Lang }) {
   const tone = toneClasses[category.tone];
 
   return (
@@ -33,13 +34,13 @@ export default function CategoryCard({ category }: { category: Category }) {
       className={`group flex flex-col justify-between border border-border-soft border-t-[3px] ${tone.top} bg-surface px-8 py-10 transition-colors`}
     >
       <div>
-        <h3 className="font-serif-display text-2xl text-foreground">{category.label}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-foreground-muted">{category.blurb}</p>
+        <h3 className="font-serif-display text-2xl text-foreground">{category.label[lang]}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-foreground-muted">{category.blurb[lang]}</p>
       </div>
       <span
         className={`link-underline mt-8 inline-block w-fit text-xs uppercase tracking-[0.18em] transition-colors ${tone.text} group-hover:text-foreground`}
       >
-        Explore
+        {lang === "no" ? "Utforsk" : "Explore"}
       </span>
     </Link>
   );

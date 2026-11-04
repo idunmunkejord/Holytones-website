@@ -1,5 +1,11 @@
 import Image from "next/image";
+import type { Lang } from "@/lib/i18n";
 import { formatDuration, formatReleaseDate, type ListedSong, type Release } from "@/lib/music";
+
+const text = {
+  en: { cover: "cover", songs: "songs", show: "Show songs +", hide: "Hide songs −", whole: "Whole album:" },
+  no: { cover: "omslag", songs: "sanger", show: "Vis sanger +", hide: "Skjul sanger −", whole: "Hele albumet:" },
+};
 
 const listenLink =
   "link-underline text-xs uppercase tracking-[0.18em] text-foreground-muted hover:text-accent";
@@ -28,11 +34,11 @@ function ListenLinks({
   );
 }
 
-function Cover({ release, size }: { release: Release; size: number }) {
+function Cover({ release, size, lang }: { release: Release; size: number; lang: Lang }) {
   return (
     <Image
       src={release.cover}
-      alt={`${release.title} cover`}
+      alt={`${release.title} ${text[lang].cover}`}
       width={size}
       height={size}
       unoptimized
@@ -42,20 +48,21 @@ function Cover({ release, size }: { release: Release; size: number }) {
 }
 
 // An album that opens to show its songs.
-export function AlbumCard({ album }: { album: Release }) {
+export function AlbumCard({ album, lang }: { album: Release; lang: Lang }) {
+  const t = text[lang];
   return (
     <details className="group border border-border-soft bg-surface">
       <summary className="flex cursor-pointer list-none items-center gap-5 p-5 sm:gap-6 sm:p-6 [&::-webkit-details-marker]:hidden">
-        <Cover release={album} size={112} />
+        <Cover release={album} size={112} lang={lang} />
         <div className="min-w-0 flex-1">
           <p className="text-[10px] uppercase tracking-[0.2em] text-accent">Album</p>
           <h3 className="mt-1 font-serif-display text-2xl text-foreground">{album.title}</h3>
           <p className="mt-1 text-sm text-foreground-muted">
-            {formatReleaseDate(album.releaseDate)} · {album.tracks.length} songs
+            {formatReleaseDate(album.releaseDate, lang)} · {album.tracks.length} {t.songs}
           </p>
           <p className="mt-3 text-xs uppercase tracking-[0.18em] text-foreground-muted">
-            <span className="group-open:hidden">Show songs +</span>
-            <span className="hidden group-open:inline">Hide songs −</span>
+            <span className="group-open:hidden">{t.show}</span>
+            <span className="hidden group-open:inline">{t.hide}</span>
           </p>
         </div>
       </summary>
@@ -79,7 +86,7 @@ export function AlbumCard({ album }: { album: Release }) {
           ))}
         </ol>
         <div className="mt-5 flex flex-wrap items-baseline gap-4">
-          <span className="text-xs uppercase tracking-[0.18em] text-foreground">Whole album:</span>
+          <span className="text-xs uppercase tracking-[0.18em] text-foreground">{t.whole}</span>
           <ListenLinks spotify={album.url} appleMusic={album.appleMusicUrl} />
         </div>
       </div>
@@ -87,20 +94,20 @@ export function AlbumCard({ album }: { album: Release }) {
   );
 }
 
-export function SingleCard({ single }: { single: Release }) {
+export function SingleCard({ single, lang }: { single: Release; lang: Lang }) {
   return (
     <div className="flex flex-wrap items-center gap-5 border-b border-border-soft py-5 first:pt-0 last:border-b-0">
-      <Cover release={single} size={72} />
+      <Cover release={single} size={72} lang={lang} />
       <div className="min-w-0 flex-1">
         <h3 className="font-serif-display text-xl text-foreground">{single.title}</h3>
-        <p className="mt-1 text-sm text-foreground-muted">{formatReleaseDate(single.releaseDate)}</p>
+        <p className="mt-1 text-sm text-foreground-muted">{formatReleaseDate(single.releaseDate, lang)}</p>
       </div>
       <ListenLinks spotify={single.url} appleMusic={single.appleMusicUrl} />
     </div>
   );
 }
 
-export function SongRow({ song, index }: { song: ListedSong; index: number }) {
+export function SongRow({ song, index, lang }: { song: ListedSong; index: number; lang: Lang }) {
   return (
     <li className="flex flex-wrap items-baseline gap-x-4 gap-y-2 border-b border-border-soft py-4 last:border-b-0 sm:gap-x-6">
       <span className="w-8 font-serif-display text-lg text-foreground-muted/60">
@@ -110,7 +117,7 @@ export function SongRow({ song, index }: { song: ListedSong; index: number }) {
         <p className="font-serif-display text-xl text-foreground">{song.title}</p>
         <p className="mt-0.5 text-sm text-foreground-muted">
           {song.releaseTitle !== song.title && `${song.releaseTitle} · `}
-          {formatReleaseDate(song.releaseDate)} · {formatDuration(song.durationMs)}
+          {formatReleaseDate(song.releaseDate, lang)} · {formatDuration(song.durationMs)}
         </p>
       </div>
       <ListenLinks

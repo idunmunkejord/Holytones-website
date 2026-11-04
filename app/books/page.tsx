@@ -2,33 +2,52 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
+import { getLang } from "@/lib/get-lang";
 import { books } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "Books",
-  description: "Books by Idun Munkejord — honest, faith-rooted writing for readers who want depth over polish.",
+const text = {
+  en: {
+    title: "Books",
+    description: "Books by Idun Munkejord — honest, faith-rooted writing for readers who want depth over polish.",
+    intro: [
+      "What you believe shapes how you live, yet some of the ideas you trust most may deserve a closer look. Holytones books invite you to explore the questions that touch your identity, faith and everyday choices, helping you recognise misleading promises and deepen your trust in God. Through thoughtful reflection and Scripture-rooted encouragement, each book brings God’s Word into the struggles, longings and decisions you know firsthand.",
+      "Begin with LØGNEN, which examines what happens when self-development takes God’s place.",
+    ],
+    coverAlt: "front and back cover",
+    backAlt: "back cover",
+    order: "Order book",
+  },
+  no: {
+    title: "Bøker",
+    description: "Bøker av Idun Munkejord – ærlig, troforankret skriving for deg som vil ha dybde fremfor fasade.",
+    intro: [
+      "Det du tror på, former hvordan du lever, men noen av ideene du stoler mest på, fortjener kanskje en nærmere titt. Bøkene fra Holytones inviterer deg til å utforske spørsmålene som berører identiteten din, troen din og valgene du tar i hverdagen, og hjelper deg å kjenne igjen villedende løfter og fordype tilliten din til Gud. Gjennom ettertenksom refleksjon og bibelforankret oppmuntring bringer hver bok Guds ord inn i kampene, lengslene og beslutningene du kjenner fra ditt eget liv.",
+      "Begynn med LØGNEN, som undersøker hva som skjer når selvutvikling tar Guds plass.",
+    ],
+    coverAlt: "forside og bakside",
+    backAlt: "bakside",
+    order: "Bestill boka",
+  },
 };
 
-export default function BooksPage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const t = text[await getLang()];
+  return { title: t.title, description: t.description };
+}
+
+export default async function BooksPage() {
+  const lang = await getLang();
+  const t = text[lang];
   return (
     <>
       <section className="border-b border-border-soft bg-background-alt px-6 pt-14 pb-16 md:px-10 md:pt-20">
         <div className="mx-auto max-w-6xl">
-          <SectionLabel>Books</SectionLabel>
-          <h1 className="sr-only">Books</h1>
+          <SectionLabel>{t.title}</SectionLabel>
+          <h1 className="sr-only">{t.title}</h1>
           <div className="max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-            <p>
-              What you believe shapes how you live, yet some of the ideas you trust most may deserve
-              a closer look. Holytones books invite you to explore the questions that touch your
-              identity, faith and everyday choices, helping you recognise misleading promises and
-              deepen your trust in God. Through thoughtful reflection and Scripture-rooted
-              encouragement, each book brings God&rsquo;s Word into the struggles, longings and
-              decisions you know firsthand.
-            </p>
-            <p>
-              Begin with LØGNEN, which examines what happens when self-development takes
-              God&rsquo;s place.
-            </p>
+            {t.intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -45,7 +64,7 @@ export default function BooksPage() {
                   {book.cover && (
                     <ZoomImage
                       src={book.cover}
-                      alt={`${book.title} — front and back cover`}
+                      alt={`${book.title} — ${t.coverAlt}`}
                       sizes="(min-width: 1024px) 384px, (min-width: 768px) 320px, (min-width: 640px) 256px, 384px"
                       className="aspect-[3/2] w-full shrink-0 overflow-hidden"
                       imageClassName="object-contain mix-blend-multiply"
@@ -60,7 +79,7 @@ export default function BooksPage() {
                     >
                       <Image
                         src={book.coverBack}
-                        alt={`${book.title} — back cover`}
+                        alt={`${book.title} — ${t.backAlt}`}
                         fill
                         sizes="(min-width: 640px) 160px, 128px"
                         quality={95}
@@ -82,11 +101,11 @@ export default function BooksPage() {
                     </p>
                   )}
                   <p className="mt-1 text-sm text-foreground-muted">
-                    {book.language} ·{" "}
-                    <span className="uppercase tracking-[0.14em] text-accent">{book.status}</span>
+                    {book.language[lang]} ·{" "}
+                    <span className="uppercase tracking-[0.14em] text-accent">{book.status[lang]}</span>
                   </p>
                   <div className="mt-4 max-w-xl space-y-4 text-sm leading-relaxed text-foreground-muted">
-                    {book.note.map((paragraph) => (
+                    {book.note[lang].map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
@@ -97,7 +116,7 @@ export default function BooksPage() {
                       rel="noopener noreferrer"
                       className="mt-6 inline-block border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
                     >
-                      Order book
+                      {t.order}
                     </a>
                   )}
                 </div>
