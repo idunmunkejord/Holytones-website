@@ -158,37 +158,7 @@ export default function LognenManifesteringPage() {
         kapittel eller sidetall. Seksjonen vises ikke på den publiserte siden før utdraget er lagt inn.
       </Missing>
 
-      {/* 6. About the author */}
-      <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto flex max-w-2xl flex-col gap-8 sm:flex-row sm:items-start">
-          {siteConfig.authorPhoto && (
-            <div className="relative h-40 w-32 shrink-0 overflow-hidden">
-              <Image src={siteConfig.authorPhoto} alt="Idun Munkejord" fill sizes="128px" className="object-cover" />
-            </div>
-          )}
-          <div className="space-y-4 text-base leading-relaxed text-foreground-muted">
-            <SectionLabel>Om forfatteren</SectionLabel>
-            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">Idun Munkejord</h2>
-            <p className="font-serif-display text-xl text-loegnen-night">
-              «Jeg vet hva det vil si å lete etter svar på feil sted.»
-            </p>
-            <p>
-              I mange år var personlig utvikling en del av både arbeidslivet mitt og min egen reise.
-              Jeg forsto hvorfor det er tiltrekkende å bli sterkere, flinkere og bedre rustet til å
-              mestre livet. Men den kristne troen min fikk meg gradvis til å stille spørsmål ved noen
-              av antakelsene under – særlig troen på at varig frihet kan finnes gjennom større tillit
-              til meg selv.
-            </p>
-            <p>
-              Forholdet mitt til Gud endret måten jeg forstår personlig utvikling på. Det er stor
-              forskjell på å utvikle potensialet sitt og å gjøre seg selv til grunnmuren for
-              identiteten sin. Ut av den forståelsen vokser det jeg skriver – også {book.title.toUpperCase()}.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Buy */}
+      {/* 6. Buy */}
       <section className="border-t border-border-soft bg-background-alt px-6 py-16 md:px-10">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 md:flex-row md:gap-12">
           <Cover sizes="(min-width: 768px) 288px, 240px" className="w-60 md:w-72" />
@@ -202,6 +172,38 @@ export default function LognenManifesteringPage() {
               <BuyButton />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 7. About the author, with the round photo used on the other landing pages */}
+      <section className="border-t border-border-soft px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-2xl space-y-4 text-base leading-relaxed text-foreground-muted">
+          <div className="flex items-center gap-4">
+            {siteConfig.authorPhoto && (
+              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
+                <Image src={siteConfig.authorPhoto} alt="Idun Munkejord" fill sizes="80px" className="object-cover" />
+              </div>
+            )}
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-accent">Om forfatteren</p>
+              <h2 className="font-serif-display text-2xl font-bold text-loegnen-night">Idun Munkejord</h2>
+            </div>
+          </div>
+          <p className="pt-2 font-serif-display text-xl text-loegnen-night">
+            «Jeg vet hva det vil si å lete etter svar på feil sted.»
+          </p>
+          <p>
+            I mange år var personlig utvikling en del av både arbeidslivet mitt og min egen reise. Jeg
+            forsto hvorfor det er tiltrekkende å bli sterkere, flinkere og bedre rustet til å mestre
+            livet. Men den kristne troen min fikk meg gradvis til å stille spørsmål ved noen av
+            antakelsene under – særlig troen på at varig frihet kan finnes gjennom større tillit til meg
+            selv.
+          </p>
+          <p>
+            Forholdet mitt til Gud endret måten jeg forstår personlig utvikling på. Det er stor
+            forskjell på å utvikle potensialet sitt og å gjøre seg selv til grunnmuren for identiteten
+            sin. Ut av den forståelsen vokser det jeg skriver – også {book.title.toUpperCase()}.
+          </p>
         </div>
       </section>
 
