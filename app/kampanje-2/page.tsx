@@ -8,6 +8,7 @@ import {
   CampaignBuySection,
   CampaignFooter,
   CampaignHeader,
+  DangerousLiesSection,
 } from "@/components/CampaignParts";
 import { books, siteConfig } from "@/lib/site-config";
 
@@ -165,6 +166,9 @@ export default function Kampanje2Page() {
           </div>
         </div>
       </section>
+
+      {/* 3b. The quote, and what the book gives you */}
+      <DangerousLiesSection />
 
       {/* 4. What the book gives you */}
       <section className="px-6 py-16 md:px-10">

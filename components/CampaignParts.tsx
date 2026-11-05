@@ -69,6 +69,26 @@ export function BackCoverHook() {
   );
 }
 
+// The back cover's line about the most dangerous lies, and what the book gives you.
+export function DangerousLiesSection() {
+  return (
+    <section className="px-6 py-16 md:px-10">
+      <figure className="mx-auto max-w-2xl">
+        <blockquote className="border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-loegnen-night md:text-3xl">
+          «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
+          inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.»
+        </blockquote>
+        <p className="mt-8 text-base leading-relaxed text-foreground-muted">
+          I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg inn
+          i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og at
+          friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham som
+          fyller alt i alle.
+        </p>
+      </figure>
+    </section>
+  );
+}
+
 const messages = [
   "Tankene dine former virkeligheten.",
   "Universet svarer på energien du sender ut.",
