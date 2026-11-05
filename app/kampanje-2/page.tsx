@@ -15,27 +15,26 @@ import { books, siteConfig } from "@/lib/site-config";
 
 const book = books[0];
 const headline = "Hva om det som lover frihet, gjør deg enda mer bundet til deg selv?";
-const intro =
-  "Du har kanskje lest bøkene, lyttet til podkastene og prøvd å tenke mer positivt. Du ønsker å utvikle deg, finne mening og mer ro. Likevel kan jakten på å få det bedre bli enda en oppgave du skal mestre.";
-
-export const metadata: Metadata = {
-  title: `${headline} — ${book.title.toUpperCase()}`,
-  description: intro,
-  robots: { index: false, follow: false },
-  openGraph: {
-    title: headline,
-    description: intro,
-    type: "website",
-    url: `${siteConfig.url}/kampanje-2`,
-    images: [{ url: `${siteConfig.url}${book.cover}` }],
-  },
-};
-
 const messages = [
   "Tankene dine former virkeligheten.",
   "Universet svarer på energien du sender ut.",
   "Kraften til å skape livet du ønsker, finnes allerede i deg.",
 ];
+// For the link preview when the page is shared.
+const description = messages.join(" ");
+
+export const metadata: Metadata = {
+  title: `${headline} — ${book.title.toUpperCase()}`,
+  description,
+  robots: { index: false, follow: false },
+  openGraph: {
+    title: headline,
+    description,
+    type: "website",
+    url: `${siteConfig.url}/kampanje-2`,
+    images: [{ url: `${siteConfig.url}${book.cover}` }],
+  },
+};
 
 const gains = [
   {
@@ -80,15 +79,19 @@ export default function Kampanje2Page() {
             <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-5xl">
               {headline}
             </h1>
+            <ul className="mt-6 space-y-2 border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
+              {messages.map((message) => (
+                <li key={message}>{message}</li>
+              ))}
+            </ul>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
-              <p>{intro}</p>
               <p>
                 {book.title.toUpperCase()} avslører når selvutvikling går fra å hjelpe deg til å mestre
-                livet til å forme det du tror om deg selv, livet og Gud.
+                livet til å forme det du tror på.
               </p>
               <p className="font-semibold">
-                Du får hjelp til å gjenkjenne halvsannhetene, stille spørsmål ved løftene og vende
-                blikket mot Jesus.
+                {book.title.toUpperCase()} hjelper deg til å gjenkjenne halvsannhetene og stille
+                spørsmål ved tanker du gradvis har adoptert uten å legge merke til det.
               </p>
             </div>
             <div className="mt-8">
@@ -104,11 +107,6 @@ export default function Kampanje2Page() {
           <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
             Det høres frigjørende ut. Men er det sant?
           </h2>
-          <ul className="space-y-3 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl text-loegnen-night">
-            {messages.map((message) => (
-              <li key={message}>{message}</li>
-            ))}
-          </ul>
           <p>
             Du har kanskje møtt slike budskap i selvutviklingsbøker, motivasjonstaler, podkaster eller
             innlegg på sosiale medier. Løftet er fristende: Du kan få livet du lengter etter hvis du
@@ -229,8 +227,59 @@ export default function Kampanje2Page() {
         </div>
       </section>
 
+      {/* 5b. A second version of Idun's story, shown alongside the first while she chooses one */}
+      <section className="border-t border-border-soft px-6 py-16 md:px-10">
+        <div className={`mx-auto max-w-2xl ${body}`}>
+          <div className="flex items-center gap-5">
+            {siteConfig.authorPhoto && (
+              <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full">
+                <Image src={siteConfig.authorPhoto} alt="Idun Munkejord" fill sizes="96px" className="object-cover" />
+              </div>
+            )}
+            <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-night">
+              «Jeg kjenner denne tiltrekningen fra innsiden.»
+            </h2>
+          </div>
+          <p>
+            I mange år var selvutvikling en del av livet mitt. Jeg trodde på løftet om å finne svarene
+            og hensikten med livet ved å gå dypere i meg selv.
+          </p>
+          <p>
+            Troen min på Gud var sterk. Nettopp derfor var det skremmende å oppdage hvor lett jeg kunne
+            bli ført på avveier av et språk som lignet Bibelens. Ordene om tro, kraft, takknemlighet og
+            overflod var kjente. Det tok tid før jeg stilte det avgjørende spørsmålet: Hvem satte jeg
+            egentlig min lit til?
+          </p>
+          <p>
+            Etter hvert vokste en indre uro frem. Hvis sannheten fantes i meg, hvis tankene mine skulle
+            skape virkeligheten, og hvis kraften til å forme livet lå i meg selv – hvilken plass hadde
+            Gud da? Var jeg i ferd med å gi meg selv Hans plass?
+          </p>
+          <p>
+            Det ble en skremmende oppvåkning. Jeg hadde ikke sluttet å tro på Jesus. Likevel hadde
+            tyngdepunktet i troen min gradvis flyttet seg fra Ham til meg selv. Jeg så at det jeg hadde
+            tatt imot som selvutvikling, hadde begynt å fungere som en annen tro, med et annet svar på
+            hvor sannheten finnes, hvor kraften kommer fra, og hvem jeg skulle stole på.
+          </p>
+          <p>
+            Derfor skrev jeg {book.title.toUpperCase()}. Jeg vil utfordre deg til å undersøke tankene du
+            har akseptert som sannhet, særlig når de høres både kloke, frigjørende og bibelske ut. For
+            et budskap kan beholde ordene om Gud samtidig som det lærer deg å sette din dypeste lit til
+            deg selv.
+          </p>
+          <p className="font-serif-display text-2xl leading-snug text-loegnen-night">
+            Jeg vet hvor lett det er å overse den forskjellen. Jeg gjorde det selv. Nå ønsker jeg å
+            hjelpe deg å gjenkjenne den – og vende blikket fra deg selv til Jesus.
+          </p>
+          <p className="text-sm uppercase tracking-[0.2em] text-accent">Idun Munkejord</p>
+          <div className="pt-3">
+            <BuyButton />
+          </div>
+        </div>
+      </section>
+
       {/* 6. Where the line goes */}
-      <section className="px-6 py-16 md:px-10">
+      <section className="border-t border-border-soft bg-background-alt px-6 py-16 md:px-10">
         <div className={`mx-auto max-w-2xl ${body}`}>
           <SectionLabel>Hvor går grensen?</SectionLabel>
           <p>
