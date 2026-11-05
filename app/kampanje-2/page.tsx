@@ -245,7 +245,7 @@ export default function Kampanje2Page() {
           <p>
             Troen min på Gud var sterk. Nettopp derfor var det skremmende å oppdage hvor lett jeg kunne
             bli ført på avveier av et språk som lignet Bibelens. Ordene om tro, kraft, takknemlighet og
-            overflod var kjente. Det tok tid før jeg stilte det avgjørende spørsmålet: Hvem satte jeg
+            et liv i overflod var kjente. Det tok tid før jeg stilte det avgjørende spørsmålet: Hvem satte jeg
             egentlig min lit til?
           </p>
           <p>
@@ -300,35 +300,7 @@ export default function Kampanje2Page() {
         </div>
       </section>
 
-      {/* 7. Hope, over the calm ocean */}
-      <section className="border-t border-border-soft">
-        <div className="relative h-56 w-full overflow-hidden md:h-80">
-          <Image
-            src="/images/hero-ocean.jpg"
-            alt="Et rolig hav ved soloppgang"
-            fill
-            sizes="100vw"
-            className="object-cover object-[50%_60%]"
-          />
-        </div>
-        <div className={`mx-auto max-w-2xl px-6 py-16 md:px-0 ${body}`}>
-          <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-night md:text-4xl">
-            Du kan utvikle deg uten å gjøre deg selv til frelseren i ditt eget liv!
-          </h2>
-          <p>
-            Mitt dypeste ønske med denne boken er at du skal finne tilbake til Jesus og tryggheten i en
-            levende relasjon med Ham som fyller alt i alle. {book.title.toUpperCase()} gir deg anledning
-            til å stoppe opp og undersøke hva du faktisk blir invitert til å tro.
-          </p>
-          <blockquote className="border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-loegnen-night">
-            «Tro handler ikke om å få virkeligheten til å bøye seg etter dine tanker, men om å stole på
-            Gud også når virkeligheten ikke bøyer seg etter din vilje. Å være skapt i Guds bilde betyr
-            ikke at du har blitt Skaperen.»
-          </blockquote>
-        </div>
-      </section>
-
-      {/* 8. Buy */}
+      {/* 7. Buy */}
       <CampaignBuySection heading="Hva bygger du din tro på?" />
 
       <CampaignFooter contact />
