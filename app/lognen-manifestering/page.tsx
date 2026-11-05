@@ -35,28 +35,6 @@ export const metadata: Metadata = {
   },
 };
 
-const questions = [
-  "Hvordan skiller du et inspirerende løfte fra en påstand du ikke kan stole på?",
-  "Kan du ta ansvar for valgene dine uten å gjøre deg ansvarlig for alt som rammer deg?",
-  "Hva bygger du håpet ditt på når livet ikke blir slik du ønsker?",
-];
-
-// Taken from the back cover.
-const explore = [
-  {
-    title: "Er det bare uskyldige redskaper?",
-    text: "Du får undersøke om troen på tiltrekningskraften, og på at alle svarene finnes i deg selv, kan være uttrykk for en eldre fristelse: ønsket om å bli din egen Gud – den samme fristelsen som møtte Adam og Eva (1. Mosebok 3,5).",
-  },
-  {
-    title: "Hvordan har det påvirket troen din?",
-    text: "Du får se hvordan budskapet om at tankene former virkeligheten, at universet svarer på energien du sender ut og at kraften finnes i deg selv, gradvis kan ha preget måten du forstår tro, bønn og Guds velsignelse på.",
-  },
-  {
-    title: "Hvor begynner friheten?",
-    text: "Du får hjelp til å skille det som er sant fra det som bare ligner sannheten – og til å se at friheten du søker, ikke begynner med å vende blikket innover mot deg selv, men utover og opp mot Ham som «fyller alt i alle» (Efeserne 1,17–23).",
-  },
-];
-
 function Cover({ className, sizes }: { className: string; sizes: string }) {
   if (!book.cover) return null;
   return (
@@ -119,62 +97,62 @@ export default function LognenManifesteringPage() {
             Tankene dine betyr noe. Men styrer de livet ditt?
           </h2>
           <p>
-            Det du tenker, påvirker hvordan du har det, hvilke valg du tar og hvordan du handler. Det
-            er sant, og det er verdt å ta på alvor.
+            Tankene dine betyr noe. Det du tenker, påvirker hvordan du har det, hvilke valg du tar, og
+            hvordan du oppfører deg.
           </p>
           <p>
-            Men det er noe helt annet å påstå at tankene dine styrer det som skjer rundt deg: om du
-            blir syk eller frisk, om du mister noe eller lykkes, hvordan andre behandler deg.
+            Men dersom påstanden om at tankene dine skaper livet ditt er sann, hvem får da skylden når
+            livet gjør vondt? For når sykdom rammer, ekteskapet ryker, eller bønnene dine ikke
+            besvares, følger det med et stort ansvar.
+          </p>
+          <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night italic">
+            Du tenkte feil, trodde ikke nok, eller sendte ut feil energi?
           </p>
           <p>
-            Hvis det stemmer, ligger forklaringen hos deg når livet gjør vondt. Kanskje har du spurt
-            deg selv om du tenkte feil, eller om du ikke trodde nok.
+            Budskapet som virket så forlokkende og frigjørende ut, gir deg nå ansvaret for alt som
+            rammer deg.
           </p>
         </div>
       </section>
 
-      {/* 3. The questions the book examines */}
+      {/* 3. The book's response */}
       <section className="bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
         <div className="mx-auto max-w-2xl">
-          <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-loegnen-light">
-            <span className="h-px w-8 bg-loegnen-light/60" />
-            Kjenner du igjen spørsmålene?
-          </p>
-          <ul className="space-y-6">
-            {questions.map((question) => (
-              <li
-                key={question}
-                className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl leading-snug text-loegnen-light md:text-3xl"
-              >
-                {question}
-              </li>
-            ))}
-          </ul>
+          <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-4xl">
+            Hva om dette er vår tidsånds bedrag for å få deg bort fra Gud og Hans velsignelse?
+          </h2>
+          <div className="mt-8 space-y-5 leading-relaxed text-background/85">
+            <p>
+              {book.title.toUpperCase()} inviterer deg til å skille det som er sant fra det som bare
+              ligner sannheten. Den peker på at friheten og lykken du søker, ikke begynner med å vende
+              blikket innover mot deg selv (bli som Gud), men utover og opp mot Ham som «fyller alt i
+              alle» (Efeserne 1,17–23).
+            </p>
+            <p>
+              Dette er ikke et løfte om at livet blir lett. Men friheten og lykken du søker, trenger
+              ikke hvile på at det er tankene dine som avgjør hvordan livet ditt utfolder seg.
+            </p>
+          </div>
           <div className="mt-10">
             <BuyButton onDark />
           </div>
         </div>
       </section>
 
-      {/* 4. Three things to explore in the book */}
+      {/* 4. The quote, and what the book gives you */}
       <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl">
-          <SectionLabel>Dette får du undersøke</SectionLabel>
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-            Tre spørsmål boka tar på alvor
-          </h2>
-          <ol className="mt-8 space-y-8">
-            {explore.map((item, index) => (
-              <li key={item.title} className="flex gap-4">
-                <span className="font-serif-display text-3xl text-loegnen-light">{index + 1}</span>
-                <div>
-                  <h3 className="font-serif-display text-xl font-bold text-loegnen-night">{item.title}</h3>
-                  <p className="mt-2 leading-relaxed text-foreground-muted">{item.text}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
+        <figure className="mx-auto max-w-2xl">
+          <blockquote className="border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-loegnen-night md:text-3xl">
+            «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
+            inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.»
+          </blockquote>
+          <p className="mt-8 text-base leading-relaxed text-foreground-muted">
+            I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
+            inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og at
+            friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham som
+            fyller alt i alle.
+          </p>
+        </figure>
       </section>
 
       {/* 5. Excerpt from the manuscript: not supplied yet, so only the marker shows, in preview */}
