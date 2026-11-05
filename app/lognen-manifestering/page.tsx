@@ -8,14 +8,13 @@ import {
   CampaignFooter,
   CampaignHeader,
   Missing,
-  PriceList,
 } from "@/components/CampaignParts";
 import { books, siteConfig } from "@/lib/site-config";
 
 // Third landing page for the LØGNEN Facebook ads, for readers who know manifestation and the law
 // of attraction without knowing The Secret. Hidden like the others (standalonePaths, noindex).
-// What it says about the book comes from the cover text; the author section is Idun's own story
-// from the About page; prices come from the checkout page.
+// Most of the text is Idun's own, written for this page; the author section is her story from the
+// About page. Prices are left to the order page.
 
 const book = books[0];
 const headline = "Kan du virkelig skape din egen virkelighet?";
@@ -62,7 +61,6 @@ export default function LognenManifesteringPage() {
             className="order-last mx-auto w-[85%] max-w-[340px] md:order-first md:mx-0 md:w-[24rem] md:max-w-none lg:w-[30rem]"
           />
           <div className="max-w-xl">
-            <SectionLabel>Ny bok av Idun Munkejord</SectionLabel>
             <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-6xl">
               {headline}
             </h1>
@@ -79,9 +77,8 @@ export default function LognenManifesteringPage() {
                 forstår tro, bønn og Guds velsignelse.
               </p>
             </div>
-            <div className="mt-8 space-y-4">
+            <div className="mt-8">
               <BuyButton />
-              <PriceList />
             </div>
           </div>
         </div>
@@ -201,9 +198,6 @@ export default function LognenManifesteringPage() {
             </h2>
             <p className="mt-1 font-serif-display text-xl text-loegnen-night">{book.subtitle}</p>
             <p className="mt-1 text-sm text-foreground-muted">Idun Munkejord</p>
-            <div className="mt-6">
-              <PriceList />
-            </div>
             <div className="mt-6">
               <BuyButton />
             </div>
