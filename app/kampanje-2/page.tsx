@@ -40,20 +40,20 @@ export const metadata: Metadata = {
 
 const gains = [
   {
-    title: "Gjennomskue ideene bak ordene.",
-    text: "Du får innsikt i hvordan manifestering, tiltrekningsloven og forestillinger om tankens kraft kommer til uttrykk i selvutvikling og åndelig språk.",
+    title: "Avslør løgnene bak de åndelige ordene.",
+    text: "Gjenkjenn hvordan manifestering og tiltrekningsloven pakkes inn som selvutvikling, og hvordan åndelig språk kan få dem til å høres bibelske ut.",
   },
   {
-    title: "Skille påvirkning fra kontroll.",
-    text: "Du får undersøke forskjellen mellom det å arbeide med tankene og vanene dine, og det å tro at du er ansvarlig for alt som rammer deg.",
+    title: "Slutt å bære ansvaret for alt som rammer deg.",
+    text: "Tankene dine påvirker valgene dine, men det gjør deg ikke skyldig i sykdom, tap eller andres handlinger.",
   },
   {
-    title: "Undersøke hva du setter din lit til.",
-    text: "Du blir utfordret til å se hvordan disse ideene kan påvirke måten du forstår tro, bønn og Guds velsignelse på.",
+    title: "Oppdag hvem du egentlig setter din lit til.",
+    text: "Undersøk når bønn blir et forsøk på å kontrollere, og tilliten til Gud erstattes av troen på din egen tankekraft.",
   },
   {
-    title: "Vende blikket mot Jesus.",
-    text: "Du får utforske et håp som hviler på hvem Gud er, også når du ikke klarer å forstå eller forandre det som skjer.",
+    title: "Sett Jesus tilbake i sentrum.",
+    text: "Bygg håpet ditt på hvem Han er, også når du ikke forstår livet eller kan forandre det som skjer.",
   },
 ];
 
