@@ -20,7 +20,7 @@ import { books, siteConfig } from "@/lib/site-config";
 const book = books[0];
 const headline = "Kan du virkelig skape din egen virkelighet?";
 const intro =
-  "Du har kanskje hørt at tankene dine tiltrekker det som skjer i livet ditt. At du kan manifestere kjærlighet, fremgang og lykke – hvis du bare tenker og tror riktig.";
+  "Du har kanskje hørt budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og kraften til å skape finnes allerede i deg selv?";
 
 export const metadata: Metadata = {
   title: `${headline} — ${book.title.toUpperCase()}`,
@@ -90,14 +90,17 @@ export default function LognenManifesteringPage() {
             </h1>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
               <p>{intro}</p>
-              <p className="font-semibold">Det er et fristende løfte. Men er det sant?</p>
+              <p>
+                Det er et fristende løfte, og lengselen bak er lett å forstå. Livet kan få mening og
+                hensikt hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.
+              </p>
+              <p>
+                <span className="font-semibold">Men hva om det er LØGN?</span> For hva om det som
+                høres så forlokkende og frigjørende ut, gradvis flytter Gud ut av sentrum av ditt liv?
+                Disse tankene kan gjennom årene ha sneket seg inn i måten du tenker på, og hvordan du
+                forstår tro, bønn og Guds velsignelse.
+              </p>
             </div>
-            <p className="mt-4 text-base leading-relaxed text-foreground-muted">
-              I {book.title.toUpperCase()} får du utforske ideene bak manifestering, tankens kraft og
-              loven om tiltrekning i lys av kristen tro. Hvor mye kan du påvirke gjennom tankene dine?
-              Hvor går grensen for din kontroll? Og hva bygger du håpet ditt på når livet ikke blir
-              slik du ønsker?
-            </p>
             <div className="mt-8 space-y-4">
               <BuyButton />
               <PriceList />
