@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
 import {
+  BackCoverHook,
   BuyButton,
   CampaignBuySection,
   CampaignFooter,
@@ -105,43 +106,36 @@ export default function Kampanje2Page() {
       <section className="px-6 py-16 md:px-10">
         <div className={`mx-auto max-w-2xl ${body}`}>
           <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
-            Det høres frigjørende ut. Men er det sant?
+            Men hva om løftet bygger på en løgn?
           </h2>
-          <p>
-            Du har kanskje møtt slike budskap i selvutviklingsbøker, motivasjonstaler, podkaster eller
-            innlegg på sosiale medier. Løftet er fristende: Du kan få livet du lengter etter hvis du
-            lærer å tenke riktig og rette oppmerksomheten mot det du ønsker deg.
-          </p>
           <p>
             Forestillingen om at tankene og følelsene dine tiltrekker det som skjer i livet ditt, er en
             idé som eksploderte over hele verden i begynnelsen av 2000-tallet. Kanskje har du møtt den
             som oppmuntrende råd, åndelig inspirasjon eller metoder for personlig vekst.
           </p>
-          <p className="font-serif-display text-2xl leading-snug font-bold text-loegnen-night">
-            Men hva om løftet bygger på en løgn? Hva om det som høres så forlokkende og frigjørende ut,
-            gradvis flytter Gud ut av sentrum av livet ditt?
+          <p>
+            Du har kanskje møtt slike budskap i selvutviklingsbøker, motivasjonstaler, podkaster eller
+            innlegg på sosiale medier. Løftet er fristende: Du kan få livet du lengter etter hvis du
+            lærer å tenke riktig og rette oppmerksomheten mot det du ønsker deg.
           </p>
-          <div className="pt-3">
-            <BuyButton />
-          </div>
         </div>
       </section>
 
-      {/* 3. When the power of thought becomes a burden */}
-      <section className="bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
+      {/* 2b. The hook from the back cover */}
+      <BackCoverHook />
+
+      {/* 3. Can you really create your own reality? */}
+      <section className="border-t border-background/15 bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
         <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[1fr_minmax(0,22rem)] md:gap-14">
           <div>
             <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-4xl">
-              Når blir tankens kraft en byrde for deg?
+              Kan du virkelig skape din egen virkelighet?
             </h2>
             <div className="mt-8 space-y-5 leading-relaxed text-background/85">
               <p>
                 Tankene dine betyr noe. De påvirker hvordan du har det, hvilke valg du tar, og hvordan
-                du handler.
-              </p>
-              <p>
-                Men derfra er det et stort sprang til å hevde at tankene dine skaper det som skjer rundt
-                deg.
+                du handler. Men derfra er det et stort sprang til å hevde at tankene dine skaper det som
+                skjer rundt deg.
               </p>
               <p>
                 Hvis du har fått høre at du tiltrekker deg livet ditt, hvem får da skylden når livet
