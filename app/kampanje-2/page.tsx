@@ -123,6 +123,9 @@ export default function Kampanje2Page() {
             Men hva om løftet bygger på en løgn? Hva om det som høres så forlokkende og frigjørende ut,
             gradvis flytter Gud ut av sentrum av livet ditt?
           </p>
+          <div className="pt-3">
+            <BuyButton />
+          </div>
         </div>
       </section>
 
@@ -186,6 +189,9 @@ export default function Kampanje2Page() {
               </li>
             ))}
           </ul>
+          <div className="mt-10">
+            <BuyButton />
+          </div>
         </div>
       </section>
 
@@ -217,6 +223,9 @@ export default function Kampanje2Page() {
             akseptert som sannhet til å oppdage når noe som lover deg frihet, begynner å ta Guds plass.
           </p>
           <p className="text-sm uppercase tracking-[0.2em] text-accent">Idun Munkejord</p>
+          <div className="pt-3">
+            <BuyButton />
+          </div>
         </div>
       </section>
 
@@ -238,6 +247,9 @@ export default function Kampanje2Page() {
             Du blir ikke lovet et enkelt liv, men du blir invitert til en personlig relasjon med Ham
             som du kan sette din lit til gjennom alt.
           </p>
+          <div className="pt-3">
+            <BuyButton />
+          </div>
         </div>
       </section>
 
