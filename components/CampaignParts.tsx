@@ -108,11 +108,21 @@ export function PromiseSection({
 }
 
 // The closing call to buy, with the author.
-export function CampaignBuySection({ heading }: { heading: string }) {
+export function CampaignBuySection({
+  heading,
+  children,
+}: {
+  heading: string;
+  // Optional text between the heading and the book's title.
+  children?: React.ReactNode;
+}) {
   return (
     <section className="px-6 py-20 md:px-10">
       <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
         <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">{heading}</h2>
+        {children && (
+          <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground-muted">{children}</div>
+        )}
         <p className="mt-4 text-foreground-muted">
           {book.title.toUpperCase()} – {book.subtitle}
         </p>
