@@ -63,7 +63,7 @@ export default function LognenManifesteringPage() {
             <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-6xl">
               {headline}
             </h1>
-            <PromiseOpening ending="Men hva om det er løgn – og du gradvis har lært å tro mer på tankens kraft enn på Guds løfter?" />
+            <PromiseOpening />
             <div className="mt-8">
               <BuyButton />
             </div>
@@ -71,7 +71,7 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      <BackCoverHook questionAsTitle />
+      <BackCoverHook />
 
       {/* 2. Thoughts and actions versus thoughts and events */}
       <section className="px-6 py-16 md:px-10">
@@ -157,6 +157,7 @@ export default function LognenManifesteringPage() {
           </div>
           <div className="order-first w-full max-w-[15rem] md:order-none md:mt-2 md:max-w-none">
             <AuthorPhoto sizes="(min-width: 768px) 16rem, 15rem" />
+            <p className="mt-6 font-serif-display text-xl text-loegnen-night">Idun Munkejord</p>
           </div>
         </div>
       </section>
@@ -170,7 +171,6 @@ export default function LognenManifesteringPage() {
               {book.title.toUpperCase()}
             </h2>
             <p className="mt-1 font-serif-display text-xl text-loegnen-night">{book.subtitle}</p>
-            <p className="mt-1 text-sm text-foreground-muted">Idun Munkejord</p>
             <div className="mt-6">
               <BuyButton />
             </div>

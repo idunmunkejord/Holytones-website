@@ -7,9 +7,18 @@ const nextConfig: NextConfig = {
     // live site, so serve the original files instead. They are all 250 KB or less.
     unoptimized: true,
   },
-  // The privacy policy moved to the Norwegian /personvern page.
   async redirects() {
-    return [{ source: "/privacy", destination: "/personvern", permanent: true }];
+    return [
+      // The privacy policy moved to the Norwegian /personvern page.
+      { source: "/privacy", destination: "/personvern", permanent: true },
+      // Earlier LØGNEN landing pages, removed in favour of /lognen-manifestering; ads may still
+      // link to them.
+      ...["/kampanje", "/kampanje-2", "/lognen-selvutvikling"].map((source) => ({
+        source,
+        destination: "/lognen-manifestering",
+        permanent: false,
+      })),
+    ];
   },
 };
 
