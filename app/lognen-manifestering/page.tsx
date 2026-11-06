@@ -106,7 +106,7 @@ export default function LognenManifesteringPage() {
       <section className="bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
         <div className="mx-auto max-w-2xl">
           <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-4xl">
-            Hva om dette er vår tidsånds selvbedrag for å få deg bort fra Gud og Hans velsignelse?
+            Hva om dette er vår tids åndelige selvbedrag for å få deg bort fra Gud og Hans velsignelse?
           </h2>
           <blockquote className="mt-8 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-background md:text-3xl">
             «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
