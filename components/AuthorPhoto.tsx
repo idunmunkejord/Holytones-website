@@ -1,23 +1,35 @@
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
-export default function AuthorPhoto({ sizes }: { sizes: string }) {
+// `src` swaps in another portrait with the same frame and warm grade; `position` sets which part
+// of a photo of a different shape stays in view (e.g. "object-top").
+export default function AuthorPhoto({
+  sizes,
+  src = siteConfig.authorPhoto,
+  position = "",
+  priority = true,
+}: {
+  sizes: string;
+  src?: string;
+  position?: string;
+  priority?: boolean;
+}) {
   return (
     <div className="relative">
       {/* Offset frame behind the photo, tying it into the warm palette. */}
       <div className="absolute inset-0 translate-x-3 translate-y-3 bg-background-alt" aria-hidden />
       <div className="relative aspect-[4/5] overflow-hidden bg-background-alt">
-        {siteConfig.authorPhoto ? (
+        {src ? (
           <>
             {/* A gentle warm grade so the cool seaside photo sits in the site's cream-and-gold palette. */}
             <Image
-              src={siteConfig.authorPhoto}
+              src={src}
               alt="Idun Munkejord"
               fill
-              priority
+              priority={priority}
               quality={95}
               sizes={sizes}
-              className="object-cover sepia-[0.22] saturate-[0.92] brightness-[1.03]"
+              className={`object-cover ${position} sepia-[0.22] saturate-[0.92] brightness-[1.03]`}
             />
             <div
               className="absolute inset-0 bg-gradient-to-b from-accent-gold/25 via-accent-peach/10 to-accent-peach/20 mix-blend-soft-light"

@@ -179,8 +179,15 @@ export default function LognenManifesteringPage() {
             </p>
           </div>
           <div className="order-first w-full max-w-[15rem] md:order-none md:mt-2 md:max-w-none">
-            <AuthorPhoto sizes="(min-width: 768px) 16rem, 15rem" />
+            {/* Cropped from the top, which leaves out the credit printed in the photo's corner. */}
+            <AuthorPhoto
+              src="/images/idun-munkejord-brygge.webp"
+              position="object-top"
+              priority={false}
+              sizes="(min-width: 768px) 16rem, 15rem"
+            />
             <p className="mt-6 font-serif-display text-xl text-loegnen-night">Idun Munkejord</p>
+            <p className="mt-1 text-xs text-foreground-muted">Foto: Soni Sousa</p>
           </div>
         </div>
       </section>
