@@ -64,7 +64,7 @@ export function BackCoverHook() {
 // The opening text under "Kan du virkelig skape din egen virkelighet?". `promiseOpening` doubles
 // as the page's link-preview description.
 export const promiseOpening =
-  "Du har kanskje hørt budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og kraften til å skape finnes allerede i deg selv?";
+  "Du har kanskje hørt det: Tankene dine former virkeligheten. Universet svarer på energien du sender ut. Og kraften til å skape livet du ønsker, finnes allerede i deg.";
 
 export function PromiseOpening() {
   return (
