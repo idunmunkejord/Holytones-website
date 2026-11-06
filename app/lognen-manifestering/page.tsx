@@ -65,7 +65,7 @@ export default function LognenManifesteringPage() {
             <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-6xl">
               {headline}
             </h1>
-            <PromiseOpening />
+            <PromiseOpening ending="Men hva om det er løgn – og du gradvis har lært å tro mer på tankens kraft enn på Guds løfter?" />
             <div className="mt-8">
               <BuyButton />
             </div>
