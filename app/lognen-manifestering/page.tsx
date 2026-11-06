@@ -73,7 +73,7 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      <BackCoverHook />
+      <BackCoverHook questionAsTitle />
 
       {/* 2. Thoughts and actions versus thoughts and events */}
       <section className="px-6 py-16 md:px-10">
