@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import AuthorPhoto from "@/components/AuthorPhoto";
 import ZoomImage from "@/components/ZoomImage";
 import {
@@ -73,20 +74,31 @@ export default function LognenManifesteringPage() {
 
       <BackCoverHook />
 
-      {/* 2. Thoughts and actions versus thoughts and events */}
+      {/* 2. Thoughts and actions versus thoughts and events, with a photo to the right */}
       <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-            Tankene dine betyr noe. Men skaper de livet ditt?
-          </h2>
-          <p>
-            Dersom tankene dine skaper livet ditt, blir smerten da din egen skyld? For når sykdom
-            rammer, ekteskapet ryker eller bønnesvar uteblir, var det du som skapte det? Tenkte du feil,
-            trodde for lite, eller sendte du ut feil energi?
-          </p>
-          <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
-            Først ble du lovet makten til å skape alt. Så får du skylden når du mister det.
-          </p>
+        <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div className="space-y-5 text-base leading-relaxed text-foreground-muted">
+            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
+              Tankene dine betyr noe. Men skaper de livet ditt?
+            </h2>
+            <p>
+              Dersom tankene dine skaper livet ditt, blir smerten da din egen skyld? For når sykdom
+              rammer, ekteskapet ryker eller bønnesvar uteblir, var det du som skapte det? Tenkte du
+              feil, trodde for lite, eller sendte du ut feil energi?
+            </p>
+            <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
+              Først ble du lovet makten til å skape alt. Så får du skylden når du mister det.
+            </p>
+          </div>
+          <div className="relative order-first aspect-[3/2] overflow-hidden md:order-none">
+            <Image
+              src="/images/tankene-betyr-noe.webp"
+              alt="En kvinne sitter ettertenksom ved et trebord i varmt lys"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
