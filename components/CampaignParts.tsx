@@ -57,7 +57,7 @@ export function BackCoverHook({ questionAsTitle = false }: { questionAsTitle?: b
                 ditt liv?{" "}
               </>
             )}
-            <span className="font-bold text-loegnen-light">
+            <span className={`font-bold ${questionAsTitle ? "text-background" : "text-loegnen-light"}`}>
               Hva om troen på tiltrekningskraften og på at alle svarene finnes i deg selv ikke bare er
               uskyldige redskaper, men uttrykk for en eldre fristelse
               {questionAsTitle ? " – " : ": "}

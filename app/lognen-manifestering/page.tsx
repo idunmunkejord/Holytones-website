@@ -7,7 +7,6 @@ import {
   BuyButton,
   CampaignFooter,
   CampaignHeader,
-  DangerousLiesSection,
   Missing,
   PromiseOpening,
   promiseOpening,
@@ -97,32 +96,43 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      {/* 3. The book's response */}
+      {/* 3. Our time's deception, and the most dangerous lies */}
       <section className="bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
         <div className="mx-auto max-w-2xl">
           <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-4xl">
             Hva om dette er vår tidsånds bedrag for å få deg bort fra Gud og Hans velsignelse?
           </h2>
-          <div className="mt-8 space-y-5 leading-relaxed text-background/85">
-            <p>
-              {book.title.toUpperCase()} inviterer deg til å skille det som er sant fra det som bare
-              ligner sannheten. Den peker på at friheten og lykken du søker, ikke begynner med å vende
-              blikket innover mot deg selv (bli som Gud), men utover og opp mot Ham som «fyller alt i
-              alle» (Efeserne 1,17–23).
-            </p>
-            <p>
-              Dette er ikke et løfte om at livet blir lett. Men friheten og lykken du søker, trenger
-              ikke hvile på at det er tankene dine som avgjør hvordan livet ditt utfolder seg.
-            </p>
-          </div>
+          <blockquote className="mt-8 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-background md:text-3xl">
+            «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
+            inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.»
+          </blockquote>
+          <p className="mt-8 leading-relaxed text-background/85">
+            I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
+            inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og at
+            friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham som
+            fyller alt i alle.
+          </p>
           <div className="mt-10">
             <BuyButton onDark />
           </div>
         </div>
       </section>
 
-      {/* 4. The quote, and what the book gives you */}
-      <DangerousLiesSection />
+      {/* 4. The book's response */}
+      <section className="px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
+          <p className="font-serif-display text-2xl leading-snug text-loegnen-night">
+            {book.title.toUpperCase()} inviterer deg til å skille det som er sant fra det som bare
+            ligner sannheten. Den peker på at friheten og lykken du søker, ikke begynner med å vende
+            blikket innover mot deg selv (bli som Gud), men utover og opp mot Ham som «fyller alt i
+            alle» (Efeserne 1,17–23).
+          </p>
+          <p>
+            Dette er ikke et løfte om at livet blir lett. Men friheten og lykken du søker, trenger ikke
+            hvile på at det er tankene dine som avgjør hvordan livet ditt utfolder seg.
+          </p>
+        </div>
+      </section>
 
       {/* 5. Excerpt from the manuscript: not supplied yet, so only the marker shows, in preview */}
       <Missing>
