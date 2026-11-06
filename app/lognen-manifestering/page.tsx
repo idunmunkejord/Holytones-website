@@ -83,16 +83,12 @@ export default function LognenManifesteringPage() {
             Tankene dine betyr noe. Men styrer de livet ditt?
           </h2>
           <p>
-            Tankene dine betyr noe. Det du tenker, påvirker hvordan du har det, hvilke valg du tar, og
-            hvordan du oppfører deg.
+            Dersom tankene dine skaper livet ditt, blir smerten da din egen skyld? For når sykdom
+            rammer, ekteskapet ryker eller bønnesvar uteblir, var det du som skapte det? Tenkte du feil,
+            trodde for lite, eller sendte du ut feil energi?
           </p>
-          <p>
-            Men dersom påstanden om at tankene dine skaper livet ditt er sann, hvem får da skylden når
-            livet gjør vondt? For når sykdom rammer, ekteskapet ryker, eller bønnene dine ikke
-            besvares, følger det med et stort ansvar.
-          </p>
-          <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night italic">
-            Du tenkte feil, trodde ikke nok, eller sendte ut feil energi?
+          <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
+            Først blir du lovet makten til å få alt. Så får du skylden når du mister det.
           </p>
           <p>
             Budskapet som virket så forlokkende og frigjørende ut, gir deg nå ansvaret for alt som
