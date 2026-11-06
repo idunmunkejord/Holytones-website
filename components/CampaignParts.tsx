@@ -61,11 +61,23 @@ export function BackCoverHook({ questionAsTitle = false }: { questionAsTitle?: b
               uskyldige redskaper, men uttrykk for en eldre fristelse
               {questionAsTitle ? " – " : ": "}
               ønsket om å bli din egen Gud?
-            </span>{" "}
-            Den samme gamle fristelsen som drev Adam og Eva ut av paradis «dere blir som Gud»
-            (1. Mosebok 3,5), men denne gangen forkledd i et motivasjonsspråk som kunne ha vært
-            hentet fra en TED-talk.
+            </span>
+            {!questionAsTitle && (
+              <>
+                {" "}
+                Den samme gamle fristelsen som drev Adam og Eva ut av paradis «dere blir som Gud»
+                (1. Mosebok 3,5), men denne gangen forkledd i et motivasjonsspråk som kunne ha vært
+                hentet fra en TED-talk.
+              </>
+            )}
           </p>
+          {questionAsTitle && (
+            <p>
+              Kan det være den samme gamle fristelsen som drev Adam og Eva ut av paradis «dere blir som
+              Gud» (1. Mosebok 3,5), men denne gangen forkledd i et motivasjonsspråk som kunne ha vært
+              hentet fra en TED-talk?
+            </p>
+          )}
         </blockquote>
         {!questionAsTitle && (
           <figcaption className="mt-4 text-xs uppercase tracking-[0.2em] text-background/60">
@@ -91,8 +103,8 @@ export function PromiseOpening({ ending }: { ending?: string }) {
     <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
       <p>{promiseOpening}</p>
       <p>
-        Det er et fristende løfte, og lengselen bak er lett å forstå. Livet kan få mening og hensikt
-        hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.
+        Det er et fristende løfte, og lengselen bak er lett å forstå. Livet kan få mening hvis du
+        bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.
       </p>
       {ending ? (
         <p className="font-serif-display text-2xl leading-snug font-bold text-loegnen-night">{ending}</p>

@@ -77,7 +77,7 @@ export default function LognenManifesteringPage() {
       <section className="px-6 py-16 md:px-10">
         <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
           <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-            Tankene dine betyr noe. Men styrer de livet ditt?
+            Tankene dine betyr noe. Men skaper de livet ditt?
           </h2>
           <p>
             Dersom tankene dine skaper livet ditt, blir smerten da din egen skyld? For når sykdom
