@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import SectionLabel from "@/components/SectionLabel";
-import { books, links, siteConfig } from "@/lib/site-config";
+import { books, siteConfig } from "@/lib/site-config";
 
 // Shared pieces of the LØGNEN ad landing pages (see standalonePaths in site-config).
 
@@ -236,27 +235,11 @@ export function Missing({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Stands in for the site footer: the web address as plain text, with nothing to click. With
-// `contact`, it also gives the email address and the terms and privacy pages.
-export function CampaignFooter({ contact = false }: { contact?: boolean }) {
+// Stands in for the site footer: the web address as plain text, with nothing to click.
+export function CampaignFooter() {
   return (
     <footer className="border-t border-border-soft bg-background-alt px-6 py-8 text-center text-xs text-foreground-muted md:px-10">
-      {contact ? (
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
-          <a href={`mailto:${links.email}`} className="hover:text-foreground">
-            {links.email}
-          </a>
-          <Link href="/salgsbetingelser" className="hover:text-foreground">
-            Salgsbetingelser
-          </Link>
-          <Link href="/personvern" className="hover:text-foreground">
-            Personvern
-          </Link>
-          <span>{siteConfig.url.replace("https://", "www.")}</span>
-        </div>
-      ) : (
-        siteConfig.url.replace("https://", "www.")
-      )}
+      {siteConfig.url.replace("https://", "www.")}
     </footer>
   );
 }

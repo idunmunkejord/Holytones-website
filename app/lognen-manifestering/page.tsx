@@ -85,7 +85,7 @@ export default function LognenManifesteringPage() {
             trodde for lite, eller sendte du ut feil energi?
           </p>
           <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
-            Først blir du lovet makten til å få alt. Så får du skylden når du mister det.
+            Først ble du lovet makten til å skape alt. Så får du skylden når du mister det.
           </p>
         </div>
       </section>
@@ -178,7 +178,7 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      <CampaignFooter contact />
+      <CampaignFooter />
     </div>
   );
 }

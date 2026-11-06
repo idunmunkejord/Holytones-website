@@ -303,7 +303,7 @@ export default function Kampanje2Page() {
       {/* 7. Buy */}
       <CampaignBuySection heading="Hva bygger du din tro på?" />
 
-      <CampaignFooter contact />
+      <CampaignFooter />
     </div>
   );
 }
