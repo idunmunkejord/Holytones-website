@@ -118,20 +118,31 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      {/* 4. Find out what is true */}
+      {/* 4. Find out what is true, with a photo of an open Bible to the left */}
       <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
-            Finn ut hva som er sant
-          </h2>
-          <p>
-            I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
-            inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og at
-            friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham som
-            fyller alt i alle.
-          </p>
-          <div className="pt-3">
-            <BuyButton />
+        <div className="mx-auto grid max-w-5xl items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div className="relative aspect-[3/2] overflow-hidden">
+            <Image
+              src="/images/finn-ut-hva-som-er-sant.webp"
+              alt="En åpen bibel på et trebord i varmt lys"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="space-y-5 text-base leading-relaxed text-foreground-muted">
+            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
+              Finn ut hva som er sant
+            </h2>
+            <p>
+              I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
+              inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og
+              at friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham
+              som fyller alt i alle.
+            </p>
+            <div className="pt-3">
+              <BuyButton />
+            </div>
           </div>
         </div>
       </section>
