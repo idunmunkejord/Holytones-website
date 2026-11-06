@@ -185,9 +185,9 @@ export default function LognenManifesteringPage() {
               position="object-top"
               priority={false}
               sizes="(min-width: 768px) 16rem, 15rem"
+              credit="Photo by Soni Sousa"
             />
             <p className="mt-6 font-serif-display text-xl text-loegnen-night">Idun Munkejord</p>
-            <p className="mt-1 text-xs text-foreground-muted">Foto: Soni Sousa</p>
           </div>
         </div>
       </section>
