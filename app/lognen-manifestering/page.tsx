@@ -94,7 +94,7 @@ export default function LognenManifesteringPage() {
       <section className="bg-loegnen-night px-6 py-16 text-background md:px-10 md:py-20">
         <div className="mx-auto max-w-2xl">
           <h2 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-light md:text-4xl">
-            Hva om dette er vår tidsånds bedrag for å få deg bort fra Gud og Hans velsignelse?
+            Hva om dette er vår tidsånds selvbedrag for å få deg bort fra Gud og Hans velsignelse?
           </h2>
           <blockquote className="mt-8 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-background md:text-3xl">
             «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
@@ -135,7 +135,7 @@ export default function LognenManifesteringPage() {
         <div className="mx-auto grid max-w-4xl items-start gap-10 md:grid-cols-[1fr_16rem] md:gap-14">
           <div className="space-y-4 text-base leading-relaxed text-foreground-muted">
             <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-              Jeg trodde selv på tankens kraft
+              Jeg trodde selv på Tankens Kraft
             </h2>
             <p>
               I mange år var selvutvikling en del av livet mitt, og troen min på Jesus var sterk.
