@@ -6,6 +6,8 @@ import {
   CampaignBuySection,
   CampaignFooter,
   CampaignHeader,
+  PromiseOpening,
+  promiseOpening,
 } from "@/components/CampaignParts";
 import { books, siteConfig } from "@/lib/site-config";
 
@@ -16,19 +18,15 @@ import { books, siteConfig } from "@/lib/site-config";
 
 const book = books[0];
 const headline = "Kan du virkelig skape din egen virkelighet?";
-const opening =
-  "Du har kanskje hørt budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og kraften til å skape finnes allerede i deg selv?";
-const intro =
-  "Det er et fristende løfte, og lengselen bak er lett å forstå. Livet kan få mening og hensikt hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.";
 const shareTitle = `${book.subtitle} — ${book.title.toUpperCase()}`;
 
 export const metadata: Metadata = {
   title: shareTitle,
-  description: opening,
+  description: promiseOpening,
   robots: { index: false, follow: false },
   openGraph: {
     title: shareTitle,
-    description: opening,
+    description: promiseOpening,
     type: "website",
     url: `${siteConfig.url}/lognen-selvutvikling`,
     images: [{ url: `${siteConfig.url}${book.cover}` }],
@@ -60,10 +58,7 @@ export default function LognenSelvutviklingPage() {
             <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-6xl">
               {headline}
             </h1>
-            <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
-              <p>{opening}</p>
-              <p>{intro}</p>
-            </div>
+            <PromiseOpening />
             <div className="mt-8">
               <BuyButton />
             </div>
@@ -71,24 +66,13 @@ export default function LognenSelvutviklingPage() {
         </div>
       </section>
 
-      {/* 2. Self-development, and the lie */}
+      {/* 2. Self-development: the law of attraction */}
       <section className="px-6 py-16 md:px-10">
         <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
           <SectionLabel>{book.subtitle}</SectionLabel>
-          <h2 className="font-serif-display text-4xl font-bold text-loegnen-night md:text-5xl">
-            Men hva om det er LØGN?
-          </h2>
           <p className="font-serif-display text-2xl leading-snug text-loegnen-night">
-            For hva om det som høres så forlokkende og frigjørende ut, gradvis flytter Gud ut av
-            sentrum av ditt liv?
-          </p>
-          <p>
             Loven dette handler om heter «tiltrekningsloven» og hevder at det du fester tankene ved,
             tiltrekker du deg.
-          </p>
-          <p>
-            Disse tankene kan gjennom årene ha sneket seg inn i måten du tenker på, og hvordan du
-            forstår tro, bønn og Guds velsignelse.
           </p>
         </div>
       </section>

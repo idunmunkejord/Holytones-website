@@ -69,6 +69,29 @@ export function BackCoverHook() {
   );
 }
 
+// The opening text under "Kan du virkelig skape din egen virkelighet?", shared by the pages that
+// use that title. `promiseOpening` doubles as their link-preview description.
+export const promiseOpening =
+  "Du har kanskje hørt budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og kraften til å skape finnes allerede i deg selv?";
+
+export function PromiseOpening() {
+  return (
+    <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
+      <p>{promiseOpening}</p>
+      <p>
+        Det er et fristende løfte, og lengselen bak er lett å forstå. Livet kan få mening og hensikt
+        hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.
+      </p>
+      <p className="font-serif-display text-2xl font-bold text-loegnen-night">Men hva om det er LØGN?</p>
+      <p>
+        For hva om det som høres så forlokkende og frigjørende ut, gradvis flytter Gud ut av sentrum
+        av ditt liv? Disse tankene kan gjennom årene ha sneket seg inn i måten du tenker på, og hvordan
+        du forstår tro, bønn og Guds velsignelse.
+      </p>
+    </div>
+  );
+}
+
 // The back cover's line about the most dangerous lies, and what the book gives you.
 export function DangerousLiesSection() {
   return (
