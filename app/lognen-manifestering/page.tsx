@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import AuthorPhoto from "@/components/AuthorPhoto";
 import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
 import {
@@ -89,10 +89,6 @@ export default function LognenManifesteringPage() {
           <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
             Først blir du lovet makten til å få alt. Så får du skylden når du mister det.
           </p>
-          <p>
-            Budskapet som virket så forlokkende og frigjørende ut, gir deg nå ansvaret for alt som
-            rammer deg.
-          </p>
         </div>
       </section>
 
@@ -112,24 +108,8 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      {/* 4. The book's response */}
+      {/* 4. Find out what is true */}
       <section className="px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-          <p className="font-serif-display text-2xl leading-snug text-loegnen-night">
-            {book.title.toUpperCase()} inviterer deg til å skille det som er sant fra det som bare
-            ligner sannheten. Den peker på at friheten og lykken du søker, ikke begynner med å vende
-            blikket innover mot deg selv (bli som Gud), men utover og opp mot Ham som «fyller alt i
-            alle» (Efeserne 1,17–23).
-          </p>
-          <p>
-            Dette er ikke et løfte om at livet blir lett. Men friheten og lykken du søker, trenger ikke
-            hvile på at det er tankene dine som avgjør hvordan livet ditt utfolder seg.
-          </p>
-        </div>
-      </section>
-
-      {/* 4b. Find out what is true */}
-      <section className="border-t border-border-soft px-6 py-16 md:px-10">
         <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
           <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
             Finn ut hva som er sant
@@ -169,23 +149,13 @@ export default function LognenManifesteringPage() {
         </div>
       </section>
 
-      {/* 7. About the author, with the round photo used on the other landing pages */}
+      {/* 7. About the author: her story, with her portrait to the right */}
       <section className="border-t border-border-soft px-6 py-16 md:px-10">
-        <div className="mx-auto max-w-2xl space-y-4 text-base leading-relaxed text-foreground-muted">
-          <div className="flex items-center gap-4">
-            {siteConfig.authorPhoto && (
-              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
-                <Image src={siteConfig.authorPhoto} alt="Idun Munkejord" fill sizes="80px" className="object-cover" />
-              </div>
-            )}
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-accent">Om forfatteren</p>
-              <h2 className="font-serif-display text-2xl font-bold text-loegnen-night">Idun Munkejord</h2>
-            </div>
-          </div>
-          <h3 className="pt-2 font-serif-display text-2xl font-bold text-loegnen-night">
+        <div className="mx-auto grid max-w-4xl items-start gap-10 md:grid-cols-[1fr_16rem] md:gap-14">
+        <div className="space-y-4 text-base leading-relaxed text-foreground-muted">
+          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
             Jeg trodde selv på tankens kraft
-          </h3>
+          </h2>
           <p>
             I mange år var selvutvikling en del av livet mitt. Og troen min på Jesus var sterk. Nettopp
             derfor var det skremmende å oppdage hvor lett jeg kunne bli ført på avveier av et språk som
@@ -203,6 +173,10 @@ export default function LognenManifesteringPage() {
             Derfor skrev jeg {book.title.toUpperCase()} for å hjelpe deg til å gjenkjenne bedraget når
             det høres ut som Guds sannhet.
           </p>
+        </div>
+        <div className="order-first w-full max-w-[15rem] md:order-none md:mt-2 md:max-w-none">
+          <AuthorPhoto sizes="(min-width: 768px) 16rem, 15rem" />
+        </div>
         </div>
       </section>
 
