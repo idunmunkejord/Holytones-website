@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import AuthorPhoto from "@/components/AuthorPhoto";
-import SectionLabel from "@/components/SectionLabel";
 import ZoomImage from "@/components/ZoomImage";
 import {
   BackCoverHook,
@@ -77,7 +76,6 @@ export default function LognenManifesteringPage() {
       {/* 2. Thoughts and actions versus thoughts and events */}
       <section className="px-6 py-16 md:px-10">
         <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
-          <SectionLabel>Hvor går grensen?</SectionLabel>
           <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
             Tankene dine betyr noe. Men styrer de livet ditt?
           </h2>
@@ -132,7 +130,38 @@ export default function LognenManifesteringPage() {
         kapittel eller sidetall. Seksjonen vises ikke på den publiserte siden før utdraget er lagt inn.
       </Missing>
 
-      {/* 6. Buy */}
+      {/* 6. About the author: her story, with her portrait to the right */}
+      <section className="border-t border-border-soft px-6 py-16 md:px-10">
+        <div className="mx-auto grid max-w-4xl items-start gap-10 md:grid-cols-[1fr_16rem] md:gap-14">
+          <div className="space-y-4 text-base leading-relaxed text-foreground-muted">
+            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
+              Jeg trodde selv på tankens kraft
+            </h2>
+            <p>
+              I mange år var selvutvikling en del av livet mitt, og troen min på Jesus var sterk.
+              Nettopp derfor var det skremmende å oppdage hvor lett jeg kunne bli ført på avveier av et
+              språk som lignet på det i Bibelen.
+            </p>
+            <p>
+              Det tok tid før jeg oppdaget det. Men etter hvert vokste det fram en indre uro – hvis
+              kraften til å forme livet lå i meg selv, hvilken plass hadde Gud da?
+            </p>
+            <p>
+              Det ble en skremmende oppvåkning. Jeg oppdaget at selvutvikling hadde utviklet seg til en
+              tro med meg selv i sentrum.
+            </p>
+            <p className="font-serif-display text-xl leading-snug text-loegnen-night">
+              Derfor skrev jeg {book.title.toUpperCase()} for å hjelpe deg til å gjenkjenne bedraget når
+              det høres ut som Guds sannhet.
+            </p>
+          </div>
+          <div className="order-first w-full max-w-[15rem] md:order-none md:mt-2 md:max-w-none">
+            <AuthorPhoto sizes="(min-width: 768px) 16rem, 15rem" />
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Buy */}
       <section className="border-t border-border-soft bg-background-alt px-6 py-16 md:px-10">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 md:flex-row md:gap-12">
           <Cover sizes="(min-width: 768px) 288px, 240px" className="w-60 md:w-72" />
@@ -146,37 +175,6 @@ export default function LognenManifesteringPage() {
               <BuyButton />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 7. About the author: her story, with her portrait to the right */}
-      <section className="border-t border-border-soft px-6 py-16 md:px-10">
-        <div className="mx-auto grid max-w-4xl items-start gap-10 md:grid-cols-[1fr_16rem] md:gap-14">
-        <div className="space-y-4 text-base leading-relaxed text-foreground-muted">
-          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night">
-            Jeg trodde selv på tankens kraft
-          </h2>
-          <p>
-            I mange år var selvutvikling en del av livet mitt. Og troen min på Jesus var sterk. Nettopp
-            derfor var det skremmende å oppdage hvor lett jeg kunne bli ført på avveier av et språk som
-            lignet på det i Bibelen.
-          </p>
-          <p>
-            Det tok tid før jeg oppdaget det. Men etter hvert vokste det fram en indre uro – hvis
-            kraften til å forme livet lå i meg selv, hvilken plass hadde Gud da?
-          </p>
-          <p>
-            Det ble en skremmende oppvåkning. Jeg oppdaget at selvutvikling hadde utviklet seg til en
-            tro med meg selv i sentrum. Alt hvilte på meg.
-          </p>
-          <p className="font-serif-display text-xl leading-snug text-loegnen-night">
-            Derfor skrev jeg {book.title.toUpperCase()} for å hjelpe deg til å gjenkjenne bedraget når
-            det høres ut som Guds sannhet.
-          </p>
-        </div>
-        <div className="order-first w-full max-w-[15rem] md:order-none md:mt-2 md:max-w-none">
-          <AuthorPhoto sizes="(min-width: 768px) 16rem, 15rem" />
-        </div>
         </div>
       </section>
 
