@@ -15,7 +15,8 @@ import { books, siteConfig } from "@/lib/site-config";
 // BackCoverHook is left out here.
 
 const book = books[0];
-const headline =
+const headline = "Kan du virkelig skape din egen virkelighet?";
+const opening =
   "Du har kanskje hørt budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og kraften til å skape finnes allerede i deg selv?";
 const intro =
   "Det er et fristende løfte, og lengselen bak er lett å forstå. Livet kan få mening og hensikt hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.";
@@ -23,11 +24,11 @@ const shareTitle = `${book.subtitle} — ${book.title.toUpperCase()}`;
 
 export const metadata: Metadata = {
   title: shareTitle,
-  description: headline,
+  description: opening,
   robots: { index: false, follow: false },
   openGraph: {
     title: shareTitle,
-    description: headline,
+    description: opening,
     type: "website",
     url: `${siteConfig.url}/lognen-selvutvikling`,
     images: [{ url: `${siteConfig.url}${book.cover}` }],
@@ -56,10 +57,13 @@ export default function LognenSelvutviklingPage() {
           )}
           <div className="max-w-xl">
             <SectionLabel>Et kristent oppgjør med vår tids åndelige selvbedrag</SectionLabel>
-            <h1 className="font-serif-display text-3xl leading-tight font-bold text-loegnen-night md:text-4xl">
+            <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-6xl">
               {headline}
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-foreground">{intro}</p>
+            <div className="mt-6 space-y-4 text-lg leading-relaxed text-foreground">
+              <p>{opening}</p>
+              <p>{intro}</p>
+            </div>
             <div className="mt-8">
               <BuyButton />
             </div>
