@@ -183,20 +183,25 @@ export default function LognenManifesteringPage() {
               <h2 className="font-serif-display text-2xl font-bold text-loegnen-night">Idun Munkejord</h2>
             </div>
           </div>
-          <p className="pt-2 font-serif-display text-xl text-loegnen-night">
-            «Jeg vet hva det vil si å lete etter svar på feil sted.»
+          <h3 className="pt-2 font-serif-display text-2xl font-bold text-loegnen-night">
+            Jeg trodde selv på tankens kraft
+          </h3>
+          <p>
+            I mange år var selvutvikling en del av livet mitt. Og troen min på Jesus var sterk. Nettopp
+            derfor var det skremmende å oppdage hvor lett jeg kunne bli ført på avveier av et språk som
+            lignet på det i Bibelen.
           </p>
           <p>
-            I mange år var personlig utvikling en del av både arbeidslivet mitt og min egen reise. Jeg
-            forsto hvorfor det er tiltrekkende å bli sterkere, flinkere og bedre rustet til å mestre
-            livet. Men den kristne troen min fikk meg gradvis til å stille spørsmål ved noen av
-            antakelsene under – særlig troen på at varig frihet kan finnes gjennom større tillit til meg
-            selv.
+            Det tok tid før jeg oppdaget det. Men etter hvert vokste det fram en indre uro – hvis
+            kraften til å forme livet lå i meg selv, hvilken plass hadde Gud da?
           </p>
           <p>
-            Forholdet mitt til Gud endret måten jeg forstår personlig utvikling på. Det er stor
-            forskjell på å utvikle potensialet sitt og å gjøre seg selv til grunnmuren for identiteten
-            sin. Ut av den forståelsen vokser det jeg skriver – også {book.title.toUpperCase()}.
+            Det ble en skremmende oppvåkning. Jeg oppdaget at selvutvikling hadde utviklet seg til en
+            tro med meg selv i sentrum. Alt hvilte på meg.
+          </p>
+          <p className="font-serif-display text-xl leading-snug text-loegnen-night">
+            Derfor skrev jeg {book.title.toUpperCase()} for å hjelpe deg til å gjenkjenne bedraget når
+            det høres ut som Guds sannhet.
           </p>
         </div>
       </section>
