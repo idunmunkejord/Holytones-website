@@ -106,12 +106,6 @@ export default function LognenManifesteringPage() {
             «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
             inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.»
           </blockquote>
-          <p className="mt-8 leading-relaxed text-background/85">
-            I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
-            inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og at
-            friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham som
-            fyller alt i alle.
-          </p>
           <div className="mt-10">
             <BuyButton onDark />
           </div>
@@ -131,6 +125,24 @@ export default function LognenManifesteringPage() {
             Dette er ikke et løfte om at livet blir lett. Men friheten og lykken du søker, trenger ikke
             hvile på at det er tankene dine som avgjør hvordan livet ditt utfolder seg.
           </p>
+        </div>
+      </section>
+
+      {/* 4b. Find out what is true */}
+      <section className="border-t border-border-soft px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-2xl space-y-5 text-base leading-relaxed text-foreground-muted">
+          <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
+            Finn ut hva som er sant
+          </h2>
+          <p>
+            I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
+            inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og at
+            friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham som
+            fyller alt i alle.
+          </p>
+          <div className="pt-3">
+            <BuyButton />
+          </div>
         </div>
       </section>
 
