@@ -16,21 +16,24 @@ export function CampaignHeader() {
   );
 }
 
+// Centred in whatever column it sits in.
 export function BuyButton({ onDark = false }: { onDark?: boolean }) {
   if (!book.orderUrl) return null;
   return (
-    <a
-      href={book.orderUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={
-        onDark
-          ? "inline-block border border-loegnen-light bg-loegnen-light px-12 py-5 text-base font-semibold uppercase tracking-[0.2em] text-loegnen-night transition-colors hover:bg-transparent hover:text-loegnen-light"
-          : "inline-block border border-loegnen-night bg-loegnen-night px-12 py-5 text-base font-semibold uppercase tracking-[0.2em] text-loegnen-light transition-colors hover:bg-transparent hover:text-loegnen-night"
-      }
-    >
-      Kjøp {book.title.toUpperCase()}
-    </a>
+    <div className="flex justify-center">
+      <a
+        href={book.orderUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={
+          onDark
+            ? "inline-block border border-loegnen-light bg-loegnen-light px-12 py-5 text-base font-semibold uppercase tracking-[0.2em] text-loegnen-night transition-colors hover:bg-transparent hover:text-loegnen-light"
+            : "inline-block border border-loegnen-night bg-loegnen-night px-12 py-5 text-base font-semibold uppercase tracking-[0.2em] text-loegnen-light transition-colors hover:bg-transparent hover:text-loegnen-night"
+        }
+      >
+        Kjøp {book.title.toUpperCase()}
+      </a>
+    </div>
   );
 }
 
