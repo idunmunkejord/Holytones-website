@@ -173,7 +173,8 @@ export default function LognenManifesteringPage() {
             </p>
             <p>
               Det ble en skremmende oppvåkning. Jeg oppdaget at selvutvikling hadde utviklet seg til en
-              tro med meg selv i sentrum.
+              tro med meg selv i sentrum. Troen på hva Gud kunne gjøre i livet mitt, hadde gradvis blitt
+              erstattet av troen på hva jeg selv kunne skape.
             </p>
             <p>
               Kanskje tenker du at du står for støtt i troen og ville ikke latt deg lure. Det trodde
