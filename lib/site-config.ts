@@ -129,8 +129,8 @@ export const categories: Category[] = [
     slug: "courses",
     label: { en: "Courses", no: "Kurs" },
     blurb: {
-      en: "Learning that helps you grow in faith and live in a close, personal relationship with Jesus.",
-      no: "Læring som hjelper deg å vokse i troen og leve i en nær, personlig relasjon med Jesus.",
+      en: "Learning that helps you grow in faith and live a Spirit-filled life.",
+      no: "Læring som hjelper deg å vokse i troen og leve et åndsfylt liv.",
     },
     tone: "violet",
   },
