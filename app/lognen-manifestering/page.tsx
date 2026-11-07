@@ -137,8 +137,8 @@ export default function LognenManifesteringPage() {
               Finn ut hva som er sant
             </h2>
             <p>
-              I {book.title.toUpperCase()} oppdager du hvordan budskapet om tankens kraft har blitt
-              blandet med kristen tro. Du lærer å skille mellom det som er sant og det som bare ligner
+              I {book.title.toUpperCase()} oppdager du hvordan budskapet om tankens kraft har blandet
+              seg inn med kristen tro. Du lærer å skille mellom det som er sant og det som bare ligner
               sannheten. Og du lærer at du ikke finner det du lengter etter ved å vende blikket innover
               mot deg selv, men ved å vende det mot Ham som fyller alt i alle.
             </p>
