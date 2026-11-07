@@ -53,28 +53,13 @@ export default function LognenManifesteringPage() {
     <div lang="no">
       <CampaignHeader />
 
-      {/* 0. The book and the buy button, first thing on the page */}
-      <section className="border-b border-border-soft bg-background-alt px-6 py-16 md:px-10">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 md:flex-row md:gap-12">
-          <Cover sizes="(min-width: 768px) 288px, 240px" className="w-60 md:w-72" />
-          <div>
-            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
-              {book.title.toUpperCase()}
-            </h2>
-            <p className="mt-1 font-serif-display text-xl text-loegnen-night">{book.subtitle}</p>
-            <div className="mt-6">
-              <BuyButton />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 1. Opening, with the book, price and button */}
-      <section className="border-b border-border-soft bg-background-alt px-6 pt-10 pb-14 md:px-10 md:pt-20">
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center md:gap-12">
+      {/* 1. Opening, with the book and button. On phones the cover comes first, small enough that
+          the title still shows on the first screen. */}
+      <section className="border-b border-border-soft bg-background-alt px-6 pt-6 pb-14 md:px-10 md:pt-20">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row md:items-center md:gap-12">
           <Cover
-            sizes="(min-width: 1024px) 480px, (min-width: 768px) 384px, 340px"
-            className="order-last mx-auto w-[85%] max-w-[340px] md:order-first md:mx-0 md:w-[24rem] md:max-w-none lg:w-[30rem]"
+            sizes="(min-width: 1024px) 480px, (min-width: 768px) 384px, 180px"
+            className="mx-auto w-[45%] max-w-[180px] md:mx-0 md:w-[24rem] md:max-w-none lg:w-[30rem]"
           />
           <div className="max-w-xl">
             <h1 className="font-serif-display text-4xl leading-tight font-bold text-loegnen-night md:text-6xl">
@@ -152,10 +137,10 @@ export default function LognenManifesteringPage() {
               Finn ut hva som er sant
             </h2>
             <p>
-              I {book.title.toUpperCase()} får du innsikt i hvordan tankens kraft gradvis har sneket seg
-              inn i vår kultur. Du lærer å skille det som er sant fra det som bare ligner sannheten, og
-              at friheten du søker ikke begynner med å vende blikket innover mot deg selv, men mot Ham
-              som fyller alt i alle.
+              I {book.title.toUpperCase()} oppdager du hvordan budskapet om tankens kraft har blitt
+              blandet med kristen tro. Du lærer å skille mellom det som er sant og det som bare ligner
+              sannheten. Og du lærer at du ikke finner det du lengter etter ved å vende blikket innover
+              mot deg selv, men ved å vende det mot Ham som fyller alt i alle.
             </p>
             <div className="pt-3">
               <BuyButton />
@@ -205,6 +190,22 @@ export default function LognenManifesteringPage() {
               credit="Photo by Soni Sousa"
             />
             <p className="mt-6 font-serif-display text-xl text-loegnen-night">Idun Munkejord</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Buy */}
+      <section className="border-t border-border-soft bg-background-alt px-6 py-16 md:px-10">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 md:flex-row md:gap-12">
+          <Cover sizes="(min-width: 768px) 288px, 240px" className="w-60 md:w-72" />
+          <div>
+            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
+              {book.title.toUpperCase()}
+            </h2>
+            <p className="mt-1 font-serif-display text-xl text-loegnen-night">{book.subtitle}</p>
+            <div className="mt-6">
+              <BuyButton />
+            </div>
           </div>
         </div>
       </section>
