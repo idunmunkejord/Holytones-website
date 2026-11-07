@@ -84,9 +84,9 @@ export default function LognenManifesteringPage() {
             </h2>
             <p>
               Dersom tankene dine skaper livet ditt, blir smerten da din egen skyld? For når sykdom
-              rammer, ekteskapet ryker eller bønnesvar uteblir, var det du som skapte det? Tenkte du
-              feil, trodde for lite, eller sendte du ut feil energi?
+              rammer, ekteskapet ryker eller bønnesvar uteblir, var det du som skapte det?
             </p>
+            <p>Tenkte du feil, trodde for lite, eller sendte du ut feil energi?</p>
             <p className="border-l-2 border-loegnen-light pl-5 font-serif-display text-2xl text-loegnen-night">
               Først ble du lovet makten til å skape alt. Så får du skylden når du mister det.
             </p>
