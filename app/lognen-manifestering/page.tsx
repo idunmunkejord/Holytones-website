@@ -180,8 +180,8 @@ export default function LognenManifesteringPage() {
               jeg også. Nettopp derfor kan denne boken gi deg noen overraskelser.
             </p>
             <p className="font-serif-display text-xl leading-snug text-loegnen-night">
-              Derfor skrev jeg {book.title.toUpperCase()} for å hjelpe deg til å gjenkjenne bedraget når
-              det høres ut som Guds sannhet.
+              Derfor ble {book.title.toUpperCase()} skrevet – for å hjelpe deg til å gjenkjenne bedraget
+              når det høres ut som Guds sannhet.
             </p>
           </div>
           <div className="order-first w-full max-w-[15rem] md:order-none md:mt-2 md:max-w-none">
