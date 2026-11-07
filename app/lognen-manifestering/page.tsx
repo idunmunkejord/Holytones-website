@@ -53,6 +53,22 @@ export default function LognenManifesteringPage() {
     <div lang="no">
       <CampaignHeader />
 
+      {/* 0. The book and the buy button, first thing on the page */}
+      <section className="border-b border-border-soft bg-background-alt px-6 py-16 md:px-10">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 md:flex-row md:gap-12">
+          <Cover sizes="(min-width: 768px) 288px, 240px" className="w-60 md:w-72" />
+          <div>
+            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
+              {book.title.toUpperCase()}
+            </h2>
+            <p className="mt-1 font-serif-display text-xl text-loegnen-night">{book.subtitle}</p>
+            <div className="mt-6">
+              <BuyButton />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 1. Opening, with the book, price and button */}
       <section className="border-b border-border-soft bg-background-alt px-6 pt-10 pb-14 md:px-10 md:pt-20">
         <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center md:gap-12">
@@ -188,22 +204,6 @@ export default function LognenManifesteringPage() {
               credit="Photo by Soni Sousa"
             />
             <p className="mt-6 font-serif-display text-xl text-loegnen-night">Idun Munkejord</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Buy */}
-      <section className="border-t border-border-soft bg-background-alt px-6 py-16 md:px-10">
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-10 md:flex-row md:gap-12">
-          <Cover sizes="(min-width: 768px) 288px, 240px" className="w-60 md:w-72" />
-          <div>
-            <h2 className="font-serif-display text-3xl font-bold text-loegnen-night md:text-4xl">
-              {book.title.toUpperCase()}
-            </h2>
-            <p className="mt-1 font-serif-display text-xl text-loegnen-night">{book.subtitle}</p>
-            <div className="mt-6">
-              <BuyButton />
-            </div>
           </div>
         </div>
       </section>
