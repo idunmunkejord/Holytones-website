@@ -175,6 +175,10 @@ export default function LognenManifesteringPage() {
               Det ble en skremmende oppvåkning. Jeg oppdaget at selvutvikling hadde utviklet seg til en
               tro med meg selv i sentrum.
             </p>
+            <p>
+              Kanskje tenker du at du står for støtt i troen og ville ikke latt deg lure. Det trodde
+              jeg også. Nettopp derfor kan denne boken gi deg noen overraskelser.
+            </p>
             <p className="font-serif-display text-xl leading-snug text-loegnen-night">
               Derfor skrev jeg {book.title.toUpperCase()} for å hjelpe deg til å gjenkjenne bedraget når
               det høres ut som Guds sannhet.
