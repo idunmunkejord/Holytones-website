@@ -178,7 +178,7 @@ export default function LognenManifesteringPage() {
             </p>
             <p>
               Kanskje tenker du at selv står du for støtt i troen til å la deg lure. Det trodde jeg
-              også. Nettopp derfor kan denne boken gi deg noen overraskelser.
+              også. Nettopp derfor vil denne boken kunne gi deg noen overraskelser.
             </p>
             <p className="font-serif-display text-xl leading-snug text-loegnen-night">
               Derfor ble {book.title.toUpperCase()} skrevet – for å hjelpe deg til å gjenkjenne bedraget
