@@ -163,9 +163,9 @@ export default function LognenManifesteringPage() {
               Jeg trodde selv på Tankens Kraft
             </h2>
             <p>
-              I mange år var selvutvikling en del av livet mitt, og troen min på Jesus var sterk.
+              I mange år har selvutvikling vært en del av livet mitt sammen med en sterk tro på Jesus.
               Nettopp derfor var det skremmende å oppdage hvor lett jeg kunne bli ført på avveier av et
-              språk som lignet på det i Bibelen.
+              språk som hørtes bibelsk ut.
             </p>
             <p>
               Det tok tid før jeg oppdaget det. Men etter hvert vokste det fram en indre uro – hvis
