@@ -48,7 +48,7 @@ export function BackCoverHook() {
         </h2>
         <blockquote className="mt-6 space-y-4 font-serif-display text-xl leading-relaxed md:text-2xl">
           <p className="font-bold text-background">
-            Hva om troen på tiltrekningskraften og på at alle svarene finnes i deg selv ikke bare er
+            Hva om troen på tiltrekningskraften, og på at alle svarene finnes i deg selv, ikke bare er
             uskyldige redskaper, men uttrykk for en eldre fristelse – ønsket om å bli din egen Gud?
           </p>
           <p>
