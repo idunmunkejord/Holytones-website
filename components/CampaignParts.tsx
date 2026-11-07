@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { books, siteConfig } from "@/lib/site-config";
 
 // Pieces of the LØGNEN ad landing page (see standalonePaths in site-config).
@@ -93,11 +94,13 @@ export function Missing({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Stands in for the site footer: the web address as plain text, with nothing to click.
+// Stands in for the site footer: the web address, linking to the home page.
 export function CampaignFooter() {
   return (
     <footer className="border-t border-border-soft bg-background-alt px-6 py-8 text-center text-xs text-foreground-muted md:px-10">
-      {siteConfig.url.replace("https://", "www.")}
+      <Link href="/" className="link-underline hover:text-foreground">
+        {siteConfig.url.replace("https://", "www.")}
+      </Link>
     </footer>
   );
 }
