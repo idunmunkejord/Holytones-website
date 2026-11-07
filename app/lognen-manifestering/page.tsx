@@ -126,7 +126,8 @@ export default function LognenManifesteringPage() {
           </h2>
           <blockquote className="mt-8 border-l-2 border-loegnen-light pl-6 font-serif-display text-2xl leading-snug text-background md:text-3xl">
             «For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som
-            inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på»
+            inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på»{" "}
+            <span className="font-sans text-sm text-background/70">({book.title})</span>
           </blockquote>
           <div className="mt-10">
             <BuyButton onDark />
