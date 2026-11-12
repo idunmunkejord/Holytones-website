@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Lang } from "@/lib/i18n";
 import { links } from "@/lib/site-config";
 
-// Weekly devotional signup. The button opens the Substack publication in `links.substack`,
+// Weekly devotional signup. The button opens the Substack page in `links.substack` as it is,
 // where visitors subscribe; nothing is stored by this site.
 
 const text = {
@@ -69,7 +69,7 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
           {substack ? (
             // Opens the Substack signup page, where visitors enter their email.
             <a
-              href={`${substack}/subscribe`}
+              href={substack}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 block w-full bg-accent px-6 py-3.5 text-center text-xs uppercase tracking-[0.2em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"

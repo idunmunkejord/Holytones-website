@@ -79,9 +79,9 @@ export const customerService: { title: string; href?: string; parts: CustomerSer
 ];
 
 export const links = {
-  // The weekly devotional's Substack publication, e.g. "https://holytones.substack.com".
-  // The homepage signup embeds Substack's own form from it. Leave empty until it exists.
-  substack: "https://idunmunkejord.substack.com",
+  // The Weekly devotional section on Substack. The homepage signup button opens it, and visitors
+  // subscribe there. Leave empty to show "opens soon" instead.
+  substack: "https://holytones.substack.com/s/weekly-devotional",
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/holytones/6773490843",
   youtube: "https://www.youtube.com/@holytones",
