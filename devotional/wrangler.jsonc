@@ -1,0 +1,31 @@
+// The Holytones devotional email program: a Cloudflare Worker with its own D1 database.
+// Deployed with `npm run deploy` from this folder, separately from the website.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "holytones-devotional",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "routes": [{ "pattern": "andakt.holytones.no", "custom_domain": true }],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "holytones-devotional",
+      // Filled in when the database is created in Cloudflare (`wrangler d1 create`).
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ],
+  "triggers": {
+    // Hourly: send the devotionals that are due. Mondays 06:00 UTC: email the list as a backup.
+    "crons": ["0 * * * *", "0 6 * * 1"]
+  },
+  "vars": {
+    "PUBLIC_URL": "https://andakt.holytones.no",
+    "SITE_URL": "https://holytones.no",
+    "FROM": "Holytones <andakt@holytones.no>",
+    "REPLY_TO": "post@holytones.no",
+    "BACKUP_TO": "post@holytones.no",
+    "ALLOWED_ORIGINS": "https://holytones.no,https://www.holytones.no,http://localhost:3000"
+  },
+  // The devotional texts are Markdown files bundled into the program.
+  "rules": [{ "type": "Text", "globs": ["**/*.md"], "fallthrough": true }]
+}

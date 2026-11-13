@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import DevotionalForm from "@/components/DevotionalForm";
 import type { Lang } from "@/lib/i18n";
 import { links } from "@/lib/site-config";
 
@@ -66,7 +67,9 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
         <div className="mt-8 max-w-[22.75rem] border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
           <h3 className="font-serif-display text-xl text-foreground">{t.boxHeading}</h3>
 
-          {substack ? (
+          {links.devotionalSignup ? (
+            <DevotionalForm lang={lang} endpoint={links.devotionalSignup} />
+          ) : substack ? (
             // Opens the Substack signup page, where visitors enter their email.
             <a
               href={substack}

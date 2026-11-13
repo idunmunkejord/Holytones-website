@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The devotional email program has its own setup (see devotional/).
+    "devotional/**",
   ]),
 ]);
 

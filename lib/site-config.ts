@@ -82,6 +82,10 @@ export const links = {
   // The Weekly devotional section on Substack. The homepage signup button opens it, and visitors
   // subscribe there. Leave empty to show "opens soon" instead.
   substack: "https://holytones.substack.com/s/weekly-devotional",
+  // The Holytones devotional email program (devotional/). When set, the homepage shows its own
+  // signup form instead of the Substack button. Set to "https://andakt.holytones.no" once the
+  // program is live in Cloudflare.
+  devotionalSignup: "",
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/holytones/6773490843",
   youtube: "https://www.youtube.com/@holytones",
