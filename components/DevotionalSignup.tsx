@@ -24,9 +24,9 @@ const text = {
     popup: {
       failed: "The signup form could not be opened. Please try again in a moment.",
       consentQuestion:
-        "One question first: may we use cookies from Simplero and Facebook (Meta) to measure our marketing? You can sign up whatever you answer.",
-      consentYes: "Yes, okay",
-      consentNo: "No thanks",
+        "We use cookies from Simplero and Facebook (Meta) to measure our marketing.",
+      consentYes: "OK, continue",
+      consentNo: "Continue without",
       consentChange: "Change cookie choice",
     },
     free: "Free to join. Free weekly reflections from Holytones.",
@@ -48,9 +48,9 @@ const text = {
     popup: {
       failed: "Påmeldingsskjemaet kunne ikke åpnes. Prøv igjen om litt.",
       consentQuestion:
-        "Ett spørsmål først: kan vi bruke informasjonskapsler fra Simplero og Facebook (Meta) til å måle markedsføringen vår? Du kan melde deg på uansett hva du svarer.",
-      consentYes: "Ja, greit",
-      consentNo: "Nei takk",
+        "Vi bruker informasjonskapsler fra Simplero og Facebook (Meta) til å måle markedsføringen vår.",
+      consentYes: "OK, fortsett",
+      consentNo: "Fortsett uten",
       consentChange: "Endre valg for informasjonskapsler",
     },
     free: "Gratis å melde seg på. Gratis ukentlige refleksjoner fra Holytones.",

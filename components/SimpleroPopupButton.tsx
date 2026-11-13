@@ -160,7 +160,7 @@ export default function SimpleroPopupButton({
   }
 
   const choice =
-    "border border-border-soft px-4 py-2.5 text-[11px] uppercase tracking-[0.18em] text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+    "bg-accent px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
   return (
     <>
@@ -177,12 +177,16 @@ export default function SimpleroPopupButton({
 
       {status === "asking" && (
         <div role="group" aria-label={text.consentQuestion} className="mt-4">
-          <p className="text-sm leading-relaxed text-foreground-muted">{text.consentQuestion}</p>
-          <div className="mt-3 grid grid-cols-2 gap-3">
+          <p className="text-xs leading-relaxed text-foreground-muted">{text.consentQuestion}</p>
+          <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
             <button type="button" onClick={() => answer("yes")} className={choice}>
               {text.consentYes}
             </button>
-            <button type="button" onClick={() => answer("no")} className={choice}>
+            <button
+              type="button"
+              onClick={() => answer("no")}
+              className="link-underline text-xs text-foreground-muted"
+            >
               {text.consentNo}
             </button>
           </div>
