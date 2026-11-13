@@ -113,7 +113,7 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
             </p>
           )}
 
-          <p className="mt-5 text-xs leading-relaxed text-foreground-muted">
+          <p className="mt-5 text-xs font-bold leading-relaxed text-foreground">
             {t.free}{" "}
             <Link href="/personvern" className="link-underline text-accent">
               {t.privacy}
