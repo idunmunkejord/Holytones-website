@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { useSyncExternalStore, type ReactNode } from "react";
 import { createPortal } from "react-dom";
-import { bannerVisible, openCookieSettings, setConsent, subscribe } from "@/lib/cookie-consent";
+import {
+  bannerVisible,
+  openCookieSettings,
+  readConsent,
+  setConsent,
+  settingsRequests,
+  subscribe,
+} from "@/lib/cookie-consent";
 import type { Lang } from "@/lib/i18n";
 
 // A small banner at the bottom of the screen asking about optional marketing cookies (see
@@ -17,6 +24,7 @@ const text = {
     more: "Read more",
     decline: "Decline",
     accept: "Accept",
+    current: { yes: "Your choice now: accepted.", no: "Your choice now: declined." },
   },
   no: {
     label: "Informasjonskapsler",
@@ -24,6 +32,7 @@ const text = {
     more: "Les mer",
     decline: "Avvis",
     accept: "Godta",
+    current: { yes: "Valget ditt nå: godtatt.", no: "Valget ditt nå: avvist." },
   },
 };
 
@@ -33,6 +42,8 @@ const choice =
 
 export default function CookieBanner({ lang }: { lang: Lang }) {
   const visible = useSyncExternalStore(subscribe, bannerVisible, () => false);
+  const consent = useSyncExternalStore(subscribe, readConsent, () => null);
+  const requests = useSyncExternalStore(subscribe, settingsRequests, () => 0);
   if (!visible) return null;
   const t = text[lang];
 
@@ -44,12 +55,21 @@ export default function CookieBanner({ lang }: { lang: Lang }) {
       aria-label={t.label}
       className="pointer-events-none fixed inset-x-0 bottom-0 z-[1000000] px-3 pb-3 sm:px-5 sm:pb-5"
     >
-      <div className="pointer-events-auto mx-auto flex max-w-3xl flex-col gap-3 border border-border-soft border-t-accent-gold/60 bg-surface px-5 py-4 shadow-[0_10px_40px_rgba(43,38,33,0.14)] sm:flex-row sm:items-center sm:gap-7 sm:px-6">
+      {/* A new key each time the visitor asks for the settings replays the "here I am" motion. */}
+      <div
+        key={requests}
+        className={`pointer-events-auto mx-auto flex max-w-3xl flex-col gap-3 border border-border-soft border-t-accent-gold/60 bg-surface px-5 py-4 shadow-[0_10px_40px_rgba(43,38,33,0.14)] sm:flex-row sm:items-center sm:gap-7 sm:px-6 ${requests ? "cookie-banner-nudge" : ""}`}
+      >
         <p className="text-[13px] leading-relaxed text-foreground-muted">
           {t.body}{" "}
           <Link href="/personvern#informasjonskapsler" className="link-underline text-accent">
             {t.more}
           </Link>
+          {consent && (
+            <span aria-live="polite" className="mt-1 block font-medium text-foreground">
+              {t.current[consent]}
+            </span>
+          )}
         </p>
         <div className="flex shrink-0 gap-3">
           <button type="button" onClick={() => setConsent("no")} className={choice}>

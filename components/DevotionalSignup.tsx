@@ -20,7 +20,7 @@ const text = {
       "These short, honest devotionals will help you recognise the lies, renew your thinking and return to the truth of who you are in Christ.",
       "No empty motivation. No pressure to become a better version of yourself. Just honest, Bible rooted reflections that speak into the thoughts you rarely say out loud.",
     ],
-    boxHeading: "Weekly Devotional from Holytones",
+    boxHeading: "Weekly Devotional",
     button: "Send Devotionals",
     soon: "Subscriptions open soon.",
     failed: "The signup form could not be opened. Please try again in a moment.",
@@ -38,8 +38,8 @@ const text = {
       "Disse korte, ærlige andaktene hjelper deg å kjenne igjen løgnene, fornye tankene dine og vende tilbake til sannheten om hvem du er i Kristus.",
       "Ingen tom motivasjon. Ikke noe press om å bli en bedre versjon av deg selv. Bare ærlige, bibelforankrede refleksjoner som taler inn i tankene du sjelden sier høyt.",
     ],
-    boxHeading: "Ukentlig andakt fra Holytones",
-    button: "Send meg andakter",
+    boxHeading: "Ukentlig andakt",
+    button: "Send andakter",
     soon: "Påmeldingen åpner snart.",
     failed: "Påmeldingsskjemaet kunne ikke åpnes. Prøv igjen om litt.",
     free: "Gratis påmelding. Motta bibelforankrede andakter hver søndag og onsdag. Meld deg av når som helst.",
@@ -74,7 +74,7 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
         </div>
 
         <div className="mt-9 max-w-[24rem] border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-9 text-center sm:px-10 sm:py-10">
-          <h3 className="font-serif-display text-[1.375rem] leading-snug text-foreground">
+          <h3 className="font-serif-display text-[1.75rem] leading-tight text-foreground sm:text-[2rem]">
             {t.boxHeading}
           </h3>
 
@@ -107,8 +107,10 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
             </p>
           )}
 
-          <p className="mt-6 text-[13px] font-bold leading-relaxed text-foreground">{t.free}</p>
-          <p className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs text-foreground-muted">
+          <p className="mt-6 text-left text-[13px] leading-relaxed text-foreground-muted">
+            {t.free}
+          </p>
+          <p className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-xs text-foreground-muted">
             <Link href="/personvern" className="link-underline">
               {t.privacy}
             </Link>

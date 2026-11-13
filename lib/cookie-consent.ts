@@ -13,6 +13,7 @@ const KEY = "holytones-marketing-cookies";
 
 let memory: Consent | null = null; // used when the browser refuses storage (private windows)
 let settingsOpen = false;
+let requests = 0;
 let trackingStarted = false;
 const waiting: Array<() => void> = [];
 const listeners = new Set<() => void>();
@@ -38,9 +39,15 @@ export function bannerVisible() {
   return settingsOpen || readConsent() === null;
 }
 
+/** How many times the visitor has asked for the banner; each time it draws attention to itself. */
+export function settingsRequests() {
+  return requests;
+}
+
 /** Shows the banner again so the visitor can change or withdraw their choice. */
 export function openCookieSettings() {
   settingsOpen = true;
+  requests += 1;
   listeners.forEach((notify) => notify());
 }
 

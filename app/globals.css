@@ -105,3 +105,30 @@ body {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+/* The cookie banner lifts and glows briefly when a visitor asks to see it (CookieBanner.tsx). */
+@keyframes cookie-banner-nudge {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 10px 40px rgba(43, 38, 33, 0.14);
+  }
+  35% {
+    transform: translateY(-12px);
+    box-shadow: 0 0 0 3px var(--accent), 0 16px 44px rgba(43, 38, 33, 0.22);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 3px transparent, 0 10px 40px rgba(43, 38, 33, 0.14);
+  }
+}
+
+.cookie-banner-nudge {
+  animation: cookie-banner-nudge 0.9s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner-nudge {
+    animation: none;
+    outline: 2px solid var(--accent);
+  }
+}
