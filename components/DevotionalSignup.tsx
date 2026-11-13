@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import CookieBanner, { CookieSettingsLink } from "@/components/CookieBanner";
 import DevotionalForm from "@/components/DevotionalForm";
 import SimpleroPopupButton from "@/components/SimpleroPopupButton";
 import type { Lang } from "@/lib/i18n";
 import { links } from "@/lib/site-config";
 
 // Weekly devotional signup. The button opens the Simplero popup form in
-// `links.simpleroDevotional`, where visitors subscribe; nothing is stored by this site.
+// `links.simpleroDevotional`, where visitors subscribe; nothing is stored by this site. The
+// optional marketing cookies that come with that form are asked about in CookieBanner.
 
 const text = {
   en: {
@@ -18,19 +20,13 @@ const text = {
       "These short, honest devotionals will help you recognise the lies, renew your thinking and return to the truth of who you are in Christ.",
       "No empty motivation. No pressure to become a better version of yourself. Just honest, Bible rooted reflections that speak into the thoughts you rarely say out loud.",
     ],
-    boxHeading: "Weekly Devotional Holytones",
+    boxHeading: "Weekly Devotional from Holytones",
     button: "Send Devotionals",
     soon: "Subscriptions open soon.",
-    popup: {
-      failed: "The signup form could not be opened. Please try again in a moment.",
-      consentQuestion:
-        "We use cookies from Simplero and Facebook (Meta) to measure our marketing.",
-      consentYes: "OK, continue",
-      consentNo: "Continue without",
-      consentChange: "Change cookie choice",
-    },
-    free: "Free to join. Free weekly reflections from Holytones.",
+    failed: "The signup form could not be opened. Please try again in a moment.",
+    free: "Free to join. Receive Bible-rooted devotionals every Sunday and Wednesday. Unsubscribe at any time.",
     privacy: "Privacy policy",
+    cookies: "Cookie settings",
     imageAlt: "A tablet on a table showing the Weekly Devotional email",
   },
   no: {
@@ -45,16 +41,10 @@ const text = {
     boxHeading: "Ukentlig andakt fra Holytones",
     button: "Send meg andakter",
     soon: "Påmeldingen åpner snart.",
-    popup: {
-      failed: "Påmeldingsskjemaet kunne ikke åpnes. Prøv igjen om litt.",
-      consentQuestion:
-        "Vi bruker informasjonskapsler fra Simplero og Facebook (Meta) til å måle markedsføringen vår.",
-      consentYes: "OK, fortsett",
-      consentNo: "Fortsett uten",
-      consentChange: "Endre valg for informasjonskapsler",
-    },
-    free: "Gratis å melde seg på. Gratis ukentlige refleksjoner fra Holytones.",
+    failed: "Påmeldingsskjemaet kunne ikke åpnes. Prøv igjen om litt.",
+    free: "Gratis påmelding. Motta bibelforankrede andakter hver søndag og onsdag. Meld deg av når som helst.",
     privacy: "Personvernerklæring",
+    cookies: "Informasjonskapsler",
     imageAlt: "Et nettbrett på et bord som viser e-posten med ukentlig andakt",
   },
 };
@@ -62,6 +52,8 @@ const text = {
 export default function DevotionalSignup({ lang }: { lang: Lang }) {
   const t = text[lang];
   const substack = links.substack.replace(/\/+$/, "");
+  // Only the Simplero form brings optional cookies, so only then is there anything to ask about.
+  const usesSimplero = Boolean(links.simpleroDevotional) && !links.devotionalSignup;
 
   return (
     <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[1fr_minmax(0,24rem)] md:gap-14">
@@ -81,18 +73,20 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
           ))}
         </div>
 
-        <div className="mt-8 max-w-[22.75rem] border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-8 sm:px-8">
-          <h3 className="font-serif-display text-xl text-foreground">{t.boxHeading}</h3>
+        <div className="mt-9 max-w-[24rem] border border-border-soft border-t-2 border-t-accent-gold/70 bg-surface px-6 py-9 text-center sm:px-10 sm:py-10">
+          <h3 className="font-serif-display text-[1.375rem] leading-snug text-foreground">
+            {t.boxHeading}
+          </h3>
 
           {links.devotionalSignup ? (
             <DevotionalForm lang={lang} endpoint={links.devotionalSignup} />
           ) : links.simpleroDevotional ? (
             // Opens the Simplero signup popup on this page.
-            <div className="mt-6">
+            <div className="mt-7">
               <SimpleroPopupButton
                 page={links.simpleroDevotional}
-                text={t.popup}
-                className="block w-full bg-accent px-6 py-3.5 text-center text-xs uppercase tracking-[0.2em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent aria-busy:cursor-progress aria-busy:opacity-60"
+                failedText={t.failed}
+                className="block w-full bg-accent px-6 py-4 text-center text-[13px] font-medium uppercase tracking-[0.22em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent aria-busy:cursor-progress aria-busy:opacity-60"
               >
                 {t.button}
               </SimpleroPopupButton>
@@ -113,13 +107,17 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
             </p>
           )}
 
-          <p className="mt-5 text-xs font-bold leading-relaxed text-foreground">
-            {t.free}{" "}
-            <Link href="/personvern" className="link-underline text-accent">
+          <p className="mt-6 text-[13px] font-bold leading-relaxed text-foreground">{t.free}</p>
+          <p className="mt-4 flex flex-wrap justify-center gap-x-5 gap-y-1 text-xs text-foreground-muted">
+            <Link href="/personvern" className="link-underline">
               {t.privacy}
             </Link>
+            {usesSimplero && (
+              <CookieSettingsLink className="link-underline">{t.cookies}</CookieSettingsLink>
+            )}
           </p>
         </div>
+        {usesSimplero && <CookieBanner lang={lang} />}
       </div>
 
       <div className="relative order-first aspect-square w-full overflow-hidden border border-border-soft md:order-none md:mt-10">

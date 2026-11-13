@@ -205,6 +205,7 @@ export const privacyPolicy: Policy = {
       ],
     },
     {
+      id: "informasjonskapsler",
       title: "12. Informasjonskapsler (cookies)",
       paragraphs: [
         "Nettstedet kan bruke informasjonskapsler og lignende teknologier.",
@@ -224,9 +225,9 @@ export const privacyPolicy: Policy = {
         "Nærmere informasjon om informasjonskapslene som faktisk brukes, deres formål, leverandører og lagringstid skal være tilgjengelig på nettstedet.",
         { heading: "Påmeldingsskjemaet for andakter" },
         "Påmeldingsskjemaet for de ukentlige andaktene leveres av Simplero og lastes først når du trykker på påmeldingsknappen.",
-        "Første gang du trykker på knappen, får du velge om Holytones kan bruke informasjonskapsler fra Simplero og Facebook-pikselen fra Meta til å måle og tilpasse markedsføringen. Velger du «OK, fortsett», får Meta vite at du har besøkt nettstedet og om du har meldt deg på, og kan knytte dette til Facebook- eller Instagram-kontoen din.",
-        "Velger du «Fortsett uten», lastes verken Facebook-pikselen eller disse informasjonskapslene, og du kan melde deg på som normalt.",
-        "Valget ditt lagres i nettleseren din. Du kan når som helst endre det med lenken «Endre valg for informasjonskapsler» under påmeldingsknappen.",
+        "På forsiden blir du spurt, i et lite felt nederst på skjermen, om Holytones kan bruke valgfrie informasjonskapsler fra Simplero og Facebook-pikselen fra Meta til å måle og tilpasse markedsføringen. Velger du «Godta», får Meta vite at du har åpnet påmeldingsskjemaet og om du har meldt deg på, og kan knytte dette til Facebook- eller Instagram-kontoen din.",
+        "Velger du «Avvis», eller svarer du ikke, lastes verken Facebook-pikselen eller disse informasjonskapslene, og du kan melde deg på som normalt.",
+        "Valget ditt lagres i nettleseren din. Du kan når som helst endre det eller trekke samtykket tilbake med lenken «Informasjonskapsler» i påmeldingsboksen på forsiden.",
       ],
     },
     {

@@ -9,7 +9,7 @@ export type Policy = {
   subtitle?: string;
   updated?: string;
   intro?: string;
-  sections: { title: string; paragraphs: PolicyBlock[] }[];
+  sections: { id?: string; title: string; paragraphs: PolicyBlock[] }[];
 };
 
 function Block({ block }: { block: PolicyBlock }) {
@@ -51,7 +51,11 @@ export default function PolicyPage({
           {policy.intro && <p>{policy.intro}</p>}
 
           {policy.sections.map((section) => (
-            <div key={section.title} className="space-y-3 border-t border-border-soft pt-6">
+            <div
+              key={section.title}
+              id={section.id}
+              className="scroll-mt-28 space-y-3 border-t border-border-soft pt-6"
+            >
               <h2 className="text-sm font-medium uppercase tracking-[0.14em] text-foreground">
                 {section.title}
               </h2>

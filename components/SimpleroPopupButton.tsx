@@ -1,6 +1,7 @@
 "use client";
 
-import { useRef, useState, useSyncExternalStore, type MouseEvent, type ReactNode } from "react";
+import { useRef, useState, type MouseEvent, type ReactNode } from "react";
+import { whenCookiesAllowed } from "@/lib/cookie-consent";
 
 // A button that opens a Simplero popup signup form on this site.
 //
@@ -10,15 +11,12 @@ import { useRef, useState, useSyncExternalStore, type MouseEvent, type ReactNode
 // nothing from Simplero runs for visitors who never open the form.
 //
 // That script also carries the marketing tracking set up in the Simplero account (the Facebook
-// pixel) and Simplero's own cookies. Both wait for `window.simpleroCookieConsent`, so the first
-// click asks the visitor for permission and the answer is remembered in this browser. The form
-// opens and works whatever they answer.
+// pixel) and Simplero's own cookies. Simplero runs both through `window.simpleroCookieConsent`,
+// which is pointed at the visitor's cookie choice (lib/cookie-consent.ts, asked by CookieBanner):
+// they only start after a yes. The form itself opens and works whatever the visitor has chosen.
 
 const WAIT_MS = 10_000;
 const RETRY_MS = 200;
-const CONSENT_KEY = "holytones-marketing-cookies";
-
-type Consent = "yes" | "no";
 
 declare global {
   interface Window {
@@ -26,63 +24,21 @@ declare global {
   }
 }
 
-function readConsent(): Consent | null {
-  try {
-    const value = window.localStorage.getItem(CONSENT_KEY);
-    return value === "yes" || value === "no" ? value : null;
-  } catch {
-    return null;
-  }
-}
-
-function storeConsent(value: Consent | null) {
-  try {
-    if (value) window.localStorage.setItem(CONSENT_KEY, value);
-    else window.localStorage.removeItem(CONSENT_KEY);
-  } catch {
-    // Private windows may refuse storage; the visitor is simply asked again next time.
-  }
-  listeners.forEach((notify) => notify());
-}
-
-const listeners = new Set<() => void>();
-
-function subscribe(notify: () => void) {
-  listeners.add(notify);
-  return () => {
-    listeners.delete(notify);
-  };
-}
-
-export type SimpleroPopupText = {
-  failed: string;
-  consentQuestion: string;
-  consentYes: string;
-  consentNo: string;
-  consentChange: string;
-};
-
 export default function SimpleroPopupButton({
   page,
-  text,
+  failedText,
   className,
   children,
 }: {
   page: string;
-  text: SimpleroPopupText;
+  failedText: string;
   className?: string;
   children: ReactNode;
 }) {
   const link = useRef<HTMLAnchorElement>(null);
   const started = useRef(false);
   const replaying = useRef(false);
-  const [status, setStatus] = useState<"idle" | "asking" | "loading" | "failed">("idle");
-  // Whether this browser has a remembered answer (never on the server, where there is no browser).
-  const answered = useSyncExternalStore(
-    subscribe,
-    () => readConsent() !== null,
-    () => false,
-  );
+  const [status, setStatus] = useState<"idle" | "loading" | "failed">("idle");
 
   const base = page.replace(/\/+$/, "");
   const containerId = `simplero-landing-page-${base.split("/").pop()}`;
@@ -91,17 +47,15 @@ export default function SimpleroPopupButton({
     return document.getElementById(containerId)?.classList.contains("simplero-visible") ?? false;
   }
 
-  function load(consent: Consent) {
-    if (started.current) return;
+  function handleClick(e: MouseEvent<HTMLAnchorElement>) {
+    // Keep the "#…" address out of the address bar; Simplero still receives the click.
+    e.preventDefault();
+    // Clicks we replay ourselves, and every click after Simplero has loaded, belong to Simplero.
+    if (replaying.current || started.current) return;
     started.current = true;
     setStatus("loading");
 
-    // Simplero runs its tracking and cookie code through this; without a yes it is dropped.
-    window.simpleroCookieConsent = {
-      whenCookiesAllowed: (run) => {
-        if (consent === "yes") run();
-      },
-    };
+    window.simpleroCookieConsent = { whenCookiesAllowed };
 
     const script = document.createElement("script");
     script.src = `${base}.js`;
@@ -137,31 +91,6 @@ export default function SimpleroPopupButton({
     }, RETRY_MS);
   }
 
-  function handleClick(e: MouseEvent<HTMLAnchorElement>) {
-    // Keep the "#…" address out of the address bar; Simplero still receives the click.
-    e.preventDefault();
-    // Clicks we replay ourselves, and every click after Simplero has loaded, belong to Simplero.
-    if (replaying.current || started.current) return;
-    const consent = readConsent();
-    if (consent) load(consent);
-    else setStatus("asking");
-  }
-
-  function answer(consent: Consent) {
-    storeConsent(consent);
-    load(consent);
-  }
-
-  function changeAnswer() {
-    storeConsent(null);
-    // Tracking that has already started can only be stopped by loading the page afresh.
-    if (started.current) window.location.reload();
-    else setStatus("asking");
-  }
-
-  const choice =
-    "bg-accent px-5 py-2.5 text-[11px] uppercase tracking-[0.18em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
-
   return (
     <>
       <a
@@ -174,38 +103,9 @@ export default function SimpleroPopupButton({
       >
         {children}
       </a>
-
-      {status === "asking" && (
-        <div role="group" aria-label={text.consentQuestion} className="mt-4">
-          <p className="text-xs leading-relaxed text-foreground-muted">{text.consentQuestion}</p>
-          <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2">
-            <button type="button" onClick={() => answer("yes")} className={choice}>
-              {text.consentYes}
-            </button>
-            <button
-              type="button"
-              onClick={() => answer("no")}
-              className="link-underline text-xs text-foreground-muted"
-            >
-              {text.consentNo}
-            </button>
-          </div>
-        </div>
-      )}
-
       <p role="alert" className="mt-3 text-sm text-foreground-muted empty:hidden">
-        {status === "failed" && text.failed}
+        {status === "failed" && failedText}
       </p>
-
-      {answered && status !== "asking" && (
-        <button
-          type="button"
-          onClick={changeAnswer}
-          className="link-underline mt-3 text-xs text-foreground-muted"
-        >
-          {text.consentChange}
-        </button>
-      )}
     </>
   );
 }
