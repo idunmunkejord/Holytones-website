@@ -79,8 +79,11 @@ export const customerService: { title: string; href?: string; parts: CustomerSer
 ];
 
 export const links = {
-  // The Weekly devotional section on Substack. The homepage signup button opens it, and visitors
-  // subscribe there. Leave empty to show "opens soon" instead.
+  // The Simplero popup form for the devotional emails. The homepage signup button opens it on the
+  // page (see components/SimpleroPopupButton.tsx). Leave empty to fall back to the Substack link.
+  simpleroDevotional: "https://www.youmatter.academy/page/720616",
+  // The Weekly devotional section on Substack, where the devotionals were sent before Simplero.
+  // Only used by the homepage signup button when `simpleroDevotional` is empty.
   substack: "https://holytones.substack.com/s/weekly-devotional",
   // The Holytones devotional email program (devotional/). When set, the homepage shows its own
   // signup form instead of the Substack button. Set to "https://andakt.holytones.no" once the

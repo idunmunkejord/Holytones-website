@@ -34,10 +34,11 @@ Open [http://localhost:3000](http://localhost:3000) to view the site. Pages hot-
   ocean gradient. Swap it for a real photo (e.g. a Next.js `<Image>` sourced from `public/`)
   whenever one is ready.
 - **Author photo**: set `authorPhoto` in `lib/site-config.ts` to a portrait in `public/images`.
-- **Weekly devotional (Substack)**: the homepage signup (`components/DevotionalSignup.tsx`)
-  links to the Substack publication's signup page, so subscribers go straight into Substack.
-  Set `links.substack` in `lib/site-config.ts` to the publication URL to switch it on; until then
-  it shows "Subscriptions open soon" and no form.
+- **Weekly devotional (Simplero)**: the homepage signup (`components/DevotionalSignup.tsx`)
+  opens the Simplero popup form set in `links.simpleroDevotional` (`lib/site-config.ts`), so
+  subscribers go straight into Simplero. Simplero's script is only loaded when a visitor clicks
+  the button. With that setting empty the button falls back to the Substack page in
+  `links.substack`, and with both empty it shows "Subscriptions open soon".
 - **Contact form**: `components/ContactForm.tsx` opens the visitor's email client with a
   pre-filled message (no backend required). Replace with a hosted form service if you'd rather
   receive submissions directly.

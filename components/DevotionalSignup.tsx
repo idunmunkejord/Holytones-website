@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import DevotionalForm from "@/components/DevotionalForm";
+import SimpleroPopupButton from "@/components/SimpleroPopupButton";
 import type { Lang } from "@/lib/i18n";
 import { links } from "@/lib/site-config";
 
-// Weekly devotional signup. The button opens the Substack page in `links.substack` as it is,
-// where visitors subscribe; nothing is stored by this site.
+// Weekly devotional signup. The button opens the Simplero popup form in
+// `links.simpleroDevotional`, where visitors subscribe; nothing is stored by this site.
 
 const text = {
   en: {
@@ -20,6 +21,14 @@ const text = {
     boxHeading: "Weekly Devotional Holytones",
     button: "Send Devotionals",
     soon: "Subscriptions open soon.",
+    popup: {
+      failed: "The signup form could not be opened. Please try again in a moment.",
+      consentQuestion:
+        "One question first: may we use cookies from Simplero and Facebook (Meta) to measure our marketing? You can sign up whatever you answer.",
+      consentYes: "Yes, okay",
+      consentNo: "No thanks",
+      consentChange: "Change cookie choice",
+    },
     free: "Free to join. Free weekly reflections from Holytones.",
     privacy: "Privacy policy",
     imageAlt: "A tablet on a table showing the Weekly Devotional email",
@@ -36,6 +45,14 @@ const text = {
     boxHeading: "Ukentlig andakt fra Holytones",
     button: "Send meg andakter",
     soon: "Påmeldingen åpner snart.",
+    popup: {
+      failed: "Påmeldingsskjemaet kunne ikke åpnes. Prøv igjen om litt.",
+      consentQuestion:
+        "Ett spørsmål først: kan vi bruke informasjonskapsler fra Simplero og Facebook (Meta) til å måle markedsføringen vår? Du kan melde deg på uansett hva du svarer.",
+      consentYes: "Ja, greit",
+      consentNo: "Nei takk",
+      consentChange: "Endre valg for informasjonskapsler",
+    },
     free: "Gratis å melde seg på. Gratis ukentlige refleksjoner fra Holytones.",
     privacy: "Personvernerklæring",
     imageAlt: "Et nettbrett på et bord som viser e-posten med ukentlig andakt",
@@ -69,6 +86,17 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
 
           {links.devotionalSignup ? (
             <DevotionalForm lang={lang} endpoint={links.devotionalSignup} />
+          ) : links.simpleroDevotional ? (
+            // Opens the Simplero signup popup on this page.
+            <div className="mt-6">
+              <SimpleroPopupButton
+                page={links.simpleroDevotional}
+                text={t.popup}
+                className="block w-full bg-accent px-6 py-3.5 text-center text-xs uppercase tracking-[0.2em] text-background transition-colors hover:bg-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent aria-busy:cursor-progress aria-busy:opacity-60"
+              >
+                {t.button}
+              </SimpleroPopupButton>
+            </div>
           ) : substack ? (
             // Opens the Substack signup page, where visitors enter their email.
             <a
