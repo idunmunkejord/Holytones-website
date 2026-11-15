@@ -37,7 +37,7 @@ export function BuyButton({ onDark = false }: { onDark?: boolean }) {
             : `${buyButtonShape} border-loegnen-night bg-loegnen-night text-loegnen-light hover:text-loegnen-night`
         }
       >
-        Forhåndsbestill {book.title.toUpperCase()}
+        Forhåndsbestill
       </a>
     </div>
   );
