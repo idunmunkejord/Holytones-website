@@ -8,6 +8,7 @@ import {
   CampaignFooter,
   CampaignHeader,
   Missing,
+  PreorderNotice,
   PromiseOpening,
   promiseOpening,
 } from "@/components/CampaignParts";
@@ -66,7 +67,8 @@ export default function LognenManifesteringPage() {
               {headline}
             </h1>
             <PromiseOpening />
-            <div className="mt-8">
+            <div className="mt-8 space-y-4">
+              <PreorderNotice />
               <BuyButton />
             </div>
           </div>

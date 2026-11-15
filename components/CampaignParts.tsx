@@ -16,7 +16,13 @@ export function CampaignHeader() {
   );
 }
 
-// Centred in whatever column it sits in.
+// Centred in whatever column it sits in. The book is on pre-order until it is published on
+// 24 November 2026; Idun changes the wording to "Kjøp" herself afterwards, so nothing here
+// switches by date. Below desktop width the padding and letter spacing are tighter, so the longer
+// label fits on a phone and never pushes a narrow tablet column wider than the screen.
+const buyButtonShape =
+  "inline-block border px-6 py-5 text-center text-base font-semibold uppercase tracking-[0.12em] transition-colors hover:bg-transparent lg:px-12 lg:tracking-[0.2em]";
+
 export function BuyButton({ onDark = false }: { onDark?: boolean }) {
   if (!book.orderUrl) return null;
   return (
@@ -27,13 +33,22 @@ export function BuyButton({ onDark = false }: { onDark?: boolean }) {
         rel="noopener noreferrer"
         className={
           onDark
-            ? "inline-block border border-loegnen-light bg-loegnen-light px-12 py-5 text-base font-semibold uppercase tracking-[0.2em] text-loegnen-night transition-colors hover:bg-transparent hover:text-loegnen-light"
-            : "inline-block border border-loegnen-night bg-loegnen-night px-12 py-5 text-base font-semibold uppercase tracking-[0.2em] text-loegnen-light transition-colors hover:bg-transparent hover:text-loegnen-night"
+            ? `${buyButtonShape} border-loegnen-light bg-loegnen-light text-loegnen-night hover:text-loegnen-light`
+            : `${buyButtonShape} border-loegnen-night bg-loegnen-night text-loegnen-light hover:text-loegnen-night`
         }
       >
-        Kjøp {book.title.toUpperCase()}
+        Forhåndsbestill {book.title.toUpperCase()}
       </a>
     </div>
+  );
+}
+
+// Shown once, by the first button on the page.
+export function PreorderNotice() {
+  return (
+    <p className="text-center text-base font-semibold text-loegnen-night md:text-lg">
+      Utgis 24. november 2026 – forhåndsbestill nå!
+    </p>
   );
 }
 
