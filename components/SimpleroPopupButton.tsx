@@ -17,6 +17,9 @@ import { whenCookiesAllowed } from "@/lib/cookie-consent";
 
 const WAIT_MS = 10_000;
 const RETRY_MS = 200;
+// Shown by the browser when someone tries to send the form without ticking the consent box. The
+// form itself is in Norwegian, so this is too.
+const CONSENT_REQUIRED_TEXT = "Kryss av her for å motta andaktene på e-post.";
 
 declare global {
   interface Window {
@@ -47,9 +50,24 @@ export default function SimpleroPopupButton({
     return document.getElementById(containerId)?.classList.contains("simplero-visible") ?? false;
   }
 
+  // Simplero's form shows the e-mail consent checkbox but lets the form be sent without it, which
+  // adds the contact with no recorded consent. Marking the box as required makes the browser
+  // refuse to send the form until it is ticked; Simplero still does the sending itself.
+  function requireConsent() {
+    const box = document.querySelector<HTMLInputElement>(
+      `#${containerId} input[name="gdpr_consent"]`,
+    );
+    if (!box || box.required) return;
+    box.required = true;
+    const update = () => box.setCustomValidity(box.checked ? "" : CONSENT_REQUIRED_TEXT);
+    box.addEventListener("change", update);
+    update();
+  }
+
   function handleClick(e: MouseEvent<HTMLAnchorElement>) {
     // Keep the "#…" address out of the address bar; Simplero still receives the click.
     e.preventDefault();
+    requireConsent();
     // Clicks we replay ourselves, and every click after Simplero has loaded, belong to Simplero.
     if (replaying.current || started.current) return;
     started.current = true;
@@ -70,6 +88,7 @@ export default function SimpleroPopupButton({
     // visitor's click until the popup is showing.
     const startedAt = Date.now();
     const timer = window.setInterval(() => {
+      requireConsent();
       if (isOpen()) {
         window.clearInterval(timer);
         replaying.current = true; // from here on Simplero handles the clicks itself
