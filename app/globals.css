@@ -132,3 +132,17 @@ body {
     outline: 2px solid var(--accent);
   }
 }
+
+/* The Simplero signup popup (components/SimpleroPopupButton.tsx): Simplero adds it to <body> and
+   styles it itself. All text inside the form box is forced to black so it stays readable over the
+   form's background photo. The "Go away, box!" link sits outside the box on the dark overlay and
+   keeps its own colour. */
+.simplero-landing-page-container .simplero-signup,
+.simplero-landing-page-container .simplero-signup * {
+  color: #000 !important;
+}
+
+.simplero-landing-page-container .simplero-signup input::placeholder {
+  color: #000 !important;
+  opacity: 1 !important;
+}
