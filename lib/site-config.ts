@@ -101,7 +101,7 @@ export const links = {
 
 // Landing pages that stand on their own: the site menu and footer are hidden on them so visitors
 // stay on the page.
-export const standalonePaths = ["/lognen-manifestering"];
+export const standalonePaths = ["/lognen-manifestering", "/takk-for-bestillingen"];
 
 export const navLinks: { href: string; label: Localized }[] = [
   { href: "/", label: { en: "Home", no: "Hjem" } },
