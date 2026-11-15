@@ -5,7 +5,7 @@ import { books } from "@/lib/site-config";
 // Shown after a pre-order of LØGNEN: the address of this page is given to Simplero as the page
 // customers land on after checkout. Same text and colours as the order confirmation e-mail
 // (emails/lognen-ordrebekreftelse.html), except that a web page cannot know the customer's name,
-// so the greeting has none. Standalone and hidden like the landing page (standalonePaths, noindex).
+// so it has no greeting line. Standalone and hidden like the landing page (standalonePaths, noindex).
 
 const book = books[0];
 
@@ -35,7 +35,6 @@ export default function PreorderThanksPage() {
           </div>
 
           <div className="space-y-5 border-b-4 border-loegnen-light bg-surface px-7 py-9 text-base leading-relaxed text-foreground md:px-10 md:text-[17px]">
-            <p className="font-serif-display text-2xl text-loegnen-night">Hei,</p>
             <p>
               Tusen takk for at du har forhåndsbestilt {book.title.toUpperCase()} – {book.subtitle}.
             </p>
