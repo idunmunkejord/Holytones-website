@@ -38,14 +38,19 @@ export const metadata: Metadata = {
 function Cover({ className, sizes }: { className: string; sizes: string }) {
   if (!book.cover) return null;
   return (
-    <ZoomImage
-      src={book.cover}
-      alt={`${book.title} av Idun Munkejord — forside og bakside`}
-      sizes={sizes}
-      className={`aspect-[3/4] shrink-0 overflow-hidden ${className}`}
-      imageClassName="object-cover object-right mix-blend-multiply"
-      unoptimized
-    />
+    <figure className={`shrink-0 ${className}`}>
+      <ZoomImage
+        src={book.cover}
+        alt={`${book.title} av Idun Munkejord — forside og bakside`}
+        sizes={sizes}
+        className="aspect-[3/4] w-full overflow-hidden"
+        imageClassName="object-cover object-right mix-blend-multiply"
+        unoptimized
+      />
+      <figcaption className="mt-2 text-center text-xs text-loegnen-night/70">
+        Trykk på bildet for å se hele omslaget
+      </figcaption>
+    </figure>
   );
 }
 
