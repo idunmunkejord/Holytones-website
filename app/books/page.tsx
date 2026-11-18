@@ -14,6 +14,7 @@ const text = {
       "Begin with LØGNEN, which examines what happens when self-development takes God’s place.",
     ],
     coverAlt: "front and back cover",
+    coverHint: "Tap the image to see the whole cover",
     backAlt: "back cover",
     order: "Order book",
   },
@@ -25,6 +26,7 @@ const text = {
       "Begynn med LØGNEN, som undersøker hva som skjer når selvutvikling tar Guds plass.",
     ],
     coverAlt: "forside og bakside",
+    coverHint: "Trykk på bildet for å se hele omslaget",
     backAlt: "bakside",
     order: "Bestill boka",
   },
@@ -62,13 +64,18 @@ export default async function BooksPage() {
               {(book.cover || book.coverBack) && (
                 <div className="flex w-full max-w-sm shrink-0 gap-3 sm:w-64 md:w-80 lg:w-96">
                   {book.cover && (
-                    <ZoomImage
-                      src={book.cover}
-                      alt={`${book.title} — ${t.coverAlt}`}
-                      sizes="(min-width: 1024px) 384px, (min-width: 768px) 320px, (min-width: 640px) 256px, 384px"
-                      className="aspect-[3/2] w-full shrink-0 overflow-hidden"
-                      imageClassName="object-contain mix-blend-multiply"
-                    />
+                    <figure className="w-full shrink-0">
+                      <ZoomImage
+                        src={book.cover}
+                        alt={`${book.title} — ${t.coverAlt}`}
+                        sizes="(min-width: 1024px) 384px, (min-width: 768px) 320px, (min-width: 640px) 256px, 384px"
+                        className="aspect-[3/2] w-full overflow-hidden"
+                        imageClassName="object-contain mix-blend-multiply"
+                      />
+                      <figcaption className="mt-2 text-center text-xs text-foreground/70">
+                        {t.coverHint}
+                      </figcaption>
+                    </figure>
                   )}
                   {book.coverBack && (
                     <a
