@@ -91,6 +91,7 @@ export const links = {
   devotionalSignup: "",
   spotify: "https://open.spotify.com/artist/7Ku7VA1XgZC0OPHhH0Zg1b?si=BYeHiVFhTm-gZRD8jIGffg",
   appleMusic: "https://music.apple.com/artist/holytones/6773490843",
+  // Not shown anywhere for now: add it back to components/SocialLinks.tsx once the channel is ready.
   youtube: "https://www.youtube.com/@holytones",
   linkedin: "https://www.linkedin.com/in/idun-munkejord-522b5315/",
   email: "post@holytones.no",

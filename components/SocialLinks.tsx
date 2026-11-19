@@ -3,7 +3,6 @@ import { links } from "@/lib/site-config";
 const items = [
   { key: "spotify", label: "Spotify", href: links.spotify },
   { key: "appleMusic", label: "Apple Music", href: links.appleMusic },
-  { key: "youtube", label: "YouTube", href: links.youtube },
 ];
 
 export default function SocialLinks({
