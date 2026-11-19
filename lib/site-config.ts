@@ -107,7 +107,7 @@ export const standalonePaths = ["/lognen-manifestering", "/takk-for-bestillingen
 export const navLinks: { href: string; label: Localized }[] = [
   { href: "/", label: { en: "Home", no: "Hjem" } },
   { href: "/books", label: { en: "Books", no: "Bøker" } },
-  { href: "/courses", label: { en: "Courses", no: "Kurs" } },
+  { href: "/courses", label: { en: "Confident in Who You Are", no: "Trygg på Hvem Du Er" } },
   { href: "/music", label: { en: "Music", no: "Musikk" } },
   { href: "/about", label: { en: "About", no: "Om meg" } },
   { href: "/contact", label: { en: "Contact", no: "Kontakt" } },
