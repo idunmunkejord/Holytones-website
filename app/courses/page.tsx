@@ -16,13 +16,13 @@ const text = {
     imageAlt: "Idun in conversation with a small group in a bright living room",
     lead: "Your worth is already given. You do not have to spend your life trying to earn it.",
     story: [
-      "During my years as a teacher and principal in upper secondary education, I have walked alongside young people facing insecurity, difficult choices and questions about who they are. I have seen how deeply the pressure to succeed can affect a person, and how much it matters to be heard, supported and reminded of your worth.",
-      "My own journey has changed the way I approach growth. My Christian faith shapes both my understanding of people and the guidance I offer. I believe lasting change begins with knowing God and discovering who you are in Christ. From that foundation you can recognise the lies shaping your thinking, loosen the grip of performance and take meaningful steps forward.",
+      "Over the years, as a leader and teacher, I’ve met many people who are wrestling with uncertainty, facing difficult choices, or questioning who they are. I’ve seen how deeply the pressure to perform can affect people and how much it means to be seen, heard, and taken seriously. These experiences have shaped the way I lead, teach, and guide others.",
+      "I’ve found that the same principles apply across industries. People need clear expectations and leaders who recognize what they can contribute, entrust them with responsibility, and give them room to grow. When I guide others, I draw on my experience in both leadership and teaching. That might mean helping someone understand their own reactions, put into words what they’re struggling with, work through a decision, or build trust with the people they work with.",
+      "My own walk with God has shaped how I see people. My Christian faith informs how I relate to others and how I understand growth and change. I believe lasting change begins with getting to know God and discovering who you are in Christ. As you grow more secure in who you are in Him, it becomes easier to recognize the lies you’ve believed about yourself, let go of the need to prove your worth, and take the next step with God.",
     ],
     more: [
       "As a teacher and mentor, I offer individual and group conversations with space for honest questions, practical guidance and biblical reflection. Together we explore what is holding you back, what you believe about yourself and how faith can shape your everyday choices. I bring energy, honesty and a listening ear. I will encourage you, ask questions that challenge you, and help you put insight into practice with room for both courage and rest.",
       "Having lived in Norway, the United States and Spain, I bring international experience and offer conversations in Norwegian, English and Spanish.",
-      "You are loved by God, your life matters, and you can move forward from a place of grace.",
     ],
     contactBefore: "If this speaks to where you are today, you are welcome to ",
     contactLink: "get in touch",
