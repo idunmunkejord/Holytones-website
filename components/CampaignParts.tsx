@@ -1,4 +1,5 @@
 import Link from "next/link";
+import OrderLink from "@/components/OrderLink";
 import { books, siteConfig } from "@/lib/site-config";
 
 // Pieces of the LØGNEN ad landing page (see standalonePaths in site-config).
@@ -27,10 +28,8 @@ export function BuyButton({ onDark = false }: { onDark?: boolean }) {
   if (!book.orderUrl) return null;
   return (
     <div className="flex justify-center">
-      <a
+      <OrderLink
         href={book.orderUrl}
-        target="_blank"
-        rel="noopener noreferrer"
         className={
           onDark
             ? `${buyButtonShape} border-loegnen-light bg-loegnen-light text-loegnen-night hover:text-loegnen-light`
@@ -38,7 +37,7 @@ export function BuyButton({ onDark = false }: { onDark?: boolean }) {
         }
       >
         Forhåndsbestill
-      </a>
+      </OrderLink>
     </div>
   );
 }

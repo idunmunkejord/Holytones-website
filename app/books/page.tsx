@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
+import OrderLink from "@/components/OrderLink";
 import ZoomImage from "@/components/ZoomImage";
 import { getLang } from "@/lib/get-lang";
 import { books } from "@/lib/site-config";
@@ -117,14 +118,12 @@ export default async function BooksPage() {
                     ))}
                   </div>
                   {book.orderUrl && (
-                    <a
+                    <OrderLink
                       href={book.orderUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="mt-6 inline-block border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
                     >
                       {t.order}
-                    </a>
+                    </OrderLink>
                   )}
                 </div>
               </div>
