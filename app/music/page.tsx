@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
-import { AlbumCard, SingleCard, SongRow } from "@/components/ReleaseCards";
+import { AlbumCard, SinglesBox, SongRow } from "@/components/ReleaseCards";
 import { albums, allSongs, singles } from "@/lib/music";
 import { getLang } from "@/lib/get-lang";
 import { readMoreLabels } from "@/lib/i18n";
@@ -41,6 +41,10 @@ const text = {
     allSongs: "Alle sanger",
   },
 };
+
+// The cover shown on the closed singles box.
+const singlesCover =
+  singles.find((single) => single.title.toLowerCase() === "through the valley") ?? singles[0];
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = text[await getLang()];
@@ -101,11 +105,7 @@ export default async function MusicPage() {
 
           <div>
             <h2 className="mb-6 font-serif-display text-2xl text-foreground">{t.singles}</h2>
-            <div>
-              {singles.map((single) => (
-                <SingleCard key={single.id} single={single} lang={lang} />
-              ))}
-            </div>
+            <SinglesBox singles={singles} cover={singlesCover} lang={lang} />
           </div>
 
           <div>

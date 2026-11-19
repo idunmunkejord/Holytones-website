@@ -3,8 +3,32 @@ import type { Lang } from "@/lib/i18n";
 import { formatDuration, formatReleaseDate, type ListedSong, type Release } from "@/lib/music";
 
 const text = {
-  en: { cover: "cover", songs: "songs", show: "Show songs +", hide: "Hide songs −", whole: "Whole album:" },
-  no: { cover: "omslag", songs: "sanger", show: "Vis sanger +", hide: "Skjul sanger −", whole: "Hele albumet:" },
+  en: {
+    cover: "cover",
+    songs: "songs",
+    show: "Show songs +",
+    hide: "Hide songs −",
+    whole: "Whole album:",
+    singles: "Singles",
+    allSingles: "All singles",
+    singleCount: "singles",
+    latest: "latest",
+    showSingles: "Show singles +",
+    hideSingles: "Hide singles −",
+  },
+  no: {
+    cover: "omslag",
+    songs: "sanger",
+    show: "Vis sanger +",
+    hide: "Skjul sanger −",
+    whole: "Hele albumet:",
+    singles: "Singler",
+    allSingles: "Alle singler",
+    singleCount: "singler",
+    latest: "siste",
+    showSingles: "Vis singler +",
+    hideSingles: "Skjul singler −",
+  },
 };
 
 const listenLink =
@@ -89,6 +113,37 @@ export function AlbumCard({ album, lang }: { album: Release; lang: Lang }) {
           <span className="text-xs uppercase tracking-[0.18em] text-foreground">{t.whole}</span>
           <ListenLinks spotify={album.url} appleMusic={album.appleMusicUrl} />
         </div>
+      </div>
+    </details>
+  );
+}
+
+// All the singles in one box like an album, closed until opened. `cover` is the single whose
+// cover is shown on the closed box.
+export function SinglesBox({ singles, cover, lang }: { singles: Release[]; cover: Release; lang: Lang }) {
+  const t = text[lang];
+  if (singles.length === 0) return null;
+  return (
+    <details className="group border border-border-soft bg-surface">
+      <summary className="flex cursor-pointer list-none items-center gap-5 p-5 sm:gap-6 sm:p-6 [&::-webkit-details-marker]:hidden">
+        <Cover release={cover} size={112} lang={lang} />
+        <div className="min-w-0 flex-1">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-accent">{t.singles}</p>
+          <h3 className="mt-1 font-serif-display text-2xl text-foreground">{t.allSingles}</h3>
+          <p className="mt-1 text-sm text-foreground-muted">
+            {singles.length} {t.singleCount} · {t.latest} {formatReleaseDate(singles[0].releaseDate, lang)}
+          </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.18em] text-foreground-muted">
+            <span className="group-open:hidden">{t.showSingles}</span>
+            <span className="hidden group-open:inline">{t.hideSingles}</span>
+          </p>
+        </div>
+      </summary>
+
+      <div className="border-t border-border-soft px-5 pt-5 pb-5 sm:px-6 sm:pb-6">
+        {singles.map((single) => (
+          <SingleCard key={single.id} single={single} lang={lang} />
+        ))}
       </div>
     </details>
   );
