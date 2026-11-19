@@ -33,13 +33,13 @@ const text = {
     imageAlt: "Idun i samtale med en liten gruppe i en lys stue",
     lead: "Verdien din er allerede gitt. Du trenger ikke bruke livet på å prøve å fortjene den.",
     story: [
-      "I årene som lærer og rektor i videregående skole har jeg gått sammen med unge mennesker som strever med usikkerhet, vanskelige valg og spørsmål om hvem de er. Jeg har sett hvor dypt prestasjonspresset kan påvirke et menneske, og hvor mye det betyr å bli hørt, få støtte og bli minnet på sin egen verdi.",
-      "Min egen reise har endret måten jeg ser på vekst. Den kristne troen min former både hvordan jeg forstår mennesker og veiledningen jeg gir. Jeg tror varig forandring begynner med å kjenne Gud og oppdage hvem du er i Kristus. Fra det fundamentet kan du kjenne igjen løgnene som former tankene dine, løsne grepet prestasjonene har om deg og ta meningsfulle steg videre.",
+      "Gjennom årene som leder og lærer har jeg møtt mange mennesker som strever med usikkerhet, vanskelige valg og spørsmål om hvem de er. Jeg har sett hvor hardt prestasjonspress kan ramme, og hvor mye det betyr å bli sett, lyttet til og tatt på alvor. Disse erfaringene har formet måten jeg leder, underviser og veileder på.",
+      "Jeg har erfart at de samme prinsippene har verdi på tvers av bransjer. Mennesker trenger tydelige forventninger og ledere som ser hva de kan bidra med, gir dem ansvar og lar dem få rom til å utvikle seg. I veiledningen trekker jeg på erfaringen min fra både ledelse og undervisning. Det kan handle om å forstå egne reaksjoner, sette ord på det som er vanskelig, eller finne ut hva som skal til for å ta et valg og bygge tillit i samarbeid med andre.",
+      "Min egen vandring med Gud har formet menneskesynet mitt. Den kristne troen preger hvordan jeg møter mennesker, og hvordan jeg forstår vekst og forandring. Jeg tror varig forandring begynner med å bli kjent med Gud og oppdage hvem du er i Kristus. Når du blir tryggere på hvem du er i Ham, kan du lettere kjenne igjen løgnene du har trodd om deg selv, slippe taket i behovet for å bevise hva du er verdt, og ta neste steg sammen med Gud.",
     ],
     more: [
       "Som lærer og mentor tilbyr jeg individuelle samtaler og gruppesamtaler med rom for ærlige spørsmål, praktisk veiledning og bibelsk refleksjon. Sammen utforsker vi hva som holder deg tilbake, hva du tror om deg selv og hvordan troen kan prege valgene du tar i hverdagen. Jeg tar med meg energi, ærlighet og et lyttende øre. Jeg vil oppmuntre deg, stille spørsmål som utfordrer deg og hjelpe deg å omsette innsikt til handling – med rom for både mot og hvile.",
       "Jeg har bodd i Norge, USA og Spania, har internasjonal erfaring og tilbyr samtaler på norsk, engelsk og spansk.",
-      "Du er elsket av Gud, livet ditt betyr noe, og du kan gå videre ut fra nåde.",
     ],
     contactBefore: "Hvis dette treffer der du er i dag, er du velkommen til å ",
     contactLink: "ta kontakt",
