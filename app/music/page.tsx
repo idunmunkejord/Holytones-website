@@ -15,8 +15,7 @@ const text = {
       "Holytones creates songs rooted in Scripture about faith, love, forgiveness, hope, and who you are in Christ. Some songs are quiet prayers. Others challenge you to place your life in God’s hands. Each one invites you to draw closer to Jesus and let faith shape the choices you make every day, whether that means forgiving someone, showing love, or finding the courage to take the next step with God.",
     more: [
       "The catalogue also includes songs built around poems and lyrics by the Norwegian poet and songwriter Reidar Munkejord, giving his words a musical voice to inspire a new generation.",
-      "Listen and let the words become your prayer and share a song with someone who needs encouragement.",
-      "New singles arrive every one to three months, released across languages as each song finds its voice. Find the full catalogue on Spotify and Apple Music.",
+      "The songs on Holytones are released across languages. Find the full catalogue on Spotify and Apple Music.",
     ],
     spotify: "Open Spotify",
     apple: "Open Apple Music",
@@ -30,9 +29,8 @@ const text = {
     intro:
       "Holytones lager sanger med røtter i Bibelen, om tro, kjærlighet, tilgivelse, håp og hvem du er i Kristus. Noen sanger er stille bønner. Andre utfordrer deg til å legge livet ditt i Guds hender. Alle inviterer deg til å komme nærmere Jesus og la troen få prege de valgene du tar i hverdagen, enten det handler om å tilgi, vise kjærlighet eller våge å ta neste steg sammen med Gud.",
     more: [
-      "Katalogen rommer også sanger bygget på dikt og tekster av den norske poeten og låtskriveren Reidar Munkejord, som gir ordene hans en musikalsk stemme som kan inspirere en ny generasjon.",
-      "Lytt, la ordene bli din bønn, og del en sang med noen som trenger oppmuntring.",
-      "Nye singler kommer hver første til tredje måned, på flere språk etter hvert som hver sang finner sin stemme. Du finner hele katalogen på Spotify og Apple Music.",
+      "I katalogen finner du også sanger basert på dikt og tekster av den norske poeten og sangtekstforfatteren Reidar Munkejord. Gjennom musikken får ordene hans nytt liv og kan inspirere en ny generasjon.",
+      "Sangene på Holytones utgis på flere språk. Du finner hele katalogen på Spotify og Apple Music.",
     ],
     spotify: "Åpne Spotify",
     apple: "Åpne Apple Music",
