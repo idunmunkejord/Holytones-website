@@ -173,14 +173,20 @@ export const books: Book[] = [
     title: "Løgnen",
     subtitle: "Når selvutvikling tar Guds plass",
     language: { en: "In Norwegian · Launch", no: "Lansering" },
+    // The same text as the LØGNEN landing page (components/CampaignParts.tsx and
+    // app/lognen-manifestering/page.tsx); the English is a translation of it.
     note: {
       en: [
-        "Many people carry a longing for life to change and find meaning, if only they think the right way and focus on what they want. The message that your thoughts shape reality, that the universe responds to the energy you send out, and that the power already lies within you, sounds appealing. Over the years these ideas have crept into the way we think, and gradually also into the way many Christians understand faith, prayer and God's blessing.",
-        "LØGNEN is a Christian response to this appealing story, which has crept almost unnoticed into our Christian faith. For the most dangerous lies are not necessarily the ones that are completely untrue, but the ones that contain just enough truth that you don't notice what has been changed.",
+        "You may have heard it: Your thoughts shape reality. The universe responds to the energy you send out. And the power to create the life you want already lies within you.",
+        "It is a tempting promise, and the longing behind it is easy to understand. You can create the life you long for, if only you think the right way and focus on what you want.",
+        "But what if it is a LIE – and you have gradually learned to trust the power of thought more than God’s promises?",
+        "In LØGNEN you discover how the message about the power of thought has blended into Christian faith. You learn to tell the difference between what is true and what only resembles the truth. And you learn that you do not find what you long for by turning your gaze inward toward yourself, but by turning it toward Him who fills everything in every way.",
       ],
       no: [
-        "Mange mennesker bærer på en lengsel om at livet kan forandres og få mening hvis de bare tenker riktig og retter oppmerksomheten mot det de ønsker. Budskapet om at tankene dine former virkeligheten, universet svarer på energien du sender ut, og at kraften allerede finnes i deg selv, høres forlokkende ut. Disse tankene har gjennom årene sneket seg inn i måten vi tenker på, og gradvis også inn i måten mange kristne forstår tro, bønn og Guds velsignelse.",
-        "LØGNEN er et kristent svar på denne forlokkende fortellingen som nesten umerket har sneket seg inn i vår kristne tro. For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på.",
+        "Du har kanskje hørt det: Tankene dine former virkeligheten. Universet svarer på energien du sender ut. Og kraften til å skape livet du ønsker, finnes allerede i deg.",
+        "Det er et fristende løfte, og lengselen bak er lett å forstå. Du kan skape det livet du lengter etter hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.",
+        "Men hva om det er LØGN – og du gradvis har lært å tro mer på tankens kraft enn på Guds løfter?",
+        "I LØGNEN oppdager du hvordan budskapet om tankens kraft har blandet seg inn med kristen tro. Du lærer å skille mellom det som er sant og det som bare ligner sannheten. Og du lærer at du ikke finner det du lengter etter ved å vende blikket innover mot deg selv, men ved å vende det mot Ham som fyller alt i alle.",
       ],
     },
     status: { en: "24 November", no: "24. november" },
