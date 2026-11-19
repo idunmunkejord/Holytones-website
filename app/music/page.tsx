@@ -12,7 +12,7 @@ const text = {
     title: "Music",
     description: "Listen to original songs by Holytones, written and released across languages.",
     intro:
-      "Holytones brings biblical truth into everyday life through songs about faith, love, forgiveness, identity and hope. From quiet prayers to powerful calls to surrender, each song invites you to draw closer to Jesus and let faith shape how you live to forgive, love, and take the next step with God.",
+      "Holytones creates songs rooted in Scripture about faith, love, forgiveness, hope, and who you are in Christ. Some songs are quiet prayers. Others challenge you to place your life in God’s hands. Each one invites you to draw closer to Jesus and let faith shape the choices you make every day, whether that means forgiving someone, showing love, or finding the courage to take the next step with God.",
     more: [
       "The catalogue also includes songs built around poems and lyrics by the Norwegian poet and songwriter Reidar Munkejord, giving his words a musical voice to inspire a new generation.",
       "Listen and let the words become your prayer and share a song with someone who needs encouragement.",
@@ -28,7 +28,7 @@ const text = {
     title: "Musikk",
     description: "Lytt til originale sanger fra Holytones, skrevet og gitt ut på flere språk.",
     intro:
-      "Holytones bringer bibelsk sannhet inn i hverdagen gjennom sanger om tro, kjærlighet, tilgivelse, identitet og håp. Fra stille bønner til sterke kall til overgivelse inviterer hver sang deg til å komme nærmere Jesus og la troen forme hvordan du lever – til å tilgi, elske og ta neste steg med Gud.",
+      "Holytones lager sanger med røtter i Bibelen, om tro, kjærlighet, tilgivelse, håp og hvem du er i Kristus. Noen sanger er stille bønner. Andre utfordrer deg til å legge livet ditt i Guds hender. Alle inviterer deg til å komme nærmere Jesus og la troen få prege de valgene du tar i hverdagen, enten det handler om å tilgi, vise kjærlighet eller våge å ta neste steg sammen med Gud.",
     more: [
       "Katalogen rommer også sanger bygget på dikt og tekster av den norske poeten og låtskriveren Reidar Munkejord, som gir ordene hans en musikalsk stemme som kan inspirere en ny generasjon.",
       "Lytt, la ordene bli din bønn, og del en sang med noen som trenger oppmuntring.",
