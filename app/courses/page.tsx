@@ -12,6 +12,7 @@ const storyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted m
 const text = {
   en: {
     title: "Courses",
+    heading: "Confident in Who You Are",
     description: "Guided courses and devotionals from YouMatter Academy for a deeper, more honest faith.",
     imageAlt: "Idun in conversation with a small group in a bright living room",
     lead: "Your worth is already given. You do not have to spend your life trying to earn it.",
@@ -29,6 +30,7 @@ const text = {
   },
   no: {
     title: "Kurs",
+    heading: "Trygg på Hvem Du Er",
     description: "Kurs og andakter fra YouMatter Academy for en dypere og mer ærlig tro.",
     imageAlt: "Idun i samtale med en liten gruppe i en lys stue",
     lead: "Verdien din er allerede gitt. Du trenger ikke bruke livet på å prøve å fortjene den.",
@@ -70,8 +72,8 @@ export default async function CoursesPage() {
           </div>
 
           <div className="max-w-2xl">
-            <SectionLabel>{t.title}</SectionLabel>
-            <h1 className="sr-only">{t.title}</h1>
+            <SectionLabel>{t.heading}</SectionLabel>
+            <h1 className="sr-only">{t.heading}</h1>
             <p className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
               {t.lead}
             </p>
