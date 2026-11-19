@@ -30,8 +30,8 @@ const text = {
     ],
     explore: "Utforsk bøker, kurs og musikk",
     more: [
-      "Kanskje har du jobbet hardt for å forbedre deg selv, overvinne utfordringer og skape et meningsfullt liv. Du har lært å ta ansvar, utvikle evnene dine og håndtere omstendighetene dine – bare for å oppdage at det alltid er noe mer å oppnå, en ny svakhet å overvinne eller en annen del av deg som visstnok må fikses. Det som begynte som et ønske om å vokse, kan gradvis bli et utmattende ansvar for å få alt i livet ditt til å fungere.",
-      "Det kristne budskapet gir et radikalt annerledes utgangspunkt. Verdien din er ikke noe du må skape, identiteten din er ikke noe du må finne opp, og varig frihet er ikke noe du kan fremstille gjennom de riktige tankene, vanene eller teknikkene. Du ble skapt for et forhold til Gud, og når du forstår hvem Han er, endres måten du forstår deg selv, meningen med livet ditt og livet du har fått.",
+      "Kanskje har du jobbet hardt for å forbedre deg selv, overvinne utfordringer og skape et meningsfullt liv. Du har lært å ta ansvar, utvikle evnene dine og håndtere omstendighetene dine – bare for å oppdage at det alltid er noe mer å oppnå, en ny svakhet å overvinne eller en annen del av deg som visstnok må fikses. Det som begynte som et ønske om å utvikle deg, kan gradvis bli et utmattende ansvar for å få alt i livet ditt til å fungere.",
+      "Det kristne budskapet gir et radikalt annerledes utgangspunkt. Verdien din er ikke noe du må skape, identiteten din er ikke noe du må finne opp, og varig frihet er ikke noe du kan fremstille gjennom de riktige tankene, øvelsene eller teknikkene. Du ble skapt for en personlig relasjon med Gud, og når du forstår hvem Han er, endres måten du forstår deg selv, meningen med livet ditt og livet du har fått.",
     ],
   },
 };
