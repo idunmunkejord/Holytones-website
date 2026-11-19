@@ -50,7 +50,7 @@ const text = {
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = text[await getLang()];
-  return { title: t.title, description: t.description };
+  return { title: t.heading, description: t.description };
 }
 
 export default async function CoursesPage() {
