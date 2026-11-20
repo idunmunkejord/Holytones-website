@@ -109,8 +109,8 @@ export const navLinks: { href: string; label: Localized }[] = [
   { href: "/books", label: { en: "Book", no: "Bok" } },
   { href: "/courses", label: { en: "Courses", no: "Kurs" } },
   { href: "/music", label: { en: "Music", no: "Musikk" } },
-  { href: "/about", label: { en: "About", no: "Om meg" } },
   { href: "/nyhetsbrev", label: { en: "Newsletter", no: "Nyhetsbrev" } },
+  { href: "/about", label: { en: "About", no: "Om meg" } },
   { href: "/contact", label: { en: "Contact", no: "Kontakt" } },
 ];
 

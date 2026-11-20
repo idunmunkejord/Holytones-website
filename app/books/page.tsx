@@ -85,9 +85,11 @@ export default async function BooksPage() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h2 className="font-serif-display text-2xl font-bold text-brown-dark">{book.title}</h2>
+                  <h2 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
+                    {book.title}
+                  </h2>
                   {book.subtitle && (
-                    <p className="mt-1 font-serif-display text-lg font-bold text-brown-dark">
+                    <p className="mt-2 font-serif-display text-2xl leading-snug font-bold text-brown-dark md:text-3xl">
                       {book.subtitle}
                     </p>
                   )}
@@ -95,7 +97,7 @@ export default async function BooksPage() {
                     {book.language[lang]} ·{" "}
                     <span className="uppercase tracking-[0.14em] text-accent">{book.status[lang]}</span>
                   </p>
-                  <div className="mt-4 max-w-xl space-y-4 text-sm leading-relaxed text-foreground-muted">
+                  <div className="mt-4 max-w-xl space-y-4 text-base leading-relaxed text-foreground-muted">
                     {book.note[lang].map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CookieSettingsLink } from "@/components/CookieBanner";
 import DevotionalForm from "@/components/DevotionalForm";
+import SectionLabel from "@/components/SectionLabel";
 import SimpleroPopupButton from "@/components/SimpleroPopupButton";
 import type { Lang } from "@/lib/i18n";
 import { links } from "@/lib/site-config";
@@ -12,7 +13,7 @@ import { links } from "@/lib/site-config";
 
 const text = {
   en: {
-    label: "Holytones | Newsletter",
+    label: "Newsletter",
     heading: "Make Room for God in Everyday Life",
     body: [
       "Perhaps you have worked hard on yourself to become more confident, overcome challenges and build a meaningful life. Yet there is always something more to achieve, a weakness to overcome or a side of yourself you feel you should change. What began as a desire to grow may have become an exhausting demand to keep improving.",
@@ -30,7 +31,7 @@ const text = {
     imageAlt: "A tablet on a table showing the Weekly Devotional email",
   },
   no: {
-    label: "Holytones | Nyhetsbrev",
+    label: "Nyhetsbrev",
     heading: "Gi Gud plass i hverdagen",
     body: [
       "Kanskje har du jobbet hardt med deg selv for å bli tryggere, mestre utfordringer og skape et meningsfullt liv. Likevel er det alltid noe mer å få til, en svakhet å overvinne eller en side ved deg selv du burde forandre. Det som begynte som et ønske om å utvikle deg, har kanskje blitt et slitsomt krav om stadig å forbedre deg.",
@@ -59,11 +60,8 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
     <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[1fr_minmax(0,24rem)] md:gap-14">
       {/* Text with the signup box under it; the picture sits in the right column (above the text on phones). */}
       <div className="max-w-xl">
-        <p className="flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-accent-gold">
-          <span className="h-px w-8 bg-accent-gold/70" aria-hidden />
-          {t.label}
-        </p>
-        <h2 className="mt-4 font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
+        <SectionLabel>{t.label}</SectionLabel>
+        <h2 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
           {t.heading}
         </h2>
         <div className="mt-4 space-y-4 text-base leading-relaxed text-foreground-muted">

@@ -2,25 +2,25 @@ import Link from "next/link";
 import type { Lang } from "@/lib/i18n";
 import type { Category, CategoryTone } from "@/lib/site-config";
 
-const toneClasses: Record<CategoryTone, { top: string; text: string }> = {
+const toneClasses: Record<CategoryTone, { frame: string; text: string }> = {
   teal: {
-    top: "border-t-accent",
+    frame: "border-accent",
     text: "text-accent",
   },
   blush: {
-    top: "border-t-accent-blush",
+    frame: "border-accent-blush",
     text: "text-accent-blush",
   },
   violet: {
-    top: "border-t-accent-violet",
+    frame: "border-accent-violet",
     text: "text-accent-violet",
   },
   peach: {
-    top: "border-t-accent-peach",
+    frame: "border-accent-peach",
     text: "text-accent-peach",
   },
   green: {
-    top: "border-t-accent-green",
+    frame: "border-accent-green",
     text: "text-accent-green",
   },
 };
@@ -31,14 +31,14 @@ export default function CategoryCard({ category, lang }: { category: Category; l
   return (
     <Link
       href={`/${category.slug}`}
-      className={`group flex flex-col justify-between border border-border-soft border-t-[3px] ${tone.top} bg-surface px-8 py-10 transition-colors`}
+      className={`group flex flex-col justify-between border-[3px] ${tone.frame} bg-surface px-8 py-10 transition-colors`}
     >
       <div>
-        <h3 className="font-serif-display text-2xl text-foreground">{category.label[lang]}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-foreground-muted">{category.blurb[lang]}</p>
+        <h3 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">{category.label[lang]}</h3>
+        <p className="mt-4 text-base leading-relaxed text-foreground">{category.blurb[lang]}</p>
       </div>
       <span
-        className={`link-underline mt-8 inline-block w-fit text-xs uppercase tracking-[0.18em] transition-colors ${tone.text} group-hover:text-foreground`}
+        className={`link-underline mt-8 inline-block w-fit text-sm font-semibold uppercase tracking-[0.18em] transition-colors ${tone.text} group-hover:text-foreground`}
       >
         {lang === "no" ? "Utforsk" : "Explore"}
       </span>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { orderButtonClass } from "@/components/CampaignParts";
 import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
 import { getLang } from "@/lib/get-lang";
@@ -26,6 +27,7 @@ const text = {
     ],
     contactBefore: "If this speaks to where you are today, you are welcome to ",
     contactLink: "get in touch",
+    contactButton: "Contact",
   },
   no: {
     title: "Kurs",
@@ -43,6 +45,7 @@ const text = {
     ],
     contactBefore: "Hvis dette treffer der du er i dag, er du velkommen til å ",
     contactLink: "ta kontakt",
+    contactButton: "Kontakt",
   },
 };
 
@@ -92,6 +95,11 @@ export default async function CoursesPage() {
                 </Link>
                 .
               </p>
+              <div className="pt-3">
+                <Link href="/contact" className={orderButtonClass}>
+                  {t.contactButton}
+                </Link>
+              </div>
             </ReadMore>
           </div>
         </div>
