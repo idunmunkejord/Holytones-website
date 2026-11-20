@@ -13,12 +13,12 @@ import { links } from "@/lib/site-config";
 const text = {
   en: {
     label: "Holytones | Newsletter",
-    heading: "Weekly Devotional",
-    lead: "What if the thought exhausting you is not true?",
+    heading: "Make Room for God in Everyday Life",
     body: [
-      "Your mind is shaped every day by pressure, comparison, fear and voices competing to define you. But what does God actually say?",
-      "These short, honest devotionals will help you recognise the lies, renew your thinking and return to the truth of who you are in Christ.",
-      "No empty motivation. No pressure to become a better version of yourself. Just honest, Bible rooted reflections that speak into the thoughts you rarely say out loud.",
+      "Perhaps you have worked hard on yourself to become more confident, overcome challenges and build a meaningful life. Yet there is always something more to achieve, a weakness to overcome or a side of yourself you feel you should change. What began as a desire to grow may have become an exhausting demand to keep improving.",
+      "The Christian faith gives you a different starting point. You do not have to prove your worth or carry the responsibility for everything that happens. You were created for fellowship with God. As you get to know Him and discover who you are in Christ, you can find a security that does not depend on how well you perform.",
+      "In the Holytones newsletter you receive short, honest reflections rooted in the Bible, about faith, identity and the thoughts you rarely share with others. They invite you to recognise the lies you have believed about yourself, find rest in God’s promises and take the next step with Him.",
+      "Sign up and get the first reflection straight to your inbox. After that, you will receive a new one every Wednesday and Sunday.",
     ],
     boxHeading: "Weekly Devotional",
     button: "Send Devotionals",
@@ -31,12 +31,12 @@ const text = {
   },
   no: {
     label: "Holytones | Nyhetsbrev",
-    heading: "Ukentlig andakt",
-    lead: "Hva om tanken som sliter deg ut, ikke er sann?",
+    heading: "Gi Gud plass i hverdagen",
     body: [
-      "Tankene dine formes hver dag av press, sammenligning, frykt og stemmer som konkurrerer om å definere deg. Men hva sier Gud egentlig?",
-      "Disse korte, ærlige andaktene hjelper deg å kjenne igjen løgnene, fornye tankene dine og vende tilbake til sannheten om hvem du er i Kristus.",
-      "Ingen tom motivasjon. Ikke noe press om å bli en bedre versjon av deg selv. Bare ærlige, bibelforankrede refleksjoner som taler inn i tankene du sjelden sier høyt.",
+      "Kanskje har du jobbet hardt med deg selv for å bli tryggere, mestre utfordringer og skape et meningsfullt liv. Likevel er det alltid noe mer å få til, en svakhet å overvinne eller en side ved deg selv du burde forandre. Det som begynte som et ønske om å utvikle deg, har kanskje blitt et slitsomt krav om stadig å forbedre deg.",
+      "Den kristne troen gir deg et annet utgangspunkt. Du trenger ikke å bevise din verdi eller bære ansvaret for alt som skjer. Du er skapt til fellesskap med Gud. Når du blir kjent med ham og oppdager hvem du er i Kristus, kan du finne trygghet som ikke avhenger av hvor godt du presterer.",
+      "I nyhetsbrevet fra Holytones får du korte, ærlige refleksjoner forankret i Bibelen, om tro, identitet og tankene du sjelden deler med andre. Tekstene inviterer deg til å gjenkjenne løgnene du har trodd om deg selv, finne hvile i Guds løfter og ta neste steg sammen med ham.",
+      "Meld deg på og få den første refleksjonen rett i innboksen. Deretter får du en ny tekst hver onsdag og søndag.",
     ],
     boxHeading: "Ukentlig andakt",
     button: "Send andakter",
@@ -66,7 +66,6 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
         <h2 className="mt-4 font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
           {t.heading}
         </h2>
-        <p className="mt-4 text-base leading-snug text-accent md:text-[1.0625rem]">{t.lead}</p>
         <div className="mt-4 space-y-4 text-base leading-relaxed text-foreground-muted">
           {t.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
