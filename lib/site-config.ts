@@ -135,7 +135,7 @@ export const categories: Category[] = [
   },
   {
     slug: "courses",
-    label: { en: "Confident in Who You Are", no: "Trygg på Hvem Du Er" },
+    label: { en: "Courses", no: "Kurs" },
     blurb: {
       en: "Learning that helps you grow and live with purpose.",
       no: "Læring som hjelper deg å vokse og leve med hensikt.",

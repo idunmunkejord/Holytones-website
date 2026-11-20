@@ -15,7 +15,6 @@ const text = {
     heading: "Confident in Who You Are",
     description: "Guided courses and devotionals from YouMatter Academy for a deeper, more honest faith.",
     imageAlt: "Idun in conversation with a small group in a bright living room",
-    lead: "Your worth is already given. You do not have to spend your life trying to earn it.",
     story: [
       "Over the years, as a leader and teacher, I’ve met many people who are wrestling with uncertainty, facing difficult choices, or questioning who they are. I’ve seen how deeply the pressure to perform can affect people and how much it means to be seen, heard, and taken seriously. These experiences have shaped the way I lead, teach, and guide others.",
       "I have found that the same principles apply across different sectors. People need clear expectations and leaders who recognise what they can contribute, give them responsibility and allow them room to grow. In my coaching, I draw on my experience in both leadership and teaching. This may involve understanding your own reactions, finding words for what feels difficult, or working out what you need to make a decision and build trust when working with others.",
@@ -33,7 +32,6 @@ const text = {
     heading: "Trygg på Hvem Du Er",
     description: "Kurs og andakter fra YouMatter Academy for en dypere og mer ærlig tro.",
     imageAlt: "Idun i samtale med en liten gruppe i en lys stue",
-    lead: "Verdien din er allerede gitt. Du trenger ikke bruke livet på å prøve å fortjene den.",
     story: [
       "Gjennom årene som leder og lærer har jeg møtt mange mennesker som strever med usikkerhet, vanskelige valg og spørsmål om hvem de er. Jeg har sett hvor hardt prestasjonspress kan ramme, og hvor mye det betyr å bli sett, lyttet til og tatt på alvor. Disse erfaringene har formet måten jeg leder, underviser og veileder på.",
       "Jeg har erfart at de samme prinsippene har verdi på tvers av bransjer. Mennesker trenger tydelige forventninger og ledere som ser hva de kan bidra med, gir dem ansvar og lar dem få rom til å utvikle seg. I veiledningen trekker jeg på erfaringen min fra både ledelse og undervisning. Det kan handle om å forstå egne reaksjoner, sette ord på det som er vanskelig, eller finne ut hva som skal til for å ta et valg og bygge tillit i samarbeid med andre.",
@@ -50,7 +48,7 @@ const text = {
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = text[await getLang()];
-  return { title: t.heading, description: t.description };
+  return { title: t.title, description: t.description };
 }
 
 export default async function CoursesPage() {
@@ -72,11 +70,10 @@ export default async function CoursesPage() {
           </div>
 
           <div className="max-w-2xl">
-            <SectionLabel>{t.heading}</SectionLabel>
-            <h1 className="sr-only">{t.heading}</h1>
-            <p className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
-              {t.lead}
-            </p>
+            <SectionLabel>{t.title}</SectionLabel>
+            <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
+              {t.heading}
+            </h1>
 
             <div className={`mt-6 ${storyClass}`}>
               {t.story.map((paragraph) => (
