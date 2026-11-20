@@ -106,7 +106,7 @@ export const standalonePaths = ["/lognen-manifestering", "/takk-for-bestillingen
 
 export const navLinks: { href: string; label: Localized }[] = [
   { href: "/", label: { en: "Home", no: "Hjem" } },
-  { href: "/books", label: { en: "Books", no: "Bøker" } },
+  { href: "/books", label: { en: "Book", no: "Bok" } },
   { href: "/courses", label: { en: "Courses", no: "Kurs" } },
   { href: "/music", label: { en: "Music", no: "Musikk" } },
   { href: "/about", label: { en: "About", no: "Om meg" } },
@@ -173,19 +173,12 @@ export const books: Book[] = [
     title: "Løgnen",
     subtitle: "Når selvutvikling tar Guds plass",
     language: { en: "In Norwegian · Launch", no: "Lansering" },
-    // The same text as the LØGNEN landing page (components/CampaignParts.tsx and
-    // app/lognen-manifestering/page.tsx); the English is a translation of it.
+    // The "Finn ut hva som er sant" section of the LØGNEN landing page; the English is a translation.
     note: {
       en: [
-        "You may have heard it: Your thoughts shape reality. The universe responds to the energy you send out. And the power to create the life you want already lies within you.",
-        "It is a tempting promise, and the longing behind it is easy to understand. You can create the life you long for, if only you think the right way and focus on what you want.",
-        "But what if it is a LIE – and you have gradually learned to trust the power of thought more than God’s promises?",
         "In LØGNEN you discover how the message about the power of thought has blended into Christian faith. You learn to tell the difference between what is true and what only resembles the truth. And you learn that you do not find what you long for by turning your gaze inward toward yourself, but by turning it toward Him who fills everything in every way.",
       ],
       no: [
-        "Du har kanskje hørt det: Tankene dine former virkeligheten. Universet svarer på energien du sender ut. Og kraften til å skape livet du ønsker, finnes allerede i deg.",
-        "Det er et fristende løfte, og lengselen bak er lett å forstå. Du kan skape det livet du lengter etter hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.",
-        "Men hva om det er LØGN – og du gradvis har lært å tro mer på tankens kraft enn på Guds løfter?",
         "I LØGNEN oppdager du hvordan budskapet om tankens kraft har blandet seg inn med kristen tro. Du lærer å skille mellom det som er sant og det som bare ligner sannheten. Og du lærer at du ikke finner det du lengter etter ved å vende blikket innover mot deg selv, men ved å vende det mot Ham som fyller alt i alle.",
       ],
     },
