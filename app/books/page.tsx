@@ -89,7 +89,7 @@ export default async function BooksPage() {
                     {book.title}
                   </h2>
                   {book.subtitle && (
-                    <p className="mt-2 font-serif-display text-2xl leading-snug font-bold text-brown-dark md:text-3xl">
+                    <p className="mt-1 font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
                       {book.subtitle}
                     </p>
                   )}
