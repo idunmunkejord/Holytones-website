@@ -1,6 +1,6 @@
-// The visitor's choice about optional marketing cookies (Simplero's own cookies and the Facebook
-// pixel that come with the Simplero signup form). Browser-only; used by CookieBanner (asks) and
-// SimpleroPopupButton (obeys).
+// The visitor's choice about optional marketing cookies: the Meta (Facebook) pixel on every page
+// (MetaPixel) and Simplero's own cookies in the signup form. Browser-only; used by CookieBanner
+// (asks) and by MetaPixel and SimpleroPopupButton (obey).
 //
 // Nothing optional runs before a yes. Code that wants to set such cookies is handed to
 // `whenCookiesAllowed`, which runs it at once after a yes and otherwise keeps it waiting, so a

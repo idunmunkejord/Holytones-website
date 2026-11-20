@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import CookieBanner, { CookieSettingsLink } from "@/components/CookieBanner";
+import { CookieSettingsLink } from "@/components/CookieBanner";
 import DevotionalForm from "@/components/DevotionalForm";
 import SimpleroPopupButton from "@/components/SimpleroPopupButton";
 import type { Lang } from "@/lib/i18n";
@@ -119,7 +119,6 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
             )}
           </p>
         </div>
-        {usesSimplero && <CookieBanner lang={lang} />}
       </div>
 
       <div className="relative order-first aspect-square w-full overflow-hidden border border-border-soft md:order-none md:mt-10">

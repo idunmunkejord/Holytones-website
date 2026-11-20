@@ -3,6 +3,8 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
+import MetaPixel from "@/components/MetaPixel";
 import { getLang } from "@/lib/get-lang";
 import { htmlLang } from "@/lib/i18n";
 import { siteConfig } from "@/lib/site-config";
@@ -46,6 +48,8 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         <Navbar lang={lang} />
         <main className="flex-1">{children}</main>
         <Footer lang={lang} />
+        <CookieBanner lang={lang} />
+        <MetaPixel />
       </body>
     </html>
   );

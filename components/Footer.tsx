@@ -4,11 +4,13 @@ import { usePathname } from "next/navigation";
 import type { Lang } from "@/lib/i18n";
 import { links, standalonePaths } from "@/lib/site-config";
 import SocialLinks from "@/components/SocialLinks";
+import { CookieSettingsLink } from "@/components/CookieBanner";
 
 // Pages whose last section is already dark get a light footer so the two stay distinct.
 const lightFooterPaths = ["/", "/about"];
 
 const rights = { en: "All rights reserved.", no: "Alle rettigheter forbeholdt." };
+const cookies = { en: "Cookie settings", no: "Informasjonskapsler" };
 
 export default function Footer({ lang }: { lang: Lang }) {
   const pathname = usePathname();
@@ -32,8 +34,13 @@ export default function Footer({ lang }: { lang: Lang }) {
           </a>
         </div>
 
-        <p className="text-xs text-foreground-muted/70">
-          © {new Date().getFullYear()} Holytones. {rights[lang]}
+        <p className="flex flex-wrap gap-x-5 gap-y-1 text-xs text-foreground-muted/70">
+          <span>
+            © {new Date().getFullYear()} Holytones. {rights[lang]}
+          </span>
+          <CookieSettingsLink className="link-underline hover:text-foreground">
+            {cookies[lang]}
+          </CookieSettingsLink>
         </p>
       </div>
     </footer>

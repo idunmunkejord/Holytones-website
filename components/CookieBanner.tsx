@@ -20,7 +20,7 @@ import type { Lang } from "@/lib/i18n";
 const text = {
   en: {
     label: "Cookies",
-    body: "We would like to use optional cookies from Simplero and Meta (Facebook) to see how people find our devotionals. You can sign up whatever you choose.",
+    body: "We would like to use optional cookies and the Meta (Facebook) pixel to measure visits to this site and see how people find us. Everything on the site works whatever you choose.",
     more: "Read more",
     decline: "Decline",
     accept: "Accept",
@@ -28,7 +28,7 @@ const text = {
   },
   no: {
     label: "Informasjonskapsler",
-    body: "Vi ønsker å bruke valgfrie informasjonskapsler fra Simplero og Meta (Facebook) for å se hvordan folk finner andaktene våre. Du kan melde deg på uansett hva du velger.",
+    body: "Vi ønsker å bruke valgfrie informasjonskapsler og Meta-pikselen (Facebook) for å måle besøk på nettstedet og se hvordan folk finner oss. Alt på nettstedet fungerer uansett hva du velger.",
     more: "Les mer",
     decline: "Avvis",
     accept: "Godta",
