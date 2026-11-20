@@ -186,8 +186,8 @@ export const books: Book[] = [
     cover: "/images/loegnen-book.webp",
     orderUrl: "https://www.youmatter.academy/cart/263881-Loegnen",
     prices: [
-      { label: "Sendes i posten", note: "Frakt er inkludert", nok: 495 },
-      { label: "Hent boka selv", note: "Etter avtale i Kristiansand", nok: 395 },
+      { label: "Sendes i posten", note: "Frakt er inkludert", nok: 464 },
+      { label: "Hent boka selv", note: "Etter avtale i Kristiansand", nok: 369 },
     ],
   },
 ];
