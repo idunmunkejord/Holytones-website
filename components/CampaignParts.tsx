@@ -24,6 +24,9 @@ export function CampaignHeader() {
 const buyButtonShape =
   "inline-block border px-6 py-5 text-center text-base font-semibold uppercase tracking-[0.12em] transition-colors hover:bg-transparent lg:px-12 lg:tracking-[0.2em]";
 
+// The same dark order button, for the home page and the Books page.
+export const orderButtonClass = `${buyButtonShape} border-loegnen-night bg-loegnen-night text-loegnen-light hover:text-loegnen-night`;
+
 export function BuyButton({ onDark = false }: { onDark?: boolean }) {
   if (!book.orderUrl) return null;
   return (

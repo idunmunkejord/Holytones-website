@@ -39,7 +39,7 @@ export default async function ArtPage() {
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-6">
           <Link
-            href="/#mailing-list"
+            href="/nyhetsbrev"
             className="border border-accent px-8 py-3 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
           >
             {t.join}

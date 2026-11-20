@@ -63,7 +63,7 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
           <span className="h-px w-8 bg-accent-gold/70" aria-hidden />
           {t.label}
         </p>
-        <h2 className="mt-4 font-serif-display text-[1.375rem] leading-[1.25] text-foreground md:text-[1.625rem]">
+        <h2 className="mt-4 font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
           {t.heading}
         </h2>
         <p className="mt-4 text-base leading-snug text-accent md:text-[1.0625rem]">{t.lead}</p>

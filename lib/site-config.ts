@@ -79,13 +79,13 @@ export const customerService: { title: string; href?: string; parts: CustomerSer
 ];
 
 export const links = {
-  // The Simplero popup form for the devotional emails. The homepage signup button opens it on the
+  // The Simplero popup form for the devotional emails. The signup button on /nyhetsbrev opens it on the
   // page (see components/SimpleroPopupButton.tsx). Leave empty to fall back to the Substack link.
   simpleroDevotional: "https://www.youmatter.academy/page/720616",
   // The Weekly devotional section on Substack, where the devotionals were sent before Simplero.
-  // Only used by the homepage signup button when `simpleroDevotional` is empty.
+  // Only used by the /nyhetsbrev signup button when `simpleroDevotional` is empty.
   substack: "https://holytones.substack.com/s/weekly-devotional",
-  // The Holytones devotional email program (devotional/). When set, the homepage shows its own
+  // The Holytones devotional email program (devotional/). When set, /nyhetsbrev shows its own
   // signup form instead of the Substack button. Set to "https://andakt.holytones.no" once the
   // program is live in Cloudflare.
   devotionalSignup: "",
@@ -110,6 +110,7 @@ export const navLinks: { href: string; label: Localized }[] = [
   { href: "/courses", label: { en: "Courses", no: "Kurs" } },
   { href: "/music", label: { en: "Music", no: "Musikk" } },
   { href: "/about", label: { en: "About", no: "Om meg" } },
+  { href: "/nyhetsbrev", label: { en: "Newsletter", no: "Nyhetsbrev" } },
   { href: "/contact", label: { en: "Contact", no: "Kontakt" } },
 ];
 

@@ -1,38 +1,88 @@
 import Image from "next/image";
+import { orderButtonClass } from "@/components/CampaignParts";
+import OrderLink from "@/components/OrderLink";
 import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
 import { readMoreLabels, type Lang } from "@/lib/i18n";
+import { books } from "@/lib/site-config";
+
+// The top of the home page: the opening of the LØGNEN landing page (app/lognen-manifestering),
+// with sections 2–4 of that page under Read More and a button to order the book.
 
 const bodyClass = "space-y-5 text-base leading-relaxed text-foreground-muted";
+const book = books[0];
 
 const text = {
   en: {
     imageAlt: "A woman at her desk with her head in her hand, looking weary",
     label: "Home",
-    heading: "What if the greatest lie you've believed is that everything depends on you?",
-    intro: [
-      "You've been told to believe in yourself, trust your feelings, follow your heart, and become the best version of who you are. But what if these familiar promises are keeping you from discovering the truth that could actually set you free?",
-      "What if you've been looking to yourself for answers that were never meant to come from you?",
+    // Translated from the Norwegian landing page.
+    headline: "Can you really create your own reality?",
+    opening: [
+      "You may have heard it: Your thoughts shape reality. The universe responds to the energy you send out. And the power to create the life you want already lies within you.",
+      "It is a tempting promise, and the longing behind it is easy to understand. You can create the life you long for, if only you think the right way and focus on what you want.",
     ],
-    explore: "Explore Books, Courses & Music",
-    more: [
-      "Perhaps you've worked hard to improve yourself, overcome challenges, and create a meaningful life. You've learned to take responsibility, develop your abilities, and manage your circumstances, only to discover that there is always something more to achieve, another weakness to overcome, or another part of yourself that supposedly needs fixing. What began as a desire to grow can gradually become an exhausting responsibility to make everything in your life work.",
-      "The Christian message offers a radically different starting point. Your value is not something you have to create, your identity is not something you have to invent, and lasting freedom is not something you can manufacture through the right thoughts, habits, or techniques. You were created for a relationship with God, and understanding who He is changes how you understand yourself, your purpose, and the life you have been given.",
+    openingQuestion:
+      "But what if it is a LIE – and you have gradually learned to trust the power of thought more than God’s promises?",
+    sections: [
+      {
+        heading: "What if what sounds so alluring and freeing moves God out of the centre of your life?",
+        paragraphs: [
+          "What if believing in the law of attraction, and that all the answers are found within you, is not just a harmless tool, but the expression of an older temptation – the desire to become your own God?",
+          "Could it be the same old temptation that drove Adam and Eve out of paradise, “you will be like God” (Genesis 3:5), but this time disguised in motivational language that could have come from a TED talk?",
+        ],
+      },
+      {
+        heading: "Your thoughts matter. But do they create your life?",
+        paragraphs: [
+          "If your thoughts create your life, is the pain then your own fault? When illness strikes, a marriage breaks down or prayers go unanswered, did you create that?",
+          "Did you think the wrong thoughts, believe too little, or send out the wrong energy?",
+        ],
+        quote: "First you were promised the power to create everything. Then you get the blame when you lose it.",
+      },
+      {
+        heading: "What if this is the spiritual self-deception of our time, drawing us away from God and His blessing?",
+        paragraphs: [],
+        quote:
+          "“For the most dangerous lies are not necessarily the ones that are completely untrue, but the ones that contain just enough truth that you don’t notice what has been changed” (LØGNEN)",
+      },
     ],
+    order: "Order LØGNEN",
   },
   no: {
     imageAlt: "En kvinne ved skrivebordet med hodet i hånden, sliten",
     label: "Hjem",
-    heading: "Hva om den største løgnen du har trodd på, er at alt avhenger av deg?",
-    intro: [
-      "Du har fått høre at du skal tro på deg selv, stole på følelsene dine, følge hjertet ditt og bli den beste versjonen av deg selv. Men hva om disse kjente løftene hindrer deg i å oppdage sannheten som faktisk kan sette deg fri?",
-      "Hva om du har lett i deg selv etter svar som aldri var ment å komme fra deg?",
+    headline: "Kan du virkelig skape din egen virkelighet?",
+    opening: [
+      "Du har kanskje hørt det: Tankene dine former virkeligheten. Universet svarer på energien du sender ut. Og kraften til å skape livet du ønsker, finnes allerede i deg.",
+      "Det er et fristende løfte, og lengselen bak er lett å forstå. Du kan skape det livet du lengter etter hvis du bare tenker riktig og retter oppmerksomheten mot det du ønsker deg.",
     ],
-    explore: "Utforsk bøker, kurs og musikk",
-    more: [
-      "Kanskje har du jobbet hardt for å forbedre deg selv, overvinne utfordringer og skape et meningsfullt liv. Du har lært å ta ansvar, utvikle evnene dine og håndtere omstendighetene dine – bare for å oppdage at det alltid er noe mer å oppnå, en ny svakhet å overvinne eller en annen del av deg som visstnok må fikses. Det som begynte som et ønske om å utvikle deg, kan gradvis bli et utmattende ansvar for å få alt i livet ditt til å fungere.",
-      "Det kristne budskapet gir et radikalt annerledes utgangspunkt. Verdien din er ikke noe du må skape, identiteten din er ikke noe du må finne opp, og varig frihet er ikke noe du kan fremstille gjennom de riktige tankene, øvelsene eller teknikkene. Du ble skapt for en personlig relasjon med Gud, og når du forstår hvem Han er, endres måten du forstår deg selv, meningen med livet ditt og livet du har fått.",
+    openingQuestion:
+      "Men hva om det er LØGN – og du gradvis har lært å tro mer på tankens kraft enn på Guds løfter?",
+    sections: [
+      {
+        heading: "Hva om det som høres så forlokkende og frigjørende ut, flytter Gud ut av sentrum av ditt liv?",
+        paragraphs: [
+          "Hva om troen på tiltrekningskraften, og på at alle svarene finnes i deg selv, ikke bare er uskyldige redskaper, men uttrykk for en eldre fristelse – ønsket om å bli din egen Gud?",
+          "Kan det være den samme gamle fristelsen som drev Adam og Eva ut av paradis «dere vil bli som Gud» (1. Mosebok 3,5), men denne gangen forkledd i et motivasjonsspråk som kunne ha vært hentet fra en TED talk?",
+        ],
+      },
+      {
+        heading: "Tankene dine betyr noe. Men skaper de livet ditt?",
+        paragraphs: [
+          "Dersom tankene dine skaper livet ditt, blir smerten da din egen skyld? For når sykdom rammer, ekteskapet ryker eller bønnesvar uteblir, var det du som skapte det?",
+          "Tenkte du feil, trodde for lite, eller sendte du ut feil energi?",
+        ],
+        quote: "Først ble du lovet makten til å skape alt. Så får du skylden når du mister det.",
+      },
+      {
+        heading: "Hva om dette er vår tids åndelige selvbedrag for å få oss bort fra Gud og Hans velsignelse?",
+        paragraphs: [],
+        quote:
+          "«For de farligste løgnene er ikke nødvendigvis de som er fullstendig usanne, men de som inneholder akkurat nok sannhet til at du ikke oppdager hva som har blitt endret på» (LØGNEN)",
+      },
     ],
+    order: "Bestill LØGNEN",
   },
 };
 
@@ -55,31 +105,43 @@ export default function AuthorHero({ lang }: { lang: Lang }) {
         <div className="max-w-2xl">
           <SectionLabel>{t.label}</SectionLabel>
           <h1 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
-            {t.heading}
+            {t.headline}
           </h1>
 
           <div className={`mt-6 ${bodyClass}`}>
-            {t.intro.map((paragraph) => (
+            {t.opening.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+            <p className="font-serif-display text-2xl leading-snug font-bold text-brown-dark">
+              {t.openingQuestion}
+            </p>
           </div>
 
-          <ReadMore
-            className={bodyClass}
-            {...readMoreLabels[lang]}
-            actions={
-              <a
-                href="#my-work"
-                className="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-[0.2em] text-accent transition-colors hover:bg-accent hover:text-background"
-              >
-                {t.explore}
-              </a>
-            }
-          >
-            {t.more.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+          <ReadMore className="space-y-12" {...readMoreLabels[lang]}>
+            {t.sections.map((section) => (
+              <div key={section.heading} className={bodyClass}>
+                <h2 className="font-serif-display text-2xl leading-snug font-bold text-brown-dark md:text-3xl">
+                  {section.heading}
+                </h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+                {section.quote && (
+                  <p className="border-l-2 border-accent pl-5 font-serif-display text-2xl leading-snug text-brown-dark">
+                    {section.quote}
+                  </p>
+                )}
+              </div>
             ))}
           </ReadMore>
+
+          {book.orderUrl && (
+            <div className="mt-10">
+              <OrderLink href={book.orderUrl} className={orderButtonClass}>
+                {t.order}
+              </OrderLink>
+            </div>
+          )}
         </div>
       </div>
     </section>

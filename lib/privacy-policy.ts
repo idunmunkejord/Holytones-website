@@ -232,7 +232,7 @@ export const privacyPolicy: Policy = {
         "Påmeldingsskjemaet for de ukentlige andaktene leveres av Simplero og lastes først når du trykker på påmeldingsknappen.",
         "Har du godtatt, får Meta også vite at du har åpnet påmeldingsskjemaet og om du har meldt deg på, og Simplero kan bruke sine valgfrie informasjonskapsler. Har du avvist, kan du melde deg på som normalt.",
         { heading: "Endre valget ditt" },
-        "Valget ditt lagres i nettleseren din. Du kan når som helst endre det eller trekke samtykket tilbake med lenken «Informasjonskapsler» nederst på sidene eller i påmeldingsboksen på forsiden.",
+        "Valget ditt lagres i nettleseren din. Du kan når som helst endre det eller trekke samtykket tilbake med lenken «Informasjonskapsler» nederst på sidene eller i påmeldingsboksen på nyhetsbrevsiden.",
       ],
     },
     {
