@@ -67,7 +67,7 @@ export default function DevotionalSignup({ lang }: { lang: Lang }) {
           {t.heading}
         </h2>
         <p className="mt-4 text-base leading-snug text-accent md:text-[1.0625rem]">{t.lead}</p>
-        <div className="mt-4 space-y-4 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
+        <div className="mt-4 space-y-4 text-base leading-relaxed text-foreground-muted">
           {t.body.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

@@ -31,11 +31,11 @@ export default function CancellationPage() {
     <section className="px-6 py-14 md:px-10 md:py-20">
       <div className="mx-auto max-w-3xl">
         <SectionLabel>Kundeservice</SectionLabel>
-        <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
+        <h1 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
           Har du ombestemt deg?
         </h1>
 
-        <div className="mt-6 space-y-4 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
+        <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground-muted">
           <p>
             Det er helt i orden. Fyll ut skjemaet under, så hjelper vi deg videre dersom du ønsker
             å benytte angreretten ved kjøp av fysiske bøker eller nettkurs fra Holytones.
@@ -64,7 +64,7 @@ export default function CancellationPage() {
           Last ned angreskjema (Word)
         </a>
 
-        <div className="mt-10 space-y-8 border border-border-soft bg-surface px-6 py-8 text-[15px] leading-[1.75] text-foreground-muted sm:px-10 md:text-base">
+        <div className="mt-10 space-y-8 border border-border-soft bg-surface px-6 py-8 text-base leading-relaxed text-foreground-muted sm:px-10">
           <div className="space-y-3">
             <h2 className={sectionHeading}>Mottaker</h2>
             <p className="whitespace-pre-line">

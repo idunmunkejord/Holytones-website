@@ -7,7 +7,7 @@ import { getLang } from "@/lib/get-lang";
 import { readMoreLabels } from "@/lib/i18n";
 import { courses } from "@/lib/site-config";
 
-const storyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted md:text-base";
+const storyClass = "space-y-5 text-base leading-relaxed text-foreground-muted";
 
 const text = {
   en: {
@@ -71,7 +71,7 @@ export default async function CoursesPage() {
 
           <div className="max-w-2xl">
             <SectionLabel>{t.title}</SectionLabel>
-            <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
+            <h1 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
               {t.heading}
             </h1>
 

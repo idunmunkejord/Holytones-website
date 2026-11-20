@@ -33,8 +33,8 @@ export default async function ArtPage() {
     <section className="flex min-h-[60vh] items-center border-b border-border-soft px-6 py-24 md:px-10">
       <div className="mx-auto max-w-2xl text-center">
         <SectionLabel>{t.label}</SectionLabel>
-        <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">{t.title}</h1>
-        <p className="mt-5 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
+        <h1 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">{t.title}</h1>
+        <p className="mt-5 text-base leading-relaxed text-foreground-muted">
           {t.body}
         </p>
         <div className="mt-9 flex flex-wrap items-center justify-center gap-6">

@@ -37,7 +37,7 @@ export default function PolicyPage({
     <section className="px-6 py-14 md:px-10 md:py-20">
       <div className="mx-auto max-w-3xl">
         <SectionLabel>Kundeservice</SectionLabel>
-        <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
+        <h1 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
           {policy.title}
         </h1>
         {policy.subtitle && (
@@ -47,7 +47,7 @@ export default function PolicyPage({
         )}
         {policy.updated && <p className="mt-1 text-xs text-foreground-muted">{policy.updated}</p>}
 
-        <div className="mt-8 space-y-8 text-[15px] leading-[1.75] text-foreground-muted md:text-base">
+        <div className="mt-8 space-y-8 text-base leading-relaxed text-foreground-muted">
           {policy.intro && <p>{policy.intro}</p>}
 
           {policy.sections.map((section) => (

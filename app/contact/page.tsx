@@ -38,7 +38,7 @@ export default async function ContactPage() {
         <div className="mx-auto max-w-4xl">
           <SectionLabel>{t.title}</SectionLabel>
           <h1 className="sr-only">{t.title}</h1>
-          <p className="max-w-2xl text-[15px] leading-[1.75] text-foreground-muted md:text-base">
+          <p className="max-w-2xl text-base leading-relaxed text-foreground-muted">
             {t.intro}
           </p>
           <div className="mt-8 max-w-2xl border border-border-soft bg-surface px-6 py-8 sm:px-10 sm:py-10">

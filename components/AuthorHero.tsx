@@ -3,7 +3,7 @@ import ReadMore from "@/components/ReadMore";
 import SectionLabel from "@/components/SectionLabel";
 import { readMoreLabels, type Lang } from "@/lib/i18n";
 
-const bodyClass = "space-y-5 text-[15px] leading-[1.75] text-foreground-muted md:text-base";
+const bodyClass = "space-y-5 text-base leading-relaxed text-foreground-muted";
 
 const text = {
   en: {
@@ -54,7 +54,7 @@ export default function AuthorHero({ lang }: { lang: Lang }) {
 
         <div className="max-w-2xl">
           <SectionLabel>{t.label}</SectionLabel>
-          <h1 className="font-serif-display text-[1.5rem] leading-[1.25] text-foreground md:text-[1.75rem]">
+          <h1 className="font-serif-display text-3xl leading-tight font-bold text-brown-dark md:text-4xl">
             {t.heading}
           </h1>
 
